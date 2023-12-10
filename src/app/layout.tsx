@@ -1,12 +1,15 @@
+import '@/styles/global.scss';
+
 import type { Metadata } from 'next';
 
-import { inter, sen } from '@/styles/fonts';
+import { inter, sen } from '@/constants/fonts';
 
 import { LayoutFooter, LayoutNavbar } from './_components/layout';
 
 export const metadata: Metadata = {
   title: 'Client Blog',
   description: 'Client Blog application',
+  icons: [{ rel: 'icon', url: '/images/favicon.ico' }],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

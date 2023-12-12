@@ -2,9 +2,10 @@ import '@/styles/global.scss';
 
 import type { Metadata } from 'next';
 
-import { Footer, Navbar } from '@/components';
 import { getDictionary } from '@/lib/getDictionary';
 import { inter, sen } from '@/styles/fonts';
+
+import { LayoutFooter, LayoutNavbar } from './_components';
 
 export const metadata: Metadata = {
   title: 'Client Blog',
@@ -27,9 +28,9 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${inter.variable} ${sen.variable}`}>
-        <Navbar locale={locale} title={title} linksNames={linksNames} />
+        <LayoutNavbar locale={locale} title={title} linksNames={linksNames} />
         {children}
-        <Footer />
+        <LayoutFooter locale={locale} title={title} linksNames={linksNames} />
       </body>
     </html>
   );

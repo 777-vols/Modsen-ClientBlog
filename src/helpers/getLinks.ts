@@ -2,7 +2,11 @@ import { urls } from '@/constants/urls';
 import { DictionaryType } from '@/lib/getDictionary';
 import { Locale } from '@/lib/i18n.config';
 
-export const getLinks = (locale: Locale, linksNames: DictionaryType['linksNames']) => {
+export const getLinks = (
+  locale: Locale,
+  linksNames: DictionaryType['linksNames'],
+  isFooterNav?: boolean,
+) => {
   const { home, blog, aboutUs, contactUs, privacyPolicy } = linksNames;
 
   const navLinks = [
@@ -24,12 +28,12 @@ export const getLinks = (locale: Locale, linksNames: DictionaryType['linksNames'
     },
   ];
 
-  return navLinks;
-
-  // const footerLinks = [
-  //   {
-  //     name: privacyPolicy,
-  //     path: urls.privacyPolicy,
-  //   },
-  // ];
+  const footerLinks = [
+    ...navLinks,
+    {
+      name: privacyPolicy,
+      path: `/${locale}${urls.privacyPolicy}`,
+    },
+  ];
+  return isFooterNav ? footerLinks : navLinks;
 };

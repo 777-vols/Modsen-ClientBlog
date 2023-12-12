@@ -1,30 +1,41 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { FC } from 'react';
 
 import { getLinks } from '@/helpers/getLinks';
-import { getDictionary } from '@/lib/getDictionary';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
-const { wrapper, container, headerTitle, navbar } = styles;
+const { wrapper, headerTitle, navWrapper, linksWrapper, itemLink, modalButton } = styles;
 
-const Navbar = async ({ locale, linksNames }: IProps) => {
-  const { title } = await getDictionary(locale);
-  const linksList = getLinks(locale, linksNames).map(({ name, path }) => (
-    <li key={path}>
+const Navbar: FC<IProps> = (props) => {
+  const { title, locale, linksNames, isFooterNav } = props;
+
+  // const pathname = usePathname();
+
+  const linksList = getLinks(locale, linksNames, isFooterNav).map(({ name, path }) => (
+    <li className={itemLink} key={path}>
       <Link href={path}>{name}</Link>
     </li>
   ));
 
   return (
-    <header className={wrapper}>
-      <div className={container}>
-        <h4 className={headerTitle}>{title}</h4>
-        <nav className={navbar}>
-          <ul>{linksList}</ul>
+    <div className={wrapper}>
+      <h4 className={headerTitle}>{title}</h4>
+      <div className={navWrapper}>
+        <nav>
+          <ul className={linksWrapper}>{linksList}</ul>
         </nav>
+        {!isFooterNav && (
+          <button className={modalButton} type="button">
+            Video about us
+          </button>
+        )}
       </div>
-    </header>
+    </div>
   );
 };
 

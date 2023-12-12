@@ -1,3 +1,10 @@
 {
-  "title": "Modsen Client Blog"
+  "title": "Modsen Client Blog",
+  "linksNames": {
+    "home": "Home",
+    "blog": "Blog",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy"
+  }
 }

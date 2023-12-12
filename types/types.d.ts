@@ -1,7 +1,9 @@
-import { type Locale } from '../src/lib/i18n.config';
+import { type Locale } from '@/lib/i18n.config';
 
 declare global {
-  declare type PageLocaleParams = { params: { locale: Locale } };
+  declare interface IPageLocale {
+    params: { locale: Locale };
+  }
 }
 
 export {};

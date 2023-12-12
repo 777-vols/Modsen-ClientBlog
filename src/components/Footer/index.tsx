@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 
 const { wrapper, container } = styles;
 
-const LayoutFooter = () => {
+const Footer = () => {
   return (
     <footer className={wrapper}>
       <div className={container}>
@@ -12,4 +12,4 @@ const LayoutFooter = () => {
   );
 };
 
-export default LayoutFooter;
+export default Footer;

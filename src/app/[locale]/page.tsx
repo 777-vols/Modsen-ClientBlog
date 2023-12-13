@@ -1,12 +1,9 @@
 import { HomeHero } from '@/components';
-import { getDictionary } from '@/lib/getDictionary';
 
-const Home = async ({ params: { locale } }: IPageLocale) => {
-  const { homeHero } = await getDictionary(locale);
-
+const Home = ({ params: { locale } }: IPageLocale) => {
   return (
     <main>
-      <HomeHero homeHero={homeHero} locale={locale} />
+      <HomeHero locale={locale} />
     </main>
   );
 };

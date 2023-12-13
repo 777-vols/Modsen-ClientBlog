@@ -1,3 +1,5 @@
+import { getDictionary } from '@/lib/getDictionary';
+
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
@@ -13,8 +15,9 @@ const {
   authorName,
 } = styles;
 
-const HomeHero = (props: IProps) => {
-  const { homeHero } = props;
+const HomeHero = async (props: IProps) => {
+  const { locale } = props;
+  const { homeHero } = await getDictionary(locale);
   const { titleText, subtitleText, infoText, descriptionText, buttonText } = homeHero;
 
   return (

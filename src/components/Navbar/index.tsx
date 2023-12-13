@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useCallback, useMemo, useState } from 'react';
+import { Portal } from 'react-portal';
 
+import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
 import { urls } from '@/constants/urls';
 import { activePathHelper, getLinks } from '@/helpers';
 
@@ -18,15 +20,24 @@ const { home } = urls;
 const Navbar: FC<IProps> = ({ navbar, locale, isFooterNav }) => {
   const { title, linksNames, videoButtonName } = navbar;
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
-  const linksList = getLinks(locale, linksNames, isFooterNav).map(({ name, path }) => {
-    return (
-      <li className={activePathHelper(pathname, path) ? activeLink : itemLink} key={path}>
-        <Link href={path}>{name}</Link>
-      </li>
-    );
-  });
+  const linksList = useMemo(
+    () =>
+      getLinks(locale, linksNames, isFooterNav).map(({ name, path }) => {
+        return (
+          <li className={activePathHelper(pathname, path) ? activeLink : itemLink} key={path}>
+            <Link href={path}>{name}</Link>
+          </li>
+        );
+      }),
+    [isFooterNav, linksNames, locale, pathname],
+  );
+
+  const handleOpenCloseModal = useCallback(() => {
+    setIsModalOpen((prevState) => !prevState);
+  }, []);
 
   return (
     <div className={wrapper}>
@@ -38,11 +49,12 @@ const Navbar: FC<IProps> = ({ navbar, locale, isFooterNav }) => {
           <ul className={linksWrapper}>{linksList}</ul>
         </nav>
         {!isFooterNav && (
-          <button className={videoButton} type="button">
+          <button className={videoButton} type="button" onClick={handleOpenCloseModal}>
             {videoButtonName}
           </button>
         )}
       </div>
+      <Portal>{isModalOpen && <AboutUsModal handleCloseModal={handleOpenCloseModal} />}</Portal>
     </div>
   );
 };

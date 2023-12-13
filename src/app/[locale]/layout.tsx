@@ -2,7 +2,6 @@ import '@/styles/global.scss';
 
 import type { Metadata } from 'next';
 
-import { getDictionary } from '@/lib/getDictionary';
 import { inter, sen } from '@/styles/fonts';
 
 import { LayoutFooter, LayoutNavbar } from './_components';
@@ -17,20 +16,18 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'ru' }] as const;
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params: { locale },
 }: {
   children: React.ReactNode;
 } & IPageLocale) {
-  const { title, linksNames } = await getDictionary(locale);
-
   return (
     <html lang={locale}>
       <body className={`${inter.variable} ${sen.variable}`}>
-        <LayoutNavbar locale={locale} title={title} linksNames={linksNames} />
+        <LayoutNavbar locale={locale} />
         {children}
-        <LayoutFooter locale={locale} title={title} linksNames={linksNames} />
+        <LayoutFooter locale={locale} />
       </body>
     </html>
   );

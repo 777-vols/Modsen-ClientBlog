@@ -24,3 +24,10 @@ $homeHeroGradient: radial-gradient(
   width: 100%;
   max-height: 100%;
 }
+
+@mixin button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--sen-font);
+  font-size: 18px;
+}

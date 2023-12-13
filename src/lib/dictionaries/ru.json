@@ -1,10 +1,20 @@
 {
-  "title": "Блог Клиента Модсен",
-  "linksNames": {
-    "home": "Главная",
-    "blog": "Блог",
-    "aboutUs": "О нас",
-    "contactUs": "Контакты",
-    "privacyPolicy": "Политика безопасности"
+  "navbar": {
+    "title": "Блог Клиента Модсен",
+    "videoButtonName": "Видео о нас",
+    "linksNames": {
+      "home": "Главная",
+      "blog": "Блог",
+      "aboutUs": "О нас",
+      "contactUs": "Контакты",
+      "privacyPolicy": "Политика безопасности"
+    }
+  },
+  "footer": {
+    "subscribeTitle": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+    "emailPlaceholder": "Введите свою электронную почту",
+    "subscribeButton": "Подписаться",
+    "ourAdress": "Финстрит 118 2561 Финтаун",
+    "ourEmail": "Hello@finsweet.com 020 7993 2905"
   }
 }

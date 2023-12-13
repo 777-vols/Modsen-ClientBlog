@@ -23,7 +23,7 @@
   flex: 10 3 50%;
   color: $color-white;
   letter-spacing: -2px;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 700;
   max-width: 50%;
 }
@@ -48,14 +48,19 @@
 }
 
 .formButton {
+  @include button;
+
   background: $color-yellow;
-  border: none;
-  font-size: 18px;
   padding: 0 25px;
   height: 56px;
   max-width: 180px;
   width: 100%;
   margin-left: 24px;
+  transition: 0.2s;
+
+  &:hover {
+    background: $color-white;
+  }
 }
 
 .info {

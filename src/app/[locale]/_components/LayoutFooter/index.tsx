@@ -1,5 +1,6 @@
 import { Navbar } from '@/components';
 import { socials } from '@/constants/socials';
+import { getDictionary } from '@/lib/getDictionary';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';
@@ -19,26 +20,27 @@ const {
   socialLink,
 } = styles;
 
-const LayoutFooter = ({ title, locale, linksNames }: IProps) => {
+const LayoutFooter = async ({ locale }: IProps) => {
+  const { navbar, footer } = await getDictionary(locale);
+  const { subscribeTitle, subscribeButton, emailPlaceholder, ourAdress, ourEmail } = footer;
+
   return (
     <footer className={wrapper}>
       <div className={container}>
-        <Navbar locale={locale} linksNames={linksNames} isFooterNav />
+        <Navbar navbar={navbar} locale={locale} isFooterNav />
         <div className={content}>
-          <h3 className={subscribeText}>
-            Subscribe to our news letter to get latest updates and news
-          </h3>
+          <h3 className={subscribeText}>{subscribeTitle}</h3>
           <form className={form}>
-            <input className={formInput} placeholder="Enter Your Email" />
+            <input className={formInput} placeholder={emailPlaceholder} />
             <button className={formButton} type="submit">
-              Subscribe
+              {subscribeButton}
             </button>
           </form>
         </div>
         <div className={info}>
           <div className={contacts}>
-            <span className={contactItem}>Finstreet 118 2561 Fintown</span>
-            <span className={contactItem}>Hello@finsweet.com 020 7993 2905</span>
+            <span className={contactItem}>{ourAdress}</span>
+            <span className={contactItem}>{ourEmail}</span>
           </div>
           <div className={socialsWrapper}>
             {socials.map(({ icon, href }) => (

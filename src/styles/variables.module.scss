@@ -77,7 +77,7 @@ $fontWeight-s: 400;
 
 @mixin flex-direction-column {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 @mixin wrapper {
@@ -101,4 +101,28 @@ $fontWeight-s: 400;
   height: 56px;
   font-family: var(--sen-font);
   font-size: $fontSize-medium-s;
+}
+
+@mixin whiteButton {
+  @include button;
+
+  background: $color-white;
+  color: $color-dark-blue;
+  transition: 0.2s;
+
+  &:hover {
+    background: $color-yellow;
+  }
+}
+
+@mixin yellowButton {
+  @include button;
+
+  background: $color-yellow;
+  color: $color-dark-blue;
+  transition: 0.2s;
+
+  &:hover {
+    background: $color-white;
+  }
 }

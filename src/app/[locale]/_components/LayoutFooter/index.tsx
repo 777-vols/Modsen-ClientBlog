@@ -22,25 +22,25 @@ const {
 
 const LayoutFooter = async ({ locale }: IProps) => {
   const { navbar, footer } = await getDictionary(locale);
-  const { subscribeTitle, subscribeButton, emailPlaceholder, ourAdress, ourEmail } = footer;
+  const { titleText, subscribeButtonText, emailPlaceholderText, adressText, emailText } = footer;
 
   return (
     <footer className={wrapper}>
       <div className={container}>
         <Navbar navbar={navbar} locale={locale} isFooterNav />
         <div className={content}>
-          <h3 className={subscribeText}>{subscribeTitle}</h3>
+          <h3 className={subscribeText}>{titleText}</h3>
           <form className={form}>
-            <input className={formInput} placeholder={emailPlaceholder} />
+            <input className={formInput} placeholder={emailPlaceholderText} />
             <button className={formButton} type="submit">
-              {subscribeButton}
+              {subscribeButtonText}
             </button>
           </form>
         </div>
         <div className={info}>
           <div className={contacts}>
-            <span className={contactItem}>{ourAdress}</span>
-            <span className={contactItem}>{ourEmail}</span>
+            <span className={contactItem}>{adressText}</span>
+            <span className={contactItem}>{emailText}</span>
           </div>
           <div className={socialsWrapper}>
             {socials.map(({ icon, href }) => (

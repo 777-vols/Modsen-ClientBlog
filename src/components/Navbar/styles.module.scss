@@ -41,15 +41,8 @@
 }
 
 .videoButton {
-  @include button;
+  @include whiteButton;
 
   margin-left: $space-small-xxl;
-  color: $color-dark-blue;
-  background: $color-white;
   padding: $space-zero $space-medium-s;
-  transition: 0.2s;
-
-  &:hover {
-    background: $color-yellow;
-  }
 }

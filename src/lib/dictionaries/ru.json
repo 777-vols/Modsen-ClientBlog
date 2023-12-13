@@ -10,11 +10,18 @@
       "privacyPolicy": "Политика безопасности"
     }
   },
+  "homeHero": {
+    "titleText": "Пошаговое руководство по выбору отличных пар шрифтов",
+    "subtitleText": ["РАЗМЕЩЕНО ПРИ ", "ЗАПУСКЕ"],
+    "infoText": ["Автор: ", "Джеймс Уэст", " | Май 23, 2022"],
+    "descriptionText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Читать далее >"
+  },
   "footer": {
-    "subscribeTitle": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
-    "emailPlaceholder": "Введите свою электронную почту",
-    "subscribeButton": "Подписаться",
-    "ourAdress": "Финстрит 118 2561 Финтаун",
-    "ourEmail": "Hello@finsweet.com 020 7993 2905"
+    "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+    "emailPlaceholderText": "Введите свою электронную почту",
+    "subscribeButtonText": "Подписаться",
+    "adressText": "Финстрит 118 2561 Финтаун",
+    "emailText": "Hello@finsweet.com 020 7993 2905"
   }
 }

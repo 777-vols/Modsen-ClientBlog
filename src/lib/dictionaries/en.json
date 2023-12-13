@@ -10,11 +10,18 @@
     },
     "videoButtonName": "Video about us"
   },
+  "homeHero": {
+    "titleText": "Step-by-step guide to choosing great font pairs",
+    "subtitleText": ["POSTED ON ", "STARTUP"],
+    "infoText": ["By ", "James West", " | May 23, 2022"],
+    "descriptionText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Read More >"
+  },
   "footer": {
-    "subscribeTitle": "Subscribe to our news letter to get latest updates and news",
-    "emailPlaceholder": "Enter Your Email",
-    "subscribeButton": "Subscribe",
-    "ourAdress": "Finstreet 118 2561 Fintown",
-    "ourEmail": "Hello@finsweet.com 020 7993 2905"
+    "titleText": "Subscribe to our news letter to get latest updates and news",
+    "emailPlaceholderText": "Enter Your Email",
+    "subscribeButtonText": "Subscribe",
+    "adressText": "Finstreet 118 2561 Fintown",
+    "emailText": "Hello@finsweet.com 020 7993 2905"
   }
 }

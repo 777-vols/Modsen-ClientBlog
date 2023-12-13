@@ -48,18 +48,12 @@
 }
 
 .formButton {
-  @include button;
+  @include yellowButton;
 
-  background: $color-yellow;
   padding: $space-zero 25px;
   max-width: 180px;
   width: 100%;
   margin-left: $space-small-xl;
-  transition: 0.2s;
-
-  &:hover {
-    background: $color-white;
-  }
 }
 
 .info {

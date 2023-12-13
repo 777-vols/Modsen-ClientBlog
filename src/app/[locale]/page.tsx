@@ -1,9 +1,10 @@
-import { HomeHero } from '@/components';
+import { HomeHero, JoinOurTeam } from '@/components';
 
-const Home = ({ params: { locale } }: IPageLocale) => {
+const Home = ({ params: { locale } }: ILocaleParams) => {
   return (
     <main>
       <HomeHero locale={locale} />
+      <JoinOurTeam locale={locale} />
     </main>
   );
 };

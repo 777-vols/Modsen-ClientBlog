@@ -17,9 +17,14 @@
     "descriptionText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "buttonText": "Читать далее >"
   },
+  "joinOurTeam": {
+    "titleText": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Присоедениться сейчас"
+  },
   "footer": {
     "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
-    "emailPlaceholderText": "Введите свою электронную почту",
+    "emailPlaceholderText": "Введите свой email",
     "subscribeButtonText": "Подписаться",
     "adressText": "Финстрит 118 2561 Финтаун",
     "emailText": "Hello@finsweet.com 020 7993 2905"

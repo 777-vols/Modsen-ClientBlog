@@ -17,6 +17,11 @@
     "descriptionText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "buttonText": "Read More >"
   },
+  "joinOurTeam": {
+    "titleText": "Join our team to be a part of our story",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Join Now"
+  },
   "footer": {
     "titleText": "Subscribe to our news letter to get latest updates and news",
     "emailPlaceholderText": "Enter Your Email",

@@ -3,6 +3,7 @@ $color-white: rgba(255, 255, 255, 1);
 $color-yellow: rgba(255, 208, 80, 1);
 $color-red: rgb(255, 80, 80);
 $color-dark-grey: rgba(76, 76, 76, 1);
+$color-medium-grey: rgba(109, 110, 118, 1);
 $color-footer-content: rgba(76, 76, 76, 0.2);
 $color-modal-background: rgba(76, 76, 76, 0.6);
 $color-home-hero-gradient: radial-gradient(
@@ -112,6 +113,8 @@ $fontWeight-s: 400;
   cursor: pointer;
   border: none;
   height: 56px;
+  width: fit-content;
+  padding: 0 $space-medium-s;
   font-family: var(--sen-font);
   font-size: $fontSize-medium-s;
 }

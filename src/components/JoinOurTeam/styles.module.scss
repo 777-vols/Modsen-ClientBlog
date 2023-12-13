@@ -1,0 +1,41 @@
+.wrapper {
+  @include container;
+  @include flex-center-horizontally;
+}
+
+.content {
+  @include flex-direction-column;
+
+  padding: $space-large-xxl $space-zero;
+  max-width: 414px;
+  width: 100%;
+}
+
+.title {
+  font-size: $fontSize-large-m;
+  line-height: 48px;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin-top: $space-small-l;
+  font-family: var(--inter-font);
+  color: $color-medium-grey;
+  font-size: $fontSize-small-xl;
+  line-height: 28px;
+}
+
+.joinUsButton {
+  @include yellowButton;
+  @include flex-center;
+
+  margin: $space-zero auto;
+  margin-top: $space-small-xxl;
+
+  &:hover {
+    background: $color-dark-blue;
+    color: $color-yellow;
+  }
+}

@@ -1,12 +1,12 @@
 import { Navbar } from '@/components';
 import { getDictionary } from '@/lib/getDictionary';
+import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
-import { IProps } from './types';
 
 const { wrapper, container } = styles;
 
-const LayoutNavbar = async ({ locale }: IProps) => {
+const LayoutNavbar = async ({ locale }: ILocaleProps) => {
   const { navbar } = await getDictionary(locale);
 
   return (

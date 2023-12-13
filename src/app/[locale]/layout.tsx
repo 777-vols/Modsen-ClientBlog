@@ -21,7 +21,7 @@ export default function RootLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-} & IPageLocale) {
+} & ILocaleParams) {
   return (
     <html lang={locale}>
       <body className={`${inter.variable} ${sen.variable}`}>

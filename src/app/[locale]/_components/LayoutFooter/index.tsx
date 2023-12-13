@@ -1,9 +1,9 @@
 import { Navbar } from '@/components';
 import { socials } from '@/constants/socials';
 import { getDictionary } from '@/lib/getDictionary';
+import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
-import { IProps } from './types';
 
 const {
   wrapper,
@@ -20,7 +20,7 @@ const {
   socialLink,
 } = styles;
 
-const LayoutFooter = async ({ locale }: IProps) => {
+const LayoutFooter = async ({ locale }: ILocaleProps) => {
   const { navbar, footer } = await getDictionary(locale);
   const { titleText, subscribeButtonText, emailPlaceholderText, adressText, emailText } = footer;
 

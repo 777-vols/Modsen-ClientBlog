@@ -1,6 +1,6 @@
 .wrapper {
-  display: flex;
-  align-items: center;
+  @include flex-center-vertical;
+
   justify-content: space-between;
   font-family: var(--inter-font);
   color: $color-white;
@@ -8,13 +8,12 @@
 
 .headerTitle {
   cursor: pointer;
-  font-size: 24px;
+  font-size: $fontSize-medium-l;
   font-weight: 700;
 }
 
 .navWrapper {
-  display: flex;
-  align-items: center;
+  @include flex-center-vertical;
 }
 
 .linksWrapper {
@@ -22,8 +21,8 @@
 }
 
 .itemLink {
-  padding-left: 24px;
-  font-size: 16px;
+  padding-left: $space-small-xl;
+  font-size: $fontSize-small-xl;
   font-weight: 400;
   transition: 0.2s;
 
@@ -34,8 +33,8 @@
 }
 
 .activeLink {
-  padding-left: 24px;
-  font-size: 16px;
+  padding-left: $space-small-xl;
+  font-size: $fontSize-small-xl;
   font-weight: 400;
   transform: scale(1.15);
   color: $color-yellow;
@@ -44,10 +43,10 @@
 .videoButton {
   @include button;
 
-  margin-left: 30px;
+  margin-left: $space-small-xxl;
   color: $color-dark-blue;
   background: $color-white;
-  padding: 15px 45px;
+  padding: $space-zero $space-medium-s;
   transition: 0.2s;
 
   &:hover {

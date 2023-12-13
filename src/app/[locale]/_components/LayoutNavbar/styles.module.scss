@@ -1,10 +1,10 @@
 .wrapper {
-  display: flex;
-  align-items: center;
+  @include flex-center-vertical;
+
   background: $color-dark-blue;
   height: 80px;
-  padding-left: 56px;
-  padding-right: 30px;
+  padding-left: $space-medium-l;
+  padding-right: $space-small-xxl;
 }
 
 .container {

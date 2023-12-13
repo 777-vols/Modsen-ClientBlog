@@ -1,26 +1,96 @@
 $color-dark-blue: rgba(35, 37, 54, 1);
 $color-dark-grey: rgba(76, 76, 76, 1);
-$color-footer-content: rgba(76, 76, 76, 0.2);
 $color-white: rgba(255, 255, 255, 1);
 $color-yellow: rgba(255, 208, 80, 1);
-
-$homeHeroGradient: radial-gradient(
+$color-footer-content: rgba(76, 76, 76, 0.2);
+$color-home-hero-gradient: radial-gradient(
   80.99% 71.93% at 74.58% 0%,
   rgba(0, 0, 0, 0) 0%,
   rgba(0, 0, 0, 0.6) 100%
 );
 
+$screen-big: 1920px;
+$screen-laptop: 1280px;
+$screen-tablet: 821px;
+$screen-mobile: 480px;
+
+$fontSize-large-xl: 56px;
+$fontSize-large-l: 48px;
+$fontSize-large-m: 36px;
+$fontSize-large-s: 28px;
+$fontSize-medium-xl: 26px;
+$fontSize-medium-l: 24px;
+$fontSize-medium-m: 22px;
+$fontSize-medium-s: 18px;
+$fontSize-small-xl: 16px;
+$fontSize-small-l: 14px;
+$fontSize-small-m: 12px;
+$fontSize-small-s: 10px;
+
+$space-large-xxl: 128px;
+$space-large-xl: 120px;
+$space-large-l: 112px;
+$space-large-m: 92px;
+$space-large-s: 80px;
+$space-medium-xxl: 73px;
+$space-medium-xl: 65px;
+$space-medium-l: 60px;
+$space-medium-m: 50px;
+$space-medium-s: 45px;
+$space-small-xxl: 30px;
+$space-small-xl: 24px;
+$space-small-l: 16px;
+$space-small-m: 12px;
+$space-small-s: 8px;
+$space-zero: 0px;
+
+$fontWeight-xl: 900;
+$fontWeight-l: 700;
+$fontWeight-m: 600;
+$fontWeight-s: 400;
+
+@mixin maxSize {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontally {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-direction-column {
+  display: flex;
+  justify-content: space-between;
+}
+
 @mixin wrapper {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: $space-zero auto;
   width: 100%;
   height: 100%;
 }
 
 @mixin container {
-  padding: 0 20px;
+  padding: $space-zero 20px;
   max-width: 1320px;
-  margin: 0 auto;
+  margin: $space-zero auto;
   width: 100%;
   max-height: 100%;
 }
@@ -28,6 +98,7 @@ $homeHeroGradient: radial-gradient(
 @mixin button {
   cursor: pointer;
   border: none;
+  height: 56px;
   font-family: var(--sen-font);
-  font-size: 18px;
+  font-size: $fontSize-medium-s;
 }

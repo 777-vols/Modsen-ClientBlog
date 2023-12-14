@@ -24,8 +24,14 @@
   },
   "footer": {
     "titleText": "Subscribe to our news letter to get latest updates and news",
-    "emailPlaceholderText": "Enter Your Email",
-    "subscribeButtonText": "Subscribe",
+    "footerForm": {
+      "successMessageText": "Success: ",
+      "errorMessageText": "Error sending message(",
+      "emailPlaceholderText": "Enter your email",
+      "namePlaceholderText": "Enter your name",
+      "messagePlaceholderText": "Enter message text",
+      "subscribeButtonText": "Subscribe"
+    },
     "adressText": "Finstreet 118 2561 Fintown",
     "emailText": "Hello@finsweet.com 020 7993 2905"
   }

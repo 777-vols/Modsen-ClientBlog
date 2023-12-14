@@ -3,6 +3,7 @@ import { socials } from '@/constants/socials';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
+import SendMessageForm from './SendMessageForm';
 import styles from './styles.module.scss';
 
 const {
@@ -10,9 +11,6 @@ const {
   container,
   content,
   subscribeText,
-  form,
-  formInput,
-  formButton,
   info,
   contacts,
   contactItem,
@@ -22,7 +20,7 @@ const {
 
 const LayoutFooter = async ({ locale }: ILocaleProps) => {
   const { navbar, footer } = await getDictionary(locale);
-  const { titleText, subscribeButtonText, emailPlaceholderText, adressText, emailText } = footer;
+  const { titleText, adressText, emailText, footerForm } = footer;
 
   return (
     <footer className={wrapper}>
@@ -30,12 +28,8 @@ const LayoutFooter = async ({ locale }: ILocaleProps) => {
         <Navbar navbar={navbar} locale={locale} isFooterNav />
         <div className={content}>
           <h3 className={subscribeText}>{titleText}</h3>
-          <form className={form}>
-            <input className={formInput} placeholder={emailPlaceholderText} />
-            <button className={formButton} type="submit">
-              {subscribeButtonText}
-            </button>
-          </form>
+
+          <SendMessageForm footerForm={footerForm} />
         </div>
         <div className={info}>
           <div className={contacts}>

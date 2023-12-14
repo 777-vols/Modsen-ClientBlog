@@ -28,31 +28,6 @@
   max-width: 50%;
 }
 
-.form {
-  @include flex-center-horizontally;
-
-  flex: 10 2 50%;
-  min-width: 450px;
-}
-
-.formInput {
-  background: transparent;
-  color: $color-white;
-  border: 1px solid $color-dark-grey;
-  padding: $space-zero 25px;
-  height: 56px;
-  max-width: 323px;
-  width: 100%;
-  font-size: $fontSize-small-xl;
-  font-family: var(--inter-font);
-}
-
-.formButton {
-  @include yellowButton;
-
-  margin-left: $space-small-xl;
-}
-
 .info {
   @include flex-space-between;
 }

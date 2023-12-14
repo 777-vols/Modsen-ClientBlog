@@ -8,7 +8,7 @@ import { Portal } from 'react-portal';
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
 import { urls } from '@/constants/urls';
 import { activePathHelper, getLinks } from '@/helpers';
-import { useIsMounted } from '@/hooks/useMounted';
+import { useIsMounted } from '@/hooks/useIsMounted';
 import { i18n } from '@/lib/i18n.config';
 
 import styles from './styles.module.scss';

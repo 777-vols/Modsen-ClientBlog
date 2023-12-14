@@ -24,8 +24,14 @@
   },
   "footer": {
     "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
-    "emailPlaceholderText": "Введите свой email",
-    "subscribeButtonText": "Подписаться",
+    "footerForm": {
+      "successMessageText": "Готово: ",
+      "errorMessageText": "Ошибка отправки сообщения(",
+      "emailPlaceholderText": "Введите ваш email",
+      "namePlaceholderText": "Введите ваше имя",
+      "messagePlaceholderText": "Введите текст сообщения",
+      "subscribeButtonText": "Подписаться"
+    },
     "adressText": "Финстрит 118 2561 Финтаун",
     "emailText": "Hello@finsweet.com 020 7993 2905"
   }

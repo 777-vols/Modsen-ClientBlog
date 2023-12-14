@@ -4,7 +4,7 @@ import { Locale } from '@/lib/i18n.config';
 
 export const getLinks = (
   locale: Locale,
-  linksNames: DictionaryType['linksNames'],
+  linksNames: DictionaryType['navbar']['linksNames'],
   isFooterNav?: boolean,
 ) => {
   const { home, blog, aboutUs, contactUs, privacyPolicy } = linksNames;

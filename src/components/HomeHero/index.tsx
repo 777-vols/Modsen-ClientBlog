@@ -33,7 +33,7 @@ const HomeHero = async ({ locale }: ILocaleProps) => {
             <span className={authorName}>{infoText[1]}</span>
             {infoText[2]}
           </span>
-          <span className={description}>{descriptionText}</span>
+          <p className={description}>{descriptionText}</p>
           <button className={readMoreButton} type="button">
             {buttonText}
           </button>

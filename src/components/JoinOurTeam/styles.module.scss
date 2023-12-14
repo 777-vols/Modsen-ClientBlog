@@ -19,23 +19,15 @@
 }
 
 .description {
+  @include descriptionText;
+
   text-align: center;
-  margin-top: $space-small-l;
-  font-family: var(--inter-font);
-  color: $color-medium-grey;
-  font-size: $fontSize-small-xl;
-  line-height: 28px;
 }
 
-.joinUsButton {
-  @include yellowButton;
+.joinUsLink {
+  @include yellowButtonWithDarkBg;
   @include flex-center;
 
   margin: $space-zero auto;
   margin-top: $space-small-xxl;
-
-  &:hover {
-    background: $color-dark-blue;
-    color: $color-yellow;
-  }
 }

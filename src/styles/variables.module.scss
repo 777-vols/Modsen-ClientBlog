@@ -142,3 +142,20 @@ $fontWeight-s: 400;
     background: $color-white;
   }
 }
+
+@mixin yellowButtonWithDarkBg {
+  @include yellowButton;
+
+  &:hover {
+    background: $color-dark-blue;
+    color: $color-yellow;
+  }
+}
+
+@mixin descriptionText {
+  margin-top: $space-small-l;
+  font-family: var(--inter-font);
+  color: $color-medium-grey;
+  font-size: $fontSize-small-xl;
+  line-height: 28px;
+}

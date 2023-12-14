@@ -1,6 +1,9 @@
 import Image from 'next/image';
 
 export const allImages = {
+  whyWeStartedBanner: (
+    <Image src="/assets/whyWeStartedBanner.webp" alt="whyWeStarted-banner" fill />
+  ),
   footerIcons: {
     twitter: <Image src="/assets/footer/twitter.svg" alt="twitter-icon" height={16} width={16} />,
     facebook: (

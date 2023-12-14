@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 const { contactUs } = urls;
 
-const { wrapper, content, title, description, joinUsButton } = styles;
+const { wrapper, content, title, description, joinUsLink } = styles;
 
 const JoinOurTeam = async ({ locale }: ILocaleProps) => {
   const { joinOurTeam } = await getDictionary(locale);
@@ -18,8 +18,8 @@ const JoinOurTeam = async ({ locale }: ILocaleProps) => {
     <section className={wrapper}>
       <div className={content}>
         <h3 className={title}>{titleText}</h3>
-        <span className={description}>{descriptionText}</span>
-        <Link className={joinUsButton} href={`/${locale}${contactUs}`}>
+        <p className={description}>{descriptionText}</p>
+        <Link className={joinUsLink} href={`/${locale}${contactUs}`}>
           {buttonText}
         </Link>
       </div>

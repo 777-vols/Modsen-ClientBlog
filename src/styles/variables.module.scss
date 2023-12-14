@@ -91,8 +91,8 @@ $fontWeight-s: 400;
 }
 
 @mixin container {
-  padding: $space-zero 20px;
-  max-width: 1320px;
+  padding: $space-zero $space-small-xxl;
+  max-width: 1340px;
   margin: $space-zero auto;
   width: 100%;
   max-height: 100%;

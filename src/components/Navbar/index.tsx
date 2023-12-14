@@ -8,12 +8,22 @@ import { Portal } from 'react-portal';
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
 import { urls } from '@/constants/urls';
 import { activePathHelper, getLinks } from '@/helpers';
+import { useIsMounted } from '@/hooks/useMounted';
+import { i18n } from '@/lib/i18n.config';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
-const { wrapper, headerTitle, navWrapper, linksWrapper, itemLink, activeLink, videoButton } =
-  styles;
+const {
+  wrapper,
+  headerTitle,
+  navWrapper,
+  linksWrapper,
+  itemLink,
+  activeLink,
+  videoButton,
+  language,
+} = styles;
 
 const { home } = urls;
 
@@ -21,7 +31,11 @@ const Navbar: FC<IProps> = ({ navbar, locale, isFooterNav }) => {
   const { title, linksNames, videoButtonName } = navbar;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const mounted = useIsMounted();
   const pathname = usePathname();
+  const splittedPathname = pathname.split('/');
+  const [, currentLanguage, ...restUrl] = splittedPathname;
 
   const linksList = useMemo(
     () =>
@@ -48,13 +62,27 @@ const Navbar: FC<IProps> = ({ navbar, locale, isFooterNav }) => {
         <nav>
           <ul className={linksWrapper}>{linksList}</ul>
         </nav>
+
         {!isFooterNav && (
-          <button className={videoButton} type="button" onClick={handleOpenCloseModal}>
-            {videoButtonName}
-          </button>
+          <>
+            <button className={videoButton} type="button" onClick={handleOpenCloseModal}>
+              {videoButtonName}
+            </button>
+            <Link
+              className={language}
+              href={
+                currentLanguage === i18n.locales[0]
+                  ? `/${i18n.locales[1]}/${restUrl.join('/')}`
+                  : `/${i18n.locales[0]}/${restUrl.join('/')}`
+              }>
+              {currentLanguage === i18n.locales[0] ? i18n.locales[1] : i18n.locales[0]}
+            </Link>
+          </>
         )}
       </div>
-      <Portal>{isModalOpen && <AboutUsModal handleCloseModal={handleOpenCloseModal} />}</Portal>
+      {mounted && (
+        <Portal>{isModalOpen && <AboutUsModal handleCloseModal={handleOpenCloseModal} />}</Portal>
+      )}
     </div>
   );
 };

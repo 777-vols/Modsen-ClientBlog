@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { allImages } from '@/constants/allImages';
 import { urls } from '@/constants/urls';
+import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
@@ -12,20 +13,23 @@ const { whyWeStartedBanner } = allImages;
 
 const { wrapper, bannerWrapper, content, subtitle, title, description, ourStoryLink } = styles;
 
-const WhyWeStarted = ({ locale }: ILocaleProps) => (
-  <section className={wrapper}>
-    <div className={bannerWrapper}>{whyWeStartedBanner}</div>
-    <div className={content}>
-      <h5 className={subtitle}>WHY WE STARTED</h5>
-      <h3 className={title}>It started out as a simple idea and evolved into our passion</h3>
-      <p className={description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip.
-      </p>
-      <Link className={ourStoryLink} href={`/${locale}${aboutUs}`}>{`Discover our story >`}</Link>
-    </div>
-  </section>
-);
+const WhyWeStarted = async ({ locale }: ILocaleProps) => {
+  const { whyWeStarted } = await getDictionary(locale);
+  const { titleText, subtitleText, descriptionText, buttonText } = whyWeStarted;
+
+  return (
+    <section className={wrapper}>
+      <div className={bannerWrapper}>{whyWeStartedBanner}</div>
+      <div className={content}>
+        <h5 className={subtitle}>{subtitleText}</h5>
+        <h3 className={title}>{titleText}</h3>
+        <p className={description}>{descriptionText}</p>
+        <Link className={ourStoryLink} href={`/${locale}${aboutUs}`}>
+          {buttonText}
+        </Link>
+      </div>
+    </section>
+  );
+};
 
 export default WhyWeStarted;

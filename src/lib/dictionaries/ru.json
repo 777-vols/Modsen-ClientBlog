@@ -22,6 +22,25 @@
     "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     "buttonText": "Присоедениться сейчас"
   },
+  "aboutUsBlock": {
+    "aboutUs": {
+      "aboutUsTitle": "Мы — сообщество авторов контента, которые делятся своими знаниями.",
+      "aboutUsSubtitle": "О НАС",
+      "aboutUsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "linkText": "Читать далее >"
+    },
+    "ourMission": {
+      "ourMissionTitle": "Создание ценного контента для креативщиков по всему миру",
+      "ourMissionSubtitle": "Наша миссия",
+      "ourMissionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  "whyWeStarted": {
+    "titleText": "Все началось с простой идеи и превратилось в нашу страсть.",
+    "subtitleText": "ПОЧЕМУ МЫ НАЧАЛИ",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    "buttonText": "Наша история >"
+  },
   "footer": {
     "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
     "footerForm": {

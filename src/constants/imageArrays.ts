@@ -1,8 +1,8 @@
 import { allImages } from './allImages';
 
-const { footerIcons, logoList } = allImages;
+const { footerIcons, logoImages } = allImages;
 const { twitter, facebook, instagram, linkedIn } = footerIcons;
-const { logo0, logo1, logo2, logo3, logo4, logo5 } = logoList;
+const { logo0, logo1, logo2, logo3, logo4, logo5 } = logoImages;
 
 export const socials = [
   { icon: facebook, href: 'https://www.facebook.com' },

@@ -46,6 +46,27 @@
       "readMoreLinkText": "Читать далее >"
     }
   },
+  "category": {
+    "titleText": "Choose A Catagory",
+    "categoriesList": {
+      "business": {
+        "titleText": "Бизнес",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "startup": {
+        "titleText": "Стартап",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "economy": {
+        "titleText": "Экономика",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "technology": {
+        "titleText": "Технологии",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      }
+    }
+  },
   "whyWeStarted": {
     "titleText": "Все началось с простой идеи и превратилось в нашу страсть.",
     "subtitleText": "ПОЧЕМУ МЫ НАЧАЛИ",

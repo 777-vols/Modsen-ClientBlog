@@ -2,8 +2,30 @@ import Image from 'next/image';
 
 export const allImages = {
   whyWeStartedBanner: <Image src="/assets/whyWeStartedBanner.webp" alt="whyWeStarted" fill />,
-  featuredPostImage: <Image src="/assets/featuredPost.webp" alt="featuredPost" fill />,
-  logoList: {
+  categoryImages: {
+    business: (
+      <Image src="/assets/chooseCategory/business.svg" alt="business" height={48} width={48} />
+    ),
+    startup: (
+      <Image src="/assets/chooseCategory/startup.svg" alt="startup" height={23} width={23} />
+    ),
+    economy: (
+      <Image src="/assets/chooseCategory/economy.svg" alt="economy" height={48} width={48} />
+    ),
+    technology: (
+      <Image src="/assets/chooseCategory/technology.svg" alt="technology" height={48} width={48} />
+    ),
+  },
+  featuredPostImage: (
+    <Image
+      src="/assets/featuredPost.webp"
+      alt="featuredPost"
+      fill
+      priority
+      sizes="height: 352px, width: 100%"
+    />
+  ),
+  logoImages: {
     logo0: <Image src="/assets/logoList/logo0.svg" alt="logo-icon" height={52} width={136} />,
     logo1: <Image src="/assets/logoList/logo1.svg" alt="logo-icon" height={32} width={160} />,
     logo2: <Image src="/assets/logoList/logo2.svg" alt="logo-icon" height={32} width={136} />,

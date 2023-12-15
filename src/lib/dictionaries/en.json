@@ -46,6 +46,27 @@
       "readMoreLinkText": "Read More >"
     }
   },
+  "category": {
+    "titleText": "Choose A Catagory",
+    "categoriesList": {
+      "business": {
+        "titleText": "Business",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "startup": {
+        "titleText": "Startup",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "economy": {
+        "titleText": "Economy",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "technology": {
+        "titleText": "Technology",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      }
+    }
+  },
   "whyWeStarted": {
     "titleText": "It started out as a simple idea and evolved into our passion",
     "subtitleText": "WHY WE STARTED",

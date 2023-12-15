@@ -1,0 +1,17 @@
+.wrapper {
+  @include container;
+
+  margin-top: $space-large-xxl;
+}
+
+.title {
+  @include blockTitle;
+  @include flex-center-horizontally;
+
+  margin-bottom: $space-medium-s;
+}
+
+.authors {
+  display: flex;
+  gap: 32px;
+}

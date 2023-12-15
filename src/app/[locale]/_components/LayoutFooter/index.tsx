@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { v4 } from 'uuid';
 
 import { Navbar } from '@/components';
@@ -40,9 +41,9 @@ const LayoutFooter = async ({ locale }: ILocaleProps) => {
           </div>
           <div className={socialsWrapper}>
             {socials.map(({ icon, href }) => (
-              <a className={socialLink} key={v4()} href={href}>
+              <Link className={socialLink} key={v4()} href={href}>
                 {icon}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

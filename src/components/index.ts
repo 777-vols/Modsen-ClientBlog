@@ -1,4 +1,5 @@
 export { default as AboutUs } from './AboutUs';
+export { default as AuthorsList } from './AuthorsList';
 export { default as ChooseCategory } from './ChooseCategory';
 export { default as HomeHero } from './HomeHero';
 export { default as JoinOurTeam } from './JoinOurTeam';

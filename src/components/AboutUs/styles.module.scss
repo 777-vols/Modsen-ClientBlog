@@ -38,10 +38,10 @@
 }
 
 .smallTitle {
+  @include mediumTitle;
+
   margin-top: $space-small-xl;
   margin-bottom: $space-small-l;
-  line-height: 40px;
-  font-size: $fontSize-large-s;
 }
 
 .bigTitle {

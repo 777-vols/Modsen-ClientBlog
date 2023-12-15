@@ -1,4 +1,5 @@
 export interface IPost {
+  id: number;
   title: string;
   createdDate: Date;
   tags: string[];

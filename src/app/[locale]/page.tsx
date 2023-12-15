@@ -1,5 +1,6 @@
 import {
   AboutUs,
+  AuthorsList,
   ChooseCategory,
   HomeHero,
   JoinOurTeam,
@@ -16,6 +17,7 @@ const Home = ({ params: { locale } }: ILocaleParams) => {
       <AboutUs locale={locale} />
       <ChooseCategory locale={locale} />
       <WhyWeStarted locale={locale} />
+      <AuthorsList locale={locale} />
       <LogoList />
       <JoinOurTeam locale={locale} />
     </main>

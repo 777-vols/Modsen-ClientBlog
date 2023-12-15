@@ -2,6 +2,44 @@ import Image from 'next/image';
 
 export const allImages = {
   whyWeStartedBanner: <Image src="/assets/whyWeStartedBanner.webp" alt="whyWeStarted" fill />,
+  authors: {
+    author0: (
+      <Image
+        src="/assets/authors/author1.png"
+        alt="author"
+        fill
+        priority
+        sizes="height: 100%, width: 100%"
+      />
+    ),
+    author1: (
+      <Image
+        src="/assets/authors/author2.png"
+        alt="author"
+        fill
+        priority
+        sizes="height: 100%, width: 100%"
+      />
+    ),
+    author2: (
+      <Image
+        src="/assets/authors/author3.png"
+        alt="author"
+        fill
+        priority
+        sizes="height: 100%, width: 100%"
+      />
+    ),
+    author3: (
+      <Image
+        src="/assets/authors/author4.png"
+        alt="author"
+        fill
+        priority
+        sizes="height: 100%, width: 100%"
+      />
+    ),
+  },
   categoryImages: {
     business: (
       <Image src="/assets/chooseCategory/business.svg" alt="business" height={48} width={48} />

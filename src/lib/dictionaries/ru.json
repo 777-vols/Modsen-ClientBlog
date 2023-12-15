@@ -47,7 +47,7 @@
     }
   },
   "category": {
-    "titleText": "Choose A Catagory",
+    "titleText": "Выберите категорию",
     "categoriesList": {
       "business": {
         "titleText": "Бизнес",
@@ -72,6 +72,9 @@
     "subtitleText": "ПОЧЕМУ МЫ НАЧАЛИ",
     "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
     "buttonText": "Наша история >"
+  },
+  "authorsList": {
+    "titleText": "Список Авторов"
   },
   "footer": {
     "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",

@@ -1,1 +1,3 @@
-export type TypeCategoryKey = 'business' | 'startup' | 'economy' | 'technology';
+import { allImages } from '@/constants/allImages';
+
+export type TypeCategoryKey = keyof (typeof allImages)['categoryImages'];

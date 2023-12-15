@@ -12,7 +12,7 @@
 }
 
 .postWrapper {
-  border: 1px solid $color-footer-content;
+  border: 1px solid rgba(244, 244, 244, 1);
   padding: $space-small-xxl;
   flex-grow: 1;
 }
@@ -32,10 +32,8 @@
 }
 
 .postTittle {
-  font-size: $fontSize-large-s;
-  font-weight: $fontWeight-l;
-  line-height: 40px;
-  letter-spacing: -1px;
+  @include mediumTitle;
+
   margin-top: $space-small-l;
 }
 

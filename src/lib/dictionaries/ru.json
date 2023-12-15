@@ -35,6 +35,17 @@
       "ourMissionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   },
+  "postsBlock": {
+    "allPosts": {
+      "titleText": "Все посты",
+      "viewAllLinkText": "Смореть все"
+    },
+    "postInfo": "Автор: ",
+    "featuredPost": {
+      "titleText": "Лучший пост",
+      "readMoreLinkText": "Читать далее >"
+    }
+  },
   "whyWeStarted": {
     "titleText": "Все началось с простой идеи и превратилось в нашу страсть.",
     "subtitleText": "ПОЧЕМУ МЫ НАЧАЛИ",

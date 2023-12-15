@@ -35,6 +35,17 @@
       "ourMissionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   },
+  "postsBlock": {
+    "allPosts": {
+      "titleText": "All Posts",
+      "viewAllLinkText": "View All"
+    },
+    "postInfo": "By ",
+    "featuredPost": {
+      "titleText": "Featured Post",
+      "readMoreLinkText": "Read More >"
+    }
+  },
   "whyWeStarted": {
     "titleText": "It started out as a simple idea and evolved into our passion",
     "subtitleText": "WHY WE STARTED",

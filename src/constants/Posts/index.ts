@@ -1,15 +1,19 @@
-export interface IPost {
-  title: string;
-  createdDate: Date;
-  tags: string[];
-  category: string;
-  author: string;
-}
+import { IPost } from './types';
+
+export const featuredPost: IPost = {
+  title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  description:
+    'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  createdDate: new Date(2022, 4, 23),
+  tags: ['business'],
+  category: 'startup',
+  author: 'John Doe',
+};
 
 export const allPosts: IPost[] = [
   {
     title: 'Step-by-step guide to choosing great font pairs',
-    createdDate: new Date(2021, 1, 23),
+    createdDate: new Date(2021, 0, 23),
     tags: ['business', 'technology'],
     category: 'startup',
     author: 'James West',

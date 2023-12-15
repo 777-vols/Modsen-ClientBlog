@@ -1,7 +1,8 @@
 .wrapper {
-  @include maxSize;
-
+  width: 100%;
   max-width: 733px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -13,4 +14,43 @@
 .postWrapper {
   border: 1px solid $color-footer-content;
   padding: $space-small-xxl;
+  flex-grow: 1;
+}
+
+.imageWrapper {
+  height: 352px;
+  width: 100%;
+  position: relative;
+  margin-bottom: $space-small-xxl;
+}
+
+.info {
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-m;
+  line-height: 20px;
+  font-family: var(--inter-font);
+}
+
+.postTittle {
+  font-size: $fontSize-large-s;
+  font-weight: $fontWeight-l;
+  line-height: 40px;
+  letter-spacing: -1px;
+  margin-top: $space-small-l;
+}
+
+.authorLink {
+  @include purpleLink;
+}
+
+.description {
+  @include descriptionText;
+
+  margin-top: $space-small-l;
+  margin-bottom: $space-small-xxl;
+}
+
+.readMoreLink {
+  @include yellowButtonWithDarkBg;
+  @include flex-center;
 }

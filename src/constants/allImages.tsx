@@ -1,9 +1,8 @@
 import Image from 'next/image';
 
 export const allImages = {
-  whyWeStartedBanner: (
-    <Image src="/assets/whyWeStartedBanner.webp" alt="whyWeStarted-banner" fill />
-  ),
+  whyWeStartedBanner: <Image src="/assets/whyWeStartedBanner.webp" alt="whyWeStarted" fill />,
+  featuredPostImage: <Image src="/assets/featuredPost.webp" alt="featuredPost" fill />,
   logoList: {
     logo0: <Image src="/assets/logoList/logo0.svg" alt="logo-icon" height={52} width={136} />,
     logo1: <Image src="/assets/logoList/logo1.svg" alt="logo-icon" height={32} width={160} />,

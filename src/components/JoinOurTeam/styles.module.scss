@@ -1,13 +1,12 @@
 .wrapper {
   @include container;
   @include flex-center-horizontally;
-
-  margin: $space-large-xxl $space-zero;
 }
 
 .content {
   @include flex-direction-column;
 
+  padding: $space-large-xxl $space-zero;
   max-width: 414px;
   width: 100%;
 }

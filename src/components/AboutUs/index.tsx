@@ -6,7 +6,7 @@ import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
 
-const { category } = urls;
+const { aboutUs } = urls;
 
 const {
   wrapper,
@@ -23,8 +23,8 @@ const {
 
 const AboutUs = async ({ locale }: ILocaleProps) => {
   const { aboutUsBlock } = await getDictionary(locale);
-  const { aboutUs, ourMission } = aboutUsBlock;
-  const { aboutUsTitle, aboutUsSubtitle, aboutUsDescription, linkText } = aboutUs;
+  const { aboutUs: aboutUsData, ourMission } = aboutUsBlock;
+  const { aboutUsTitle, aboutUsSubtitle, aboutUsDescription, linkText } = aboutUsData;
   const { ourMissionTitle, ourMissionSubtitle, ourMissionDescription } = ourMission;
 
   return (
@@ -37,7 +37,7 @@ const AboutUs = async ({ locale }: ILocaleProps) => {
           <h5 className={subtitle}>{aboutUsSubtitle}</h5>
           <h3 className={bigTitle}>{aboutUsTitle}</h3>
           <p className={description}>{aboutUsDescription}</p>
-          <Link className={readMoreLink} href={`/${locale}${category}`}>
+          <Link className={readMoreLink} href={`/${locale}${aboutUs}`}>
             {linkText}
           </Link>
         </div>

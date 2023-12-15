@@ -1,0 +1,14 @@
+.wrapper {
+  @include container;
+}
+
+.logoslist {
+  @include flex-space-between;
+
+  flex-wrap: wrap;
+  padding: $space-large-m $space-zero;
+}
+
+.logoWrapper {
+  @include flex-center-vertical;
+}

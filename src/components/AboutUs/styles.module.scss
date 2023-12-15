@@ -1,7 +1,5 @@
 .wrapper {
   @include container;
-
-  margin-top: $space-large-xxl;
 }
 
 .shape {
@@ -47,12 +45,11 @@
 }
 
 .bigTitle {
+  @include blockTitle;
+
   margin-top: $space-small-xl;
   margin-bottom: $space-small-l;
-  font-size: $fontSize-large-m;
-  font-weight: $fontWeight-l;
   letter-spacing: -1px;
-  line-height: 48px;
 }
 
 .description {

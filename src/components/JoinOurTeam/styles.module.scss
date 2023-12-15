@@ -12,9 +12,8 @@
 }
 
 .title {
-  font-size: $fontSize-large-m;
-  line-height: 48px;
-  letter-spacing: -2px;
+  @include blockTitle;
+
   text-align: center;
 }
 

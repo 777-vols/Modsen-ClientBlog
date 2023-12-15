@@ -1,9 +1,10 @@
-import { AboutUs, HomeHero, JoinOurTeam, LogoList, WhyWeStarted } from '@/components';
+import { AboutUs, HomeHero, JoinOurTeam, LogoList, Posts, WhyWeStarted } from '@/components';
 
 const Home = ({ params: { locale } }: ILocaleParams) => {
   return (
     <main>
       <HomeHero locale={locale} />
+      <Posts locale={locale} />
       <AboutUs locale={locale} />
       <WhyWeStarted locale={locale} />
       <LogoList />

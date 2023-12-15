@@ -1,0 +1,23 @@
+.wrapper {
+  max-height: 181px;
+  width: 100%;
+  padding: $space-small-xl $space-small-xxl;
+}
+
+.info {
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-m;
+  line-height: 20px;
+  font-family: var(--inter-font);
+}
+
+.title {
+  font-size: $fontSize-medium-l;
+  line-height: 32px;
+  margin-top: $space-small-s;
+  max-width: 370px;
+}
+
+.authorLink {
+  @include purpleLink;
+}

@@ -154,6 +154,20 @@ $fontWeight-s: 400;
   }
 }
 
+@mixin purpleLink {
+  color: $color-purple;
+  font-size: $fontSize-small-xl;
+  line-height: 28px;
+}
+
+@mixin blockTitle {
+  font-family: var(--sen-font);
+  font-size: $fontSize-large-m;
+  font-weight: $fontWeight-l;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
 @mixin descriptionText {
   margin-top: $space-small-l;
   font-family: var(--inter-font);

@@ -1,0 +1,8 @@
+.wrapper {
+  @include container;
+
+  margin: $space-large-xxl auto;
+  display: flex;
+  gap: 32px;
+  max-height: 804px;
+}

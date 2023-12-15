@@ -1,0 +1,16 @@
+.wrapper {
+  @include maxSize;
+
+  max-width: 733px;
+}
+
+.title {
+  @include blockTitle;
+
+  margin-bottom: $space-small-xxl;
+}
+
+.postWrapper {
+  border: 1px solid $color-footer-content;
+  padding: $space-small-xxl;
+}

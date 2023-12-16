@@ -1,5 +1,6 @@
 .wrapper {
   @include container;
+  @include appearanceAnimation;
 
   background-color: $color-light-yellow;
   padding: $space-medium-xxl $space-large-l;

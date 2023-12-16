@@ -14,6 +14,7 @@
   font-weight: $fontWeight-l;
   height: 256px;
   padding-bottom: $space-small-s;
+  transition: transform 0.5s ease-in-out;
 }
 
 .author {
@@ -60,6 +61,10 @@
   border: none;
   background: $color-white;
   border-radius: 50px;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .activePrevNextButton {
@@ -74,7 +79,7 @@
   font-size: 34px;
   background: $color-dark-blue;
   border-radius: 50px;
-  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.1);

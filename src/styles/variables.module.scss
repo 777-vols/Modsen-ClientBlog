@@ -56,6 +56,19 @@ $fontWeight-l: 700;
 $fontWeight-m: 600;
 $fontWeight-s: 400;
 
+@mixin appearanceAnimation {
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: 3s show ease;
+}
+
 @mixin maxSize {
   width: 100%;
   height: 100%;

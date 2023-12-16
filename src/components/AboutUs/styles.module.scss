@@ -1,10 +1,11 @@
 .wrapper {
   @include container;
+  @include appearanceAnimation;
 }
 
 .shape {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   height: 23px;
   margin-left: 18%;

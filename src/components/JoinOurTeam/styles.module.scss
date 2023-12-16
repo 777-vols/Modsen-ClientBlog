@@ -1,6 +1,7 @@
 .wrapper {
   @include container;
   @include flex-center-horizontally;
+  @include appearanceAnimation;
 }
 
 .content {

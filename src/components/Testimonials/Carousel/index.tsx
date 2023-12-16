@@ -7,6 +7,7 @@ import { authorsArray } from '@/constants/Authors';
 import styles from './styles.module.scss';
 
 const {
+  wrapper,
   message,
   panel,
   author,
@@ -38,7 +39,7 @@ const Carousel = () => {
   };
 
   return (
-    <div>
+    <div className={wrapper}>
       <p className={message}>{review}</p>
       <div className={panel}>
         <div className={author}>

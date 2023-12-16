@@ -1,5 +1,6 @@
 .wrapper {
   @include container;
+  @include appearanceAnimation;
 
   margin-top: $space-large-xxl;
 }

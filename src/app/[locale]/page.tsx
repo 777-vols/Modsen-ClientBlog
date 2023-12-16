@@ -1,3 +1,8 @@
+'use client';
+
+import { FC, Fragment, Suspense } from 'react';
+import { v4 } from 'uuid';
+
 import {
   AboutUs,
   AuthorsList,
@@ -9,19 +14,32 @@ import {
   Testimonials,
   WhyWeStarted,
 } from '@/components';
+import { useInfinityScroll } from '@/hooks/useInfiniteScroll';
 
-const Home = ({ params: { locale } }: ILocaleParams) => {
+import Loading from './loading';
+
+const Home: FC<ILocaleParams> = ({ params: { locale } }) => {
+  const pageBlocks = [
+    <HomeHero key={v4()} locale={locale} />,
+    <Posts key={v4()} locale={locale} />,
+    <AboutUs key={v4()} locale={locale} />,
+    <ChooseCategory key={v4()} locale={locale} />,
+    <WhyWeStarted key={v4()} locale={locale} />,
+    <AuthorsList key={v4()} locale={locale} />,
+    <LogoList key={v4()} />,
+    <Testimonials key={v4()} locale={locale} />,
+    <JoinOurTeam key={v4()} locale={locale} />,
+  ];
+
+  const infinityScrollBlocks = useInfinityScroll(pageBlocks);
+
   return (
     <main>
-      <HomeHero locale={locale} />
-      <Posts locale={locale} />
-      <AboutUs locale={locale} />
-      <ChooseCategory locale={locale} />
-      <WhyWeStarted locale={locale} />
-      <AuthorsList locale={locale} />
-      <LogoList />
-      <Testimonials locale={locale} />
-      <JoinOurTeam locale={locale} />
+      <Suspense fallback={<Loading />}>
+        {infinityScrollBlocks.map((block) => (
+          <Fragment key={v4()}>{block}</Fragment>
+        ))}
+      </Suspense>
     </main>
   );
 };

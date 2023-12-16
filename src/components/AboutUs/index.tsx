@@ -21,8 +21,8 @@ const {
   readMoreLink,
 } = styles;
 
-const AboutUs = async ({ locale }: ILocaleProps) => {
-  const { aboutUsBlock } = await getDictionary(locale);
+const AboutUs = ({ locale }: ILocaleProps) => {
+  const { aboutUsBlock } = getDictionary(locale);
   const { aboutUs: aboutUsData, ourMission } = aboutUsBlock;
   const { aboutUsTitle, aboutUsSubtitle, aboutUsDescription, linkText } = aboutUsData;
   const { ourMissionTitle, ourMissionSubtitle, ourMissionDescription } = ourMission;

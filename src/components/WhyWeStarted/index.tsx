@@ -13,8 +13,8 @@ const { whyWeStartedBanner } = allImages;
 
 const { wrapper, bannerWrapper, content, subtitle, title, description, ourStoryLink } = styles;
 
-const WhyWeStarted = async ({ locale }: ILocaleProps) => {
-  const { whyWeStarted } = await getDictionary(locale);
+const WhyWeStarted = ({ locale }: ILocaleProps) => {
+  const { whyWeStarted } = getDictionary(locale);
   const { titleText, subtitleText, descriptionText, buttonText } = whyWeStarted;
 
   return (

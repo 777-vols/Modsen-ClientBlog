@@ -6,8 +6,8 @@ import styles from './styles.module.scss';
 
 const { wrapper, content, carousel, subtitle, title, description } = styles;
 
-const Testimonials = async ({ locale }: ILocaleProps) => {
-  const { testimonials } = await getDictionary(locale);
+const Testimonials = ({ locale }: ILocaleProps) => {
+  const { testimonials } = getDictionary(locale);
   const { titleText, subtitleText, descriptionText } = testimonials;
 
   return (

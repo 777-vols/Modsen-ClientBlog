@@ -10,8 +10,8 @@ const { contactUs } = urls;
 
 const { wrapper, content, title, description, joinUsLink } = styles;
 
-const JoinOurTeam = async ({ locale }: ILocaleProps) => {
-  const { joinOurTeam } = await getDictionary(locale);
+const JoinOurTeam = ({ locale }: ILocaleProps) => {
+  const { joinOurTeam } = getDictionary(locale);
   const { titleText, descriptionText, buttonText } = joinOurTeam;
 
   return (

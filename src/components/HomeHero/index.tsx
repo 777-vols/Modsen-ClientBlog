@@ -15,8 +15,8 @@ const {
   authorName,
 } = styles;
 
-const HomeHero = async ({ locale }: ILocaleProps) => {
-  const { homeHero } = await getDictionary(locale);
+const HomeHero = ({ locale }: ILocaleProps) => {
+  const { homeHero } = getDictionary(locale);
   const { titleText, subtitleText, infoText, descriptionText, buttonText } = homeHero;
 
   return (

@@ -7,8 +7,8 @@ import styles from './styles.module.scss';
 
 const { wrapper, title, authors } = styles;
 
-const AuthorsList = async ({ locale }: ILocaleProps) => {
-  const { authorsList } = await getDictionary(locale);
+const AuthorsList = ({ locale }: ILocaleProps) => {
+  const { authorsList } = getDictionary(locale);
   const { titleText } = authorsList;
 
   return (

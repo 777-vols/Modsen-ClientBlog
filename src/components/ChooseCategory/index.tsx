@@ -9,8 +9,8 @@ import { TypeCategoryKey } from './types';
 
 const { wrapper, categories, title } = styles;
 
-const ChooseCategory = async ({ locale }: ILocaleProps) => {
-  const { category } = await getDictionary(locale);
+const ChooseCategory = ({ locale }: ILocaleProps) => {
+  const { category } = getDictionary(locale);
   const { titleText, categoriesList } = category;
 
   const categoriesComponents = Object.keys(categoriesList).map((categoryKey) => (

@@ -1,13 +1,15 @@
-import 'server-only';
+import en from '@/lib/dictionaries/en.json';
+import ru from '@/lib/dictionaries/ru.json';
 
 import { Locale } from './i18n.config';
 
-const dictionaries = {
-  en: () => import('./dictionaries/en.json').then((module) => module.default),
-  ru: () => import('./dictionaries/ru.json').then((module) => module.default),
-};
+export interface Dictionary {
+  en: typeof en;
+  ru: typeof ru;
+}
 
-export const getDictionary = async (locale: Locale) =>
-  dictionaries[locale]?.() ?? dictionaries.en();
+const dictionaries: Dictionary = { en, ru };
 
-export type DictionaryType = Awaited<ReturnType<typeof getDictionary>>;
+export const getDictionary = (lang: Locale) => dictionaries[lang];
+
+export type DictionaryType = ReturnType<typeof getDictionary>;

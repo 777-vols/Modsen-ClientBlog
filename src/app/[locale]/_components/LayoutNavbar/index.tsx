@@ -6,8 +6,8 @@ import styles from './styles.module.scss';
 
 const { wrapper, container } = styles;
 
-const LayoutNavbar = async ({ locale }: ILocaleProps) => {
-  const { navbar } = await getDictionary(locale);
+const LayoutNavbar = ({ locale }: ILocaleProps) => {
+  const { navbar } = getDictionary(locale);
 
   return (
     <header className={wrapper}>

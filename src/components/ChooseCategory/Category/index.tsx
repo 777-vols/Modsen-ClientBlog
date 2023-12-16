@@ -13,8 +13,8 @@ const { categoryImages } = allImages;
 
 const { wrapper, title, description, imageWrapper } = styles;
 
-const Category = async ({ categoryKey, locale }: IProps) => {
-  const { category: categoryData } = await getDictionary(locale);
+const Category = ({ categoryKey, locale }: IProps) => {
+  const { category: categoryData } = getDictionary(locale);
   const { categoriesList } = categoryData;
   const { titleText, descriptionText } = categoriesList[categoryKey];
 

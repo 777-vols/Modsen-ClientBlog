@@ -53,14 +53,13 @@
 .disabledPrevNextButton {
   @include maxSize;
 
-  font-size: 28px;
+  font-size: 29px;
   font-weight: $fontWeight-xl;
   height: 48px;
   width: 48px;
   border: none;
   background: $color-white;
   border-radius: 50px;
-  // margin: $space-small-m;
 }
 
 .activePrevNextButton {
@@ -72,10 +71,9 @@
   border: none;
   color: $color-white;
   font-weight: $fontWeight-xl;
-  font-size: 33px;
+  font-size: 34px;
   background: $color-dark-blue;
   border-radius: 50px;
-  // margin: $space-small-m;
   transition: 0.2s;
 
   &:hover {

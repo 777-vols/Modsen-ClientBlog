@@ -13,8 +13,8 @@ const { blog } = urls;
 
 const { wrapper, title, viewAllLink, postWrapper } = styles;
 
-const AllPosts = async ({ locale }: ILocaleProps) => {
-  const { postsBlock } = await getDictionary(locale);
+const AllPosts = ({ locale }: ILocaleProps) => {
+  const { postsBlock } = getDictionary(locale);
   const { allPosts: allPostsData } = postsBlock;
   const { titleText, viewAllLinkText } = allPostsData;
 

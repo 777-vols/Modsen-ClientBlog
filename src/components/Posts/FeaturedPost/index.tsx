@@ -28,8 +28,8 @@ const {
   authorLink,
 } = styles;
 
-const FeaturedPost = async ({ locale }: ILocaleProps) => {
-  const { postsBlock } = await getDictionary(locale);
+const FeaturedPost = ({ locale }: ILocaleProps) => {
+  const { postsBlock } = getDictionary(locale);
   const { featuredPost: featuredPostData, postInfo } = postsBlock;
   const { titleText, readMoreLinkText } = featuredPostData;
 

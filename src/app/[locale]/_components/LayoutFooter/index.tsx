@@ -21,12 +21,12 @@ const {
   socialLink,
 } = styles;
 
-const LayoutFooter = async ({ locale }: ILocaleProps) => {
-  const { navbar, footer } = await getDictionary(locale);
+const LayoutFooter = ({ locale }: ILocaleProps) => {
+  const { navbar, footer } = getDictionary(locale);
   const { titleText, adressText, emailText, footerForm } = footer;
 
   return (
-    <footer className={wrapper}>
+    <footer id="footer" className={wrapper}>
       <div className={container}>
         <Navbar navbar={navbar} locale={locale} isFooterNav />
         <div className={content}>

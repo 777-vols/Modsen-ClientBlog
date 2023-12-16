@@ -7,10 +7,10 @@ import { IProps } from './types';
 
 const { wrapper, title, info, authorLink } = styles;
 
-const Post = async ({ locale, postData }: IProps) => {
+const Post = ({ locale, postData }: IProps) => {
   const { title: postTitle, createdDate, author } = postData;
 
-  const { postsBlock } = await getDictionary(locale);
+  const { postsBlock } = getDictionary(locale);
   const { postInfo } = postsBlock;
 
   return (

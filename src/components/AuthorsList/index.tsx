@@ -1,11 +1,17 @@
+import dynamic from 'next/dynamic';
+
+import Loading from '@/app/[locale]/loading';
 import { authorsArray } from '@/constants/Authors';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
-import AuthorCard from './AuthorCard';
 import styles from './styles.module.scss';
 
 const { wrapper, title, authors } = styles;
+
+const LazyLoadAuthorCard = dynamic(() => import('./AuthorCard'), {
+  loading: () => <Loading />,
+});
 
 const AuthorsList = ({ locale }: ILocaleProps) => {
   const { authorsList } = getDictionary(locale);
@@ -16,7 +22,7 @@ const AuthorsList = ({ locale }: ILocaleProps) => {
       <h3 className={title}>{titleText}</h3>
       <div className={authors}>
         {authorsArray.map((authorData) => (
-          <AuthorCard key={authorData.id} locale={locale} authorData={authorData} />
+          <LazyLoadAuthorCard key={authorData.id} locale={locale} authorData={authorData} />
         ))}
       </div>
     </section>

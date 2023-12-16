@@ -1,10 +1,16 @@
+import dynamic from 'next/dynamic';
+
+import Loading from '@/app/[locale]/loading';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
-import Carousel from './Carousel';
 import styles from './styles.module.scss';
 
 const { wrapper, content, carousel, subtitle, title, description } = styles;
+
+const LazyLoadAllPosts = dynamic(() => import('./Carousel'), {
+  loading: () => <Loading />,
+});
 
 const Testimonials = ({ locale }: ILocaleProps) => {
   const { testimonials } = getDictionary(locale);
@@ -18,7 +24,7 @@ const Testimonials = ({ locale }: ILocaleProps) => {
         <p className={description}>{descriptionText}</p>
       </div>
       <div className={carousel}>
-        <Carousel />
+        <LazyLoadAllPosts />
       </div>
     </section>
   );

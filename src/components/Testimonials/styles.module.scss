@@ -1,0 +1,37 @@
+.wrapper {
+  @include container;
+
+  background-color: $color-light-yellow;
+  padding: $space-medium-xxl $space-large-l;
+  display: flex;
+}
+
+.content {
+  flex: 4 1 300px;
+  border-right: 1px solid $color-medium-grey;
+  padding-right: $space-large-s;
+}
+
+.subtitle {
+  font-family: var(--inter-font);
+  font-size: $fontSize-small-xl;
+  font-weight: $fontWeight-m;
+  margin-bottom: $space-small-m;
+}
+
+.title {
+  @include blockTitle;
+
+  margin-bottom: $space-small-l;
+}
+
+.description {
+  font-family: var(--inter-font);
+  font-size: $fontSize-small-xl;
+  font-weight: $fontWeight-s;
+}
+
+.carousel {
+  flex: 6 2 400px;
+  padding-left: $space-large-m;
+}

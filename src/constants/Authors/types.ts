@@ -5,4 +5,5 @@ export interface IAuthor {
   jobTitle: string;
   company: string;
   from: string;
+  review: string;
 }

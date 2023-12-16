@@ -76,6 +76,11 @@
   "authorsList": {
     "titleText": "List of Authors"
   },
+  "testimonials": {
+    "titleText": "What people say about our blog",
+    "subtitleText": "TESTIMONIALS",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
   "footer": {
     "titleText": "Subscribe to our news letter to get latest updates and news",
     "footerForm": {

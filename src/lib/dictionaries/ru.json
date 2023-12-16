@@ -76,6 +76,11 @@
   "authorsList": {
     "titleText": "Список Авторов"
   },
+  "testimonials": {
+    "titleText": "Что люди говорят о нашем блоге",
+    "subtitleText": "ОТЗЫВЫ",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
   "footer": {
     "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
     "footerForm": {

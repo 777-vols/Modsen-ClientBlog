@@ -6,6 +6,7 @@ import {
   JoinOurTeam,
   LogoList,
   Posts,
+  Testimonials,
   WhyWeStarted,
 } from '@/components';
 
@@ -19,6 +20,7 @@ const Home = ({ params: { locale } }: ILocaleParams) => {
       <WhyWeStarted locale={locale} />
       <AuthorsList locale={locale} />
       <LogoList />
+      <Testimonials locale={locale} />
       <JoinOurTeam locale={locale} />
     </main>
   );

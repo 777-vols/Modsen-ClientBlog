@@ -13,6 +13,8 @@ export const authorsArray: IAuthor[] = [
     jobTitle: 'Content Writer',
     company: '@Company',
     from: 'Paris, France',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     id: 1,
@@ -21,6 +23,8 @@ export const authorsArray: IAuthor[] = [
     jobTitle: 'Content Writer',
     company: '@Company',
     from: 'London, England',
+    review:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
   {
     id: 2,
@@ -29,6 +33,8 @@ export const authorsArray: IAuthor[] = [
     jobTitle: 'Content Writer',
     company: '@Company',
     from: 'Moskow, Russia',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     id: 3,
@@ -37,5 +43,6 @@ export const authorsArray: IAuthor[] = [
     jobTitle: 'Content Writer',
     company: '@Company',
     from: 'Minsk, Belarus',
+    review: 'Subscribe to our news letter to get latest updates and news.',
   },
 ];

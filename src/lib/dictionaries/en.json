@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "title": "Modsen Client Blog",
+    "linksNames": {
+      "home": "Home",
+      "blog": "Blog",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "videoButtonName": "Video about us"
+  },
+  "homeHero": {
+    "titleText": "Step-by-step guide to choosing great font pairs",
+    "subtitleText": ["POSTED ON ", "STARTUP"],
+    "infoText": ["By ", "James West", " | May 23, 2022"],
+    "descriptionText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Read More >"
+  },
+  "joinOurTeam": {
+    "titleText": "Join our team to be a part of our story",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Join Now"
+  },
+  "aboutUsBlock": {
+    "aboutUs": {
+      "aboutUsTitle": "We are a community of content writers who share their learnings",
+      "aboutUsSubtitle": "ABOUT US",
+      "aboutUsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "linkText": "Read More >"
+    },
+    "ourMission": {
+      "ourMissionTitle": "Creating valuable content for creatives all around the world",
+      "ourMissionSubtitle": "OUR MISION",
+      "ourMissionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  "postsBlock": {
+    "allPosts": {
+      "titleText": "All Posts",
+      "viewAllLinkText": "View All"
+    },
+    "postInfo": "By ",
+    "featuredPost": {
+      "titleText": "Featured Post",
+      "readMoreLinkText": "Read More >"
+    }
+  },
+  "category": {
+    "titleText": "Choose A Catagory",
+    "categoriesList": {
+      "business": {
+        "titleText": "Business",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "startup": {
+        "titleText": "Startup",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "economy": {
+        "titleText": "Economy",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "technology": {
+        "titleText": "Technology",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      }
+    }
+  },
+  "whyWeStarted": {
+    "titleText": "It started out as a simple idea and evolved into our passion",
+    "subtitleText": "WHY WE STARTED",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    "buttonText": "Discover our story >"
+  },
+  "authorsList": {
+    "titleText": "List of Authors"
+  },
+  "testimonials": {
+    "titleText": "What people say about our blog",
+    "subtitleText": "TESTIMONIALS",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
+  "footer": {
+    "titleText": "Subscribe to our news letter to get latest updates and news",
+    "footerForm": {
+      "successMessageText": "Success: ",
+      "errorMessageText": "Error sending message(",
+      "emailPlaceholderText": "Enter your email",
+      "namePlaceholderText": "Enter your name",
+      "messagePlaceholderText": "Enter message text",
+      "subscribeButtonText": "Subscribe"
+    },
+    "adressText": "Finstreet 118 2561 Fintown",
+    "emailText": "Hello@finsweet.com 020 7993 2905"
+  }
+}

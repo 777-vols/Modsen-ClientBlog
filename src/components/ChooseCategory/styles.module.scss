@@ -1,0 +1,18 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+
+  margin-top: $space-large-xxl;
+}
+
+.categories {
+  display: flex;
+  gap: 32px;
+}
+
+.title {
+  @include blockTitle;
+  @include flex-center-horizontally;
+
+  margin-bottom: $space-medium-s;
+}

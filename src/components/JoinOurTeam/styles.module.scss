@@ -1,0 +1,33 @@
+.wrapper {
+  @include container;
+  @include flex-center-horizontally;
+  @include appearanceAnimation;
+}
+
+.content {
+  @include flex-direction-column;
+
+  padding: $space-large-xxl $space-zero;
+  max-width: 414px;
+  width: 100%;
+}
+
+.title {
+  @include blockTitle;
+
+  text-align: center;
+}
+
+.description {
+  @include descriptionText;
+
+  text-align: center;
+}
+
+.joinUsLink {
+  @include yellowButtonWithDarkBg;
+  @include flex-center;
+
+  margin: $space-zero auto;
+  margin-top: $space-small-xxl;
+}

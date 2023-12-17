@@ -1,0 +1,199 @@
+$color-dark-blue: rgba(35, 37, 54, 1);
+$color-white: rgba(255, 255, 255, 1);
+$color-lavender: rgba(244, 240, 248, 1);
+$color-yellow: rgba(255, 208, 80, 1);
+$color-light-yellow: rgba(251, 246, 234, 1);
+$color-red: rgb(255, 80, 80);
+$color-purple: rgba(89, 46, 169, 1);
+$color-dark-grey: rgba(76, 76, 76, 1);
+$color-medium-grey: rgba(109, 110, 118, 1);
+$color-light-grey: rgba(244, 244, 244, 1);
+$color-footer-content: rgba(76, 76, 76, 0.2);
+$color-modal-background: rgba(76, 76, 76, 0.6);
+$color-home-hero-gradient: radial-gradient(
+  80.99% 71.93% at 74.58% 0%,
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.6) 100%
+);
+
+$screen-big: 1920px;
+$screen-laptop: 1280px;
+$screen-tablet: 821px;
+$screen-mobile: 480px;
+
+$fontSize-large-xl: 56px;
+$fontSize-large-l: 48px;
+$fontSize-large-m: 36px;
+$fontSize-large-s: 28px;
+$fontSize-medium-xl: 26px;
+$fontSize-medium-l: 24px;
+$fontSize-medium-m: 22px;
+$fontSize-medium-s: 18px;
+$fontSize-small-xl: 16px;
+$fontSize-small-l: 14px;
+$fontSize-small-m: 12px;
+$fontSize-small-s: 10px;
+
+$space-large-xxl: 128px;
+$space-large-xl: 120px;
+$space-large-l: 112px;
+$space-large-m: 92px;
+$space-large-s: 80px;
+$space-medium-xxl: 73px;
+$space-medium-xl: 65px;
+$space-medium-l: 60px;
+$space-medium-m: 50px;
+$space-medium-s: 45px;
+$space-small-xxl: 32px;
+$space-small-xl: 24px;
+$space-small-l: 16px;
+$space-small-m: 12px;
+$space-small-s: 8px;
+$space-zero: 0px;
+
+$fontWeight-xl: 900;
+$fontWeight-l: 700;
+$fontWeight-m: 600;
+$fontWeight-s: 400;
+
+@mixin appearanceAnimation {
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: 3s show ease;
+}
+
+@mixin maxSize {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontally {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin wrapper {
+  max-width: 1440px;
+  margin: $space-zero auto;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin container {
+  padding: $space-zero $space-small-xxl;
+  max-width: 1340px;
+  margin: $space-zero auto;
+  width: 100%;
+  max-height: 100%;
+}
+
+@mixin modalBackground {
+  @include flex-center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $color-modal-background;
+}
+
+@mixin button {
+  cursor: pointer;
+  border: none;
+  height: 56px;
+  width: fit-content;
+  padding: 0 $space-medium-s;
+  font-family: var(--sen-font);
+  font-size: $fontSize-medium-s;
+}
+
+@mixin whiteButton {
+  @include button;
+
+  background: $color-white;
+  color: $color-dark-blue;
+  transition: 0.2s;
+
+  &:hover {
+    background: $color-yellow;
+  }
+}
+
+@mixin yellowButton {
+  @include button;
+
+  background: $color-yellow;
+  color: $color-dark-blue;
+  transition: 0.2s;
+
+  &:hover {
+    background: $color-white;
+  }
+}
+
+@mixin yellowButtonWithDarkBg {
+  @include yellowButton;
+
+  &:hover {
+    background: $color-dark-blue;
+    color: $color-yellow;
+  }
+}
+
+@mixin purpleLink {
+  color: $color-purple;
+  font-size: $fontSize-small-xl;
+  line-height: 28px;
+}
+
+@mixin blockTitle {
+  font-family: var(--sen-font);
+  font-size: $fontSize-large-m;
+  font-weight: $fontWeight-l;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+@mixin mediumTitle {
+  font-weight: $fontWeight-l;
+  line-height: 40px;
+  letter-spacing: -1px;
+  font-size: $fontSize-large-s;
+}
+
+@mixin descriptionText {
+  margin-top: $space-small-l;
+  font-family: var(--inter-font);
+  color: $color-medium-grey;
+  font-size: $fontSize-small-xl;
+  line-height: 28px;
+}

@@ -1,0 +1,87 @@
+.panel {
+  @include flex-space-between;
+}
+
+.avatar {
+  position: relative;
+  height: 48px;
+  width: 48px;
+}
+
+.message {
+  font-size: $space-small-xl;
+  line-height: 32px;
+  font-weight: $fontWeight-l;
+  height: 256px;
+  padding-bottom: $space-small-s;
+  transition: transform 0.5s ease-in-out;
+}
+
+.author {
+  display: flex;
+}
+
+.avatar {
+  margin-right: $fontSize-medium-s;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullName {
+  font-size: $fontSize-medium-l;
+  line-height: 32px;
+}
+
+.adress {
+  font-family: var(--inter-font);
+  color: $color-medium-grey;
+}
+
+.controls {
+  display: flex;
+}
+
+.buttonWrapper {
+  @include flex-center;
+
+  height: 62px;
+  width: 82px;
+}
+
+.disabledPrevNextButton {
+  @include maxSize;
+
+  font-size: 29px;
+  font-weight: $fontWeight-xl;
+  height: 48px;
+  width: 48px;
+  border: none;
+  background: $color-white;
+  border-radius: 50px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.activePrevNextButton {
+  @include maxSize;
+
+  cursor: pointer;
+  height: 62px;
+  width: 62px;
+  border: none;
+  color: $color-white;
+  font-weight: $fontWeight-xl;
+  font-size: 34px;
+  background: $color-dark-blue;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

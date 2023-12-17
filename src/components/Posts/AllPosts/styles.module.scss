@@ -1,0 +1,25 @@
+.wrapper {
+  @include maxSize;
+
+  max-width: 517px;
+  position: relative;
+}
+
+.title {
+  @include blockTitle;
+
+  margin-bottom: $space-small-xxl;
+}
+
+.viewAllLink {
+  @include purpleLink;
+
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.postWrapper {
+  max-height: 724px;
+  overflow: auto;
+}

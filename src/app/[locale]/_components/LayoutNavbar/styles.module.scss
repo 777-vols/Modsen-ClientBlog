@@ -1,0 +1,12 @@
+.wrapper {
+  @include flex-center-vertical;
+
+  background: $color-dark-blue;
+  height: 80px;
+  padding-left: $space-medium-l;
+  padding-right: $space-small-xxl;
+}
+
+.container {
+  @include container;
+}

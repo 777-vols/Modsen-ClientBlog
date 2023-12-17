@@ -15,7 +15,7 @@ const InfinityScroll = ({ wrapper, children }: IProps) => {
       const isAllListRendered = renderedComponentsCounter > Children.count(children) - 1;
 
       if (isLastElementVisible && !isAllListRendered) {
-        setRenderedComponentsCounter(renderedComponentsCounter + 1);
+        setRenderedComponentsCounter(renderedComponentsCounter + 2);
       }
     }
   }, [isLastElementVisible, listWrapperRef]);

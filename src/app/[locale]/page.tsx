@@ -20,7 +20,7 @@ import Loading from './loading';
 const Home: FC<ILocaleParams> = ({ params: { locale } }) => {
   return (
     <Suspense fallback={<Loading />}>
-      <InfinityScroll wrapper={<main />}>
+      <InfinityScroll wrapper={<main id="rootMain" />}>
         <HomeHero locale={locale} />
         <Posts locale={locale} />
         <AboutUs locale={locale} />

@@ -1,4 +1,6 @@
 .wrapper {
+  max-width: 296px;
+  margin: 0 $space-small-s;
   border: 1px solid $color-medium-grey;
   flex: 5 2 200px;
   padding: $space-small-xxl;

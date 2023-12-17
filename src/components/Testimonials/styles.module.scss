@@ -1,7 +1,9 @@
 .wrapper {
   @include container;
   @include appearanceAnimation;
+}
 
+.wrappeInner {
   background-color: $color-light-yellow;
   padding: $space-medium-xxl $space-large-l;
   display: flex;

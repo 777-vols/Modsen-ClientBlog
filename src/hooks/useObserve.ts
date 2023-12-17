@@ -12,7 +12,11 @@ const useObserve = (): [LegacyRef<HTMLDivElement>, boolean] => {
 
   useEffect(() => {
     const refVariable = lastElementRef.current;
-    const observer = new IntersectionObserver(callback);
+    const observer = new IntersectionObserver(callback, {
+      root: document.querySelector('.rootMain'),
+      rootMargin: '0px',
+      threshold: [0, 0.5, 1],
+    });
 
     if (lastElementRef.current) {
       observer.observe(lastElementRef.current);

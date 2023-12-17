@@ -7,6 +7,8 @@
   background: $color-light-grey;
   padding: $space-small-xxl;
   transition: 0.3s;
+  gap: 5px;
+  max-width: 296px;
 
   &:hover {
     background: $color-light-yellow;

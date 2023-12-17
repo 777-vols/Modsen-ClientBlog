@@ -26,9 +26,7 @@
 }
 
 .subtitle {
-  font-size: $fontSize-small-xl;
-  letter-spacing: 3px;
-  font-weight: $fontWeight-s;
+  @include subtitle;
 }
 
 .title {

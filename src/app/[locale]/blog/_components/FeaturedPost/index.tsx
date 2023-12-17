@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { featuredHomePost } from '@/constants/Posts';
+import { featuredBlogPost } from '@/constants/Posts';
 import { urls } from '@/constants/urls';
 import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
@@ -16,18 +16,19 @@ const {
   authorId,
   image: postImage,
   id: postId,
-} = featuredHomePost;
+} = featuredBlogPost;
 
 const {
   wrapper,
-  title,
-  postWrapper,
+  background,
   imageWrapper,
   readMoreLink,
   info,
   postTittle,
   description,
   authorLink,
+  subtitle,
+  content,
 } = styles;
 
 const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
@@ -35,29 +36,31 @@ const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 const FeaturedPost = ({ locale }: ILocaleProps) => {
   const { postsBlock } = getDictionary(locale);
   const { featuredPost: featuredPostData, postInfo } = postsBlock;
-  const { titleText, readMoreLinkText } = featuredPostData;
+  const { readMoreLinkText } = featuredPostData;
 
   const stringDate = getStringDate(createdPostDate);
 
   return (
-    <div className={wrapper}>
-      <h3 className={title}>{titleText}</h3>
-      <article className={postWrapper}>
-        <div className={imageWrapper}>{postImage}</div>
-        <span className={info}>
-          {postInfo}
-          <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
-            {postAuthor}
+    <section className={background}>
+      <div className={wrapper}>
+        <div className={content}>
+          <span className={subtitle}>FEATURED POST</span>
+          <h3 className={postTittle}>{postTitleText}</h3>
+          <span className={info}>
+            {postInfo}
+            <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+              {postAuthor}
+            </Link>
+            {` | ${stringDate}`}
+          </span>
+          <p className={description}>{descriptionTitleText}</p>
+          <Link className={readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
+            {readMoreLinkText}
           </Link>
-          {` ${stringDate}`}
-        </span>
-        <h5 className={postTittle}>{postTitleText}</h5>
-        <p className={description}>{descriptionTitleText}</p>
-        <Link className={readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
-          {readMoreLinkText}
-        </Link>
-      </article>
-    </div>
+        </div>
+        <div className={imageWrapper}>{postImage}</div>
+      </div>
+    </section>
   );
 };
 

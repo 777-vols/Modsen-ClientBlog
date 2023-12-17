@@ -1,28 +1,32 @@
 import Link from 'next/link';
 
+import { urls } from '@/constants/urls';
+import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
+const { author: authorPageUrl } = urls;
+
 const { wrapper, title, info, authorLink } = styles;
 
 const Post = ({ locale, postData }: IProps) => {
-  const { title: postTitle, createdDate, author } = postData;
+  const { title: postTitle, createdDate, authorName, authorId } = postData;
 
   const { postsBlock } = getDictionary(locale);
   const { postInfo } = postsBlock;
+
+  const stringDate = getStringDate(createdDate);
 
   return (
     <div className={wrapper}>
       <span className={info}>
         {postInfo}
-        <Link className={authorLink} href={`/${locale}`}>
-          {author}
+        <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+          {authorName}
         </Link>
-        {` ${String(createdDate.getMonth() + 1).padStart(2, '0')} ${String(
-          createdDate.getDate(),
-        ).padStart(2, '0')} ${createdDate.getFullYear()}`}
+        {` ${stringDate}`}
       </span>
       <h5 className={title}>{postTitle}</h5>
     </div>

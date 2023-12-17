@@ -43,8 +43,12 @@
   font-size: $fontSize-small-xl;
 }
 
-.authorName {
+.authorNameLink {
   color: $color-yellow;
+
+  &:hover {
+    color: $color-red;
+  }
 }
 
 .description {
@@ -54,7 +58,8 @@
   margin: $space-small-l $space-zero;
 }
 
-.readMoreButton {
+.readMoreLink {
+  @include flex-center;
   @include yellowButton;
 
   margin-top: $space-small-xxl;

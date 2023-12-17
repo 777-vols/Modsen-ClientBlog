@@ -1,9 +1,10 @@
 export interface IPost {
-  id: number;
+  id: string;
   title: string;
+  description: string;
   createdDate: Date;
   tags: string[];
   category: string;
-  author: string;
-  description?: string;
+  authorName: string;
+  authorId: string;
 }

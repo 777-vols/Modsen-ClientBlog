@@ -1,7 +1,14 @@
+import Link from 'next/link';
+
+import { homeHeroPost } from '@/constants/Posts';
+import { urls } from '@/constants/urls';
+import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
+
+const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 
 const {
   wrapper,
@@ -11,13 +18,23 @@ const {
   title,
   info,
   description,
-  readMoreButton,
-  authorName,
+  authorNameLink,
+  readMoreLink,
 } = styles;
 
 const HomeHero = ({ locale }: ILocaleProps) => {
   const { homeHero } = getDictionary(locale);
-  const { titleText, subtitleText, infoText, descriptionText, buttonText } = homeHero;
+  const { subtitleText, infoText, buttonText } = homeHero;
+  const {
+    id: postId,
+    title: titleText,
+    description: descriptionText,
+    createdDate: createdPostDate,
+    authorName: authorNameText,
+    authorId,
+  } = homeHeroPost;
+
+  const stringDate = getStringDate(createdPostDate);
 
   return (
     <section className={wrapper}>
@@ -30,13 +47,15 @@ const HomeHero = ({ locale }: ILocaleProps) => {
           <h1 className={title}>{titleText}</h1>
           <span className={info}>
             {infoText[0]}
-            <span className={authorName}>{infoText[1]}</span>
-            {infoText[2]}
+            <Link href={`/${locale}${authorPageUrl}/${authorId}`} className={authorNameLink}>
+              {authorNameText}
+            </Link>
+            {` | ${stringDate}`}
           </span>
           <p className={description}>{descriptionText}</p>
-          <button className={readMoreButton} type="button">
+          <Link href={`/${locale}${blogPostPageUrl}/${postId}`} className={readMoreLink}>
             {buttonText}
-          </button>
+          </Link>
         </div>
       </div>
     </section>

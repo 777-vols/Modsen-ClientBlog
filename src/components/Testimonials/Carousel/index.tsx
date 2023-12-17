@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { authorsArray } from '@/constants/Authors';
+import { allAuthors } from '@/constants/Authors';
 
 import styles from './styles.module.scss';
 
@@ -24,7 +24,7 @@ const {
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const { from, image, name, review } = authorsArray[currentSlide];
+  const { from, image, name, review } = allAuthors[currentSlide];
 
   const handlePrevious = () => {
     if (currentSlide !== 0) {
@@ -33,7 +33,7 @@ const Carousel = () => {
   };
 
   const handleNext = () => {
-    if (currentSlide !== authorsArray.length - 1) {
+    if (currentSlide !== allAuthors.length - 1) {
       setCurrentSlide((prevState) => prevState + 1);
     }
   };
@@ -61,7 +61,7 @@ const Carousel = () => {
           <div className={buttonWrapper}>
             <button
               className={
-                currentSlide !== authorsArray.length - 1
+                currentSlide !== allAuthors.length - 1
                   ? activePrevNextButton
                   : disabledPrevNextButton
               }

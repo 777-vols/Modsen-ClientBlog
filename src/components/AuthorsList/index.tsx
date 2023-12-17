@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 import Loading from '@/app/[locale]/loading';
-import { authorsArray } from '@/constants/Authors';
+import { allAuthors } from '@/constants/Authors';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -16,6 +16,8 @@ const LazyLoadAuthorCard = dynamic(() => import('./AuthorCard'), {
 const AuthorsList = ({ locale }: ILocaleProps) => {
   const { authorsList } = getDictionary(locale);
   const { titleText } = authorsList;
+
+  const authorsArray = allAuthors.slice(0, 4);
 
   return (
     <section className={wrapper}>

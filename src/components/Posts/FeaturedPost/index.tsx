@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { allImages } from '@/constants/allImages';
 import { featuredPost } from '@/constants/Posts';
+import { urls } from '@/constants/urls';
+import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -13,7 +15,8 @@ const {
   title: postTitleText,
   description: descriptionTitleText,
   createdDate: createdPostDate,
-  author: postAuthor,
+  authorName: postAuthor,
+  authorId,
 } = featuredPost;
 
 const {
@@ -28,10 +31,14 @@ const {
   authorLink,
 } = styles;
 
+const { author: authorPageUrl } = urls;
+
 const FeaturedPost = ({ locale }: ILocaleProps) => {
   const { postsBlock } = getDictionary(locale);
   const { featuredPost: featuredPostData, postInfo } = postsBlock;
   const { titleText, readMoreLinkText } = featuredPostData;
+
+  const stringDate = getStringDate(createdPostDate);
 
   return (
     <div className={wrapper}>
@@ -40,12 +47,10 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
         <div className={imageWrapper}>{featuredPostImage}</div>
         <span className={info}>
           {postInfo}
-          <Link className={authorLink} href={`/${locale}`}>
+          <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
             {postAuthor}
           </Link>
-          {` ${String(createdPostDate.getMonth() + 1).padStart(2, '0')} ${String(
-            createdPostDate.getDate(),
-          ).padStart(2, '0')} ${createdPostDate.getFullYear()}`}
+          {` ${stringDate}`}
         </span>
         <h5 className={postTittle}>{postTitleText}</h5>
         <p className={description}>{descriptionTitleText}</p>

@@ -1,5 +1,5 @@
 export interface IAuthor {
-  id: number;
+  id: string;
   image: React.ReactNode;
   name: string;
   jobTitle: string;

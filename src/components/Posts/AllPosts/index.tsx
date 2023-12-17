@@ -17,6 +17,7 @@ const AllPosts = ({ locale }: ILocaleProps) => {
   const { postsBlock } = getDictionary(locale);
   const { allPosts: allPostsData } = postsBlock;
   const { titleText, viewAllLinkText } = allPostsData;
+  const postsArray = allPosts.slice(0, 4);
 
   return (
     <div className={wrapper}>
@@ -25,7 +26,7 @@ const AllPosts = ({ locale }: ILocaleProps) => {
       </Link>
       <h3 className={title}>{titleText}</h3>
       <div className={postWrapper}>
-        {allPosts.map((postData) => (
+        {postsArray.map((postData) => (
           <Post key={v4()} locale={locale} postData={postData} />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { urls } from '@/constants/urls';
+import { urls } from '@/constants';
 import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
 

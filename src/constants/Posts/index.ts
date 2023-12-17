@@ -1,4 +1,5 @@
-import { allImages } from '../allImages';
+import { allImages } from '@/constants/allImages';
+
 import { IPost } from './types';
 
 const { posts } = allImages;

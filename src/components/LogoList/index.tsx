@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
 
-import { logos } from '@/constants/imageArrays';
+import { logos } from '@/constants';
 
 import styles from './styles.module.scss';
 

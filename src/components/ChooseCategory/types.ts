@@ -1,3 +1,3 @@
-import { allImages } from '@/constants/allImages';
+import { allImages } from '@/constants';
 
 export type TypeCategoryKey = keyof (typeof allImages)['categoryImages'];

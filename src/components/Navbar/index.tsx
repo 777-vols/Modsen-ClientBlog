@@ -6,7 +6,7 @@ import { FC, useCallback, useMemo, useState } from 'react';
 import { Portal } from 'react-portal';
 
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
-import { urls } from '@/constants/urls';
+import { urls } from '@/constants';
 import { activePathHelper, getLinks } from '@/helpers';
 import { useIsMounted } from '@/hooks/useIsMounted';
 import { i18n } from '@/lib/i18n.config';

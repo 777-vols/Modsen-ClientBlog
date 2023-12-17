@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { v4 } from 'uuid';
 
 import { Navbar } from '@/components';
-import { socials } from '@/constants/imageArrays';
+import { socials } from '@/constants';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 

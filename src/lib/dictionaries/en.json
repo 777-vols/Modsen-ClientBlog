@@ -43,6 +43,7 @@
     "postInfo": "By ",
     "featuredPost": {
       "titleText": "Featured Post",
+      "subtitleText": "FEATURED POST",
       "readMoreLinkText": "Read More >"
     }
   },

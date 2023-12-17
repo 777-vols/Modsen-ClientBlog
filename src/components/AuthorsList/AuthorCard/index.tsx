@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { v4 } from 'uuid';
 
-import { socials } from '@/constants/imageArrays';
+import { socials } from '@/constants';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';

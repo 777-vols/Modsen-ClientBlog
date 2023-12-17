@@ -43,6 +43,7 @@
     "postInfo": "Автор: ",
     "featuredPost": {
       "titleText": "Лучший пост",
+      "subtitleText": "ЛУЧШИЙ ПОСТ",
       "readMoreLinkText": "Читать далее >"
     }
   },

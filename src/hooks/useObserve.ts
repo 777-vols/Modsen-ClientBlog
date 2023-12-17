@@ -1,6 +1,6 @@
 import { LegacyRef, useEffect, useRef, useState } from 'react';
 
-const useObserve = (): [LegacyRef<HTMLDivElement>, boolean] => {
+export const useObserve = (): [LegacyRef<HTMLDivElement>, boolean] => {
   const [isLastElementVisible, setIsLastElementVisible] = useState(false);
   const lastElementRef = useRef<HTMLDivElement>(null);
 
@@ -31,5 +31,3 @@ const useObserve = (): [LegacyRef<HTMLDivElement>, boolean] => {
 
   return [lastElementRef, isLastElementVisible];
 };
-
-export default useObserve;

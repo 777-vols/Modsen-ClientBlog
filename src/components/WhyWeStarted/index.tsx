@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-import { allImages } from '@/constants/allImages';
-import { urls } from '@/constants/urls';
+import { allImages, urls } from '@/constants';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 

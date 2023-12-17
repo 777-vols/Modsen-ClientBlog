@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
+import { urls } from '@/constants';
 import { featuredBlogPost } from '@/constants/Posts';
-import { urls } from '@/constants/urls';
 import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
@@ -36,7 +36,7 @@ const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 const FeaturedPost = ({ locale }: ILocaleProps) => {
   const { postsBlock } = getDictionary(locale);
   const { featuredPost: featuredPostData, postInfo } = postsBlock;
-  const { readMoreLinkText } = featuredPostData;
+  const { readMoreLinkText, subtitleText } = featuredPostData;
 
   const stringDate = getStringDate(createdPostDate);
 
@@ -44,7 +44,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
     <section className={background}>
       <div className={wrapper}>
         <div className={content}>
-          <span className={subtitle}>FEATURED POST</span>
+          <span className={subtitle}>{subtitleText}</span>
           <h3 className={postTittle}>{postTitleText}</h3>
           <span className={info}>
             {postInfo}

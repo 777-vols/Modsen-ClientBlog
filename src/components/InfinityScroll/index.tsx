@@ -1,6 +1,6 @@
 import React, { Children, cloneElement, useCallback, useEffect, useRef, useState } from 'react';
 
-import useObserve from '@/hooks/useObserve';
+import { useObserve } from '@/hooks';
 
 import { IProps } from './types';
 

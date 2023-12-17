@@ -1,4 +1,4 @@
-import { urls } from '@/constants/urls';
+import { urls } from '@/constants';
 import { DictionaryType } from '@/lib/getDictionary';
 import { Locale } from '@/lib/i18n.config';
 

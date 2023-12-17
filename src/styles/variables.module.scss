@@ -175,6 +175,12 @@ $fontWeight-s: 400;
   line-height: 28px;
 }
 
+@mixin subtitle {
+  font-family: var(--inter-font);
+  letter-spacing: 3px;
+  font-size: $fontSize-small-xl;
+}
+
 @mixin blockTitle {
   font-family: var(--sen-font);
   font-size: $fontSize-large-m;

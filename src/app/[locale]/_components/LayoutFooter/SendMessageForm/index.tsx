@@ -8,8 +8,7 @@ import React, { FC, useRef } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 
-import { envVariables } from '@/constants/envVariables';
-import { footerFormValidator } from '@/constants/formValidators';
+import { envVariables, footerFormValidator } from '@/constants';
 
 import styles from './styles.module.scss';
 import { IProps, ISendMessageFormData } from './types';

@@ -1,6 +1,8 @@
 .wrapper {
   @include container;
   @include appearanceAnimation;
+
+  margin-bottom: $space-large-xxl;
 }
 
 .shape {
@@ -32,10 +34,7 @@
 }
 
 .subtitle {
-  font-family: var(--inter-font);
-  letter-spacing: 3px;
-  font-size: $fontSize-small-xl;
-  line-height: 20px;
+  @include subtitle;
 }
 
 .smallTitle {

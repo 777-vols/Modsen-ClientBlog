@@ -52,7 +52,8 @@ export const allAuthors: IAuthor[] = [
     jobTitle: 'Developer',
     company: '@Company',
     from: 'Warshaw, Poland',
-    review: 'Subscribe to our news letter to get latest updates and news.',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     id: '5',

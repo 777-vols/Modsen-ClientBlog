@@ -38,16 +38,20 @@
   "postsBlock": {
     "allPosts": {
       "titleText": "All Posts",
-      "viewAllLinkText": "View All"
+      "viewAllLinkText": "View All",
+      "prevButtonText": "< Prev",
+      "nextButtonText": "Next >"
     },
     "postInfo": "By ",
     "featuredPost": {
       "titleText": "Featured Post",
+      "subtitleText": "FEATURED POST",
       "readMoreLinkText": "Read More >"
     }
   },
   "category": {
-    "titleText": "Choose A Catagory",
+    "homeTitleText": "Choose A Catagory",
+    "blogTitleText": "All Categories",
     "categoriesList": {
       "business": {
         "titleText": "Business",

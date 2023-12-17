@@ -38,16 +38,20 @@
   "postsBlock": {
     "allPosts": {
       "titleText": "Все посты",
-      "viewAllLinkText": "Смореть все"
+      "viewAllLinkText": "Смореть все",
+      "prevButtonText": "< Назад",
+      "nextButtonText": "Вперед >"
     },
     "postInfo": "Автор: ",
     "featuredPost": {
       "titleText": "Лучший пост",
+      "subtitleText": "ЛУЧШИЙ ПОСТ",
       "readMoreLinkText": "Читать далее >"
     }
   },
   "category": {
-    "titleText": "Выберите категорию",
+    "homeTitleText": "Выберите категорию",
+    "blogTitleText": "Все категории",
     "categoriesList": {
       "business": {
         "titleText": "Бизнес",

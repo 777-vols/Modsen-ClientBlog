@@ -1,15 +1,12 @@
 import Link from 'next/link';
 
-import { allImages } from '@/constants/allImages';
-import { featuredPost } from '@/constants/Posts';
-import { urls } from '@/constants/urls';
+import { urls } from '@/constants';
+import { featuredHomePost } from '@/constants/Posts';
 import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
-
-const { featuredPostImage } = allImages;
 
 const {
   title: postTitleText,
@@ -17,7 +14,9 @@ const {
   createdDate: createdPostDate,
   authorName: postAuthor,
   authorId,
-} = featuredPost;
+  image: postImage,
+  id: postId,
+} = featuredHomePost;
 
 const {
   wrapper,
@@ -31,7 +30,7 @@ const {
   authorLink,
 } = styles;
 
-const { author: authorPageUrl } = urls;
+const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 
 const FeaturedPost = ({ locale }: ILocaleProps) => {
   const { postsBlock } = getDictionary(locale);
@@ -44,7 +43,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
     <div className={wrapper}>
       <h3 className={title}>{titleText}</h3>
       <article className={postWrapper}>
-        <div className={imageWrapper}>{featuredPostImage}</div>
+        <div className={imageWrapper}>{postImage}</div>
         <span className={info}>
           {postInfo}
           <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
@@ -54,7 +53,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
         </span>
         <h5 className={postTittle}>{postTitleText}</h5>
         <p className={description}>{descriptionTitleText}</p>
-        <Link className={readMoreLink} href={`/${locale}`}>
+        <Link className={readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
           {readMoreLinkText}
         </Link>
       </article>

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { v4 } from 'uuid';
 
+import { urls } from '@/constants';
 import { allPosts } from '@/constants/Posts';
-import { urls } from '@/constants/urls';
 import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 

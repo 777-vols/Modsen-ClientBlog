@@ -1,0 +1,60 @@
+.background {
+  background: $color-lavender;
+}
+
+.wrapper {
+  @include appearanceAnimation;
+  @include container;
+
+  padding: $space-large-s $space-zero;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  @include flex-direction-column;
+
+  max-width: 624px;
+  margin-right: $space-small-xxl;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.imageWrapper {
+  max-width: 515px;
+  height: 359px;
+  width: 100%;
+  position: relative;
+  margin-bottom: $space-small-xxl;
+}
+
+.info {
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-m;
+  line-height: 20px;
+  font-family: var(--inter-font);
+}
+
+.postTittle {
+  @include blockTitle;
+
+  margin-top: $space-small-xl;
+}
+
+.authorLink {
+  @include purpleLink;
+}
+
+.description {
+  @include descriptionText;
+
+  margin-top: $space-small-l;
+  margin-bottom: $space-small-xxl;
+}
+
+.readMoreLink {
+  @include yellowButtonWithDarkBg;
+  @include flex-center;
+}

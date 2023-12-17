@@ -1,6 +1,6 @@
 import React, { Children, cloneElement, useCallback, useEffect, useRef, useState } from 'react';
 
-import useObserve from '@/hooks/useObserve';
+import { useObserve } from '@/hooks';
 
 import { IProps } from './types';
 
@@ -15,7 +15,7 @@ const InfinityScroll = ({ wrapper, children }: IProps) => {
       const isAllListRendered = renderedComponentsCounter > Children.count(children) - 1;
 
       if (isLastElementVisible && !isAllListRendered) {
-        setRenderedComponentsCounter(renderedComponentsCounter + 1);
+        setRenderedComponentsCounter(renderedComponentsCounter + 2);
       }
     }
   }, [isLastElementVisible, listWrapperRef]);

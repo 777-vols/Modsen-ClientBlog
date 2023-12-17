@@ -19,22 +19,40 @@ export const postsImages = {
       sizes="height: 359px, width: 100%"
     />
   ),
-  post1: (
+  twoWomen: (
     <Image
-      src="/assets/featuredPost.webp"
+      src="/assets/posts/twoWomen.png"
       alt="featuredPost"
       fill
       priority
-      sizes="height: 352px, width: 100%"
+      sizes="height: 318px, width: 100%"
     />
   ),
-  post2: (
+  peopleDoingHandshakes: (
     <Image
-      src="/assets/featuredPost.webp"
+      src="/assets/posts/peopleDoingHandshakes.png"
       alt="featuredPost"
       fill
       priority
-      sizes="height: 352px, width: 100%"
+      sizes="height: 318px, width: 100%"
+    />
+  ),
+  womanLookingAtMan: (
+    <Image
+      src="/assets/posts/womanLookingAtMan.png"
+      alt="featuredPost"
+      fill
+      priority
+      sizes="height: 318px, width: 100%"
+    />
+  ),
+  peopleWalkingOnHallway: (
+    <Image
+      src="/assets/posts/peopleWalkingOnHallway.png"
+      alt="featuredPost"
+      fill
+      priority
+      sizes="height: 318px, width: 100%"
     />
   ),
 };

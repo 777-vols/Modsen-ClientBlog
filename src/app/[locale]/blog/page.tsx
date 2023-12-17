@@ -1,17 +1,21 @@
 import { FC, Suspense } from 'react';
 
 import Loading from '@/app/[locale]/loading';
-import { ChooseCategory, JoinOurTeam } from '@/components';
+import { Categories, JoinOurTeam } from '@/components';
+import { getDictionary } from '@/lib/getDictionary';
 
 import { AllPosts, FeaturedPost } from './_components';
 
 const Blog: FC<ILocaleParams> = ({ params: { locale } }) => {
+  const { category } = getDictionary(locale);
+  const { blogTitleText } = category;
+
   return (
     <Suspense fallback={<Loading />}>
       <main>
         <FeaturedPost locale={locale} />
         <AllPosts locale={locale} />
-        <ChooseCategory locale={locale} />
+        <Categories locale={locale} titleText={blogTitleText} />
         <JoinOurTeam locale={locale} />
       </main>
     </Suspense>

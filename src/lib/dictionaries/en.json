@@ -38,7 +38,9 @@
   "postsBlock": {
     "allPosts": {
       "titleText": "All Posts",
-      "viewAllLinkText": "View All"
+      "viewAllLinkText": "View All",
+      "prevButtonText": "< Prev",
+      "nextButtonText": "Next >"
     },
     "postInfo": "By ",
     "featuredPost": {
@@ -48,7 +50,8 @@
     }
   },
   "category": {
-    "titleText": "Choose A Catagory",
+    "homeTitleText": "Choose A Catagory",
+    "blogTitleText": "All Categories",
     "categoriesList": {
       "business": {
         "titleText": "Business",

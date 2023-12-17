@@ -1,17 +1,16 @@
 import { v4 } from 'uuid';
 
 import { getDictionary } from '@/lib/getDictionary';
-import { ILocaleProps } from '@/types';
 
 import Category from './Category';
 import styles from './styles.module.scss';
-import { TypeCategoryKey } from './types';
+import { IProps, TypeCategoryKey } from './types';
 
 const { wrapper, categories, title } = styles;
 
-const ChooseCategory = ({ locale }: ILocaleProps) => {
+const Categories = ({ titleText, locale }: IProps) => {
   const { category } = getDictionary(locale);
-  const { titleText, categoriesList } = category;
+  const { categoriesList } = category;
 
   const categoriesComponents = Object.keys(categoriesList).map((categoryKey) => (
     <Category key={v4()} locale={locale} categoryKey={categoryKey as TypeCategoryKey} />
@@ -25,4 +24,4 @@ const ChooseCategory = ({ locale }: ILocaleProps) => {
   );
 };
 
-export default ChooseCategory;
+export default Categories;

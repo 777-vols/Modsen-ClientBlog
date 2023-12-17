@@ -54,7 +54,7 @@
 .disabledPrevNextButton {
   @include maxSize;
 
-  font-size: 29px;
+  font-size: $fontSize-large-s;
   font-weight: $fontWeight-xl;
   height: 48px;
   width: 48px;
@@ -76,7 +76,7 @@
   border: none;
   color: $color-white;
   font-weight: $fontWeight-xl;
-  font-size: 34px;
+  font-size: $fontSize-large-m;
   background: $color-dark-blue;
   border-radius: 50px;
   transition: all 0.2s ease-in-out;

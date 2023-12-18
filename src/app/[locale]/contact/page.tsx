@@ -1,8 +1,15 @@
-const Contact = () => {
+import { Suspense } from 'react';
+
+import Loading from '@/app/[locale]/loading';
+
+import MapGl from './_components/MapGl';
+
+const Contact = ({ params: { locale } }: ILocaleParams) => {
   return (
-    <main>
-      <h1>Contact</h1>
-    </main>
+    <Suspense fallback={<Loading />}>
+      <main>contact</main>
+      <MapGl />
+    </Suspense>
   );
 };
 

@@ -1,4 +1,4 @@
-import { FC, Suspense } from 'react';
+import { Suspense } from 'react';
 
 import Loading from '@/app/[locale]/loading';
 import { Categories, JoinOurTeam } from '@/components';
@@ -6,7 +6,7 @@ import { getDictionary } from '@/lib/getDictionary';
 
 import { AllPosts, FeaturedPost } from './_components';
 
-const Blog: FC<ILocaleParams> = ({ params: { locale } }) => {
+const Blog = ({ params: { locale } }: ILocaleParams) => {
   const { category } = getDictionary(locale);
   const { blogTitleText } = category;
 

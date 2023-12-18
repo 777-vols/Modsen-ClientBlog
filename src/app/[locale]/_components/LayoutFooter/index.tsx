@@ -23,16 +23,16 @@ const {
 
 const LayoutFooter = ({ locale }: ILocaleProps) => {
   const { navbar, footer } = getDictionary(locale);
-  const { titleText, adressText, emailText, footerForm } = footer;
+  const { titleText, adressText, emailText } = footer;
 
   return (
     <footer id="footer" className={wrapper}>
       <div className={container}>
         <Navbar navbar={navbar} locale={locale} isFooterNav />
         <div className={content}>
-          <h3 className={subscribeText}>{titleText}</h3>
+          <h2 className={subscribeText}>{titleText}</h2>
 
-          <SendMessageForm footerForm={footerForm} />
+          <SendMessageForm locale={locale} />
         </div>
         <div className={info}>
           <div className={contacts}>

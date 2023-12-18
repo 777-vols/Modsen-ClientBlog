@@ -20,8 +20,8 @@ const Testimonials = ({ locale }: ILocaleProps) => {
     <section className={wrapper}>
       <div className={wrappeInner}>
         <div className={content}>
-          <h5 className={subtitle}>{subtitleText}</h5>
-          <h3 className={title}>{titleText}</h3>
+          <span className={subtitle}>{subtitleText}</span>
+          <h2 className={title}>{titleText}</h2>
           <p className={description}>{descriptionText}</p>
         </div>
         <div className={carousel}>

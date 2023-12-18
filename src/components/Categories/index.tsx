@@ -18,7 +18,7 @@ const Categories = ({ titleText, locale }: IProps) => {
 
   return (
     <section className={wrapper}>
-      <h3 className={title}>{titleText}</h3>
+      <h2 className={title}>{titleText}</h2>
       <div className={categories}>{categoriesComponents}</div>
     </section>
   );

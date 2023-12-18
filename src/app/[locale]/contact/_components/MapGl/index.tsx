@@ -15,14 +15,16 @@ const MapGl = () => {
     <Marker key={longitude} longitude={longitude} latitude={latitude} />
   ));
   return (
-    <Map
-      initialViewState={initialViewSettings}
-      mapStyle={mapStyles}
-      style={{ height: mapHeight }}
-      mapboxAccessToken={mapBoxApiKey}>
-      {markers}
-      <NavigationControl showCompass={false} />
-    </Map>
+    <section>
+      <Map
+        initialViewState={initialViewSettings}
+        mapStyle={mapStyles}
+        style={{ height: mapHeight }}
+        mapboxAccessToken={mapBoxApiKey}>
+        {markers}
+        <NavigationControl showCompass={false} />
+      </Map>
+    </section>
   );
 };
 

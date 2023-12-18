@@ -28,7 +28,7 @@ const Post = ({ locale, postData }: IProps) => {
         </Link>
         {` ${stringDate}`}
       </span>
-      <h5 className={title}>{postTitle}</h5>
+      <h4 className={title}>{postTitle}</h4>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const AuthorsList = ({ locale }: ILocaleProps) => {
 
   return (
     <section className={wrapper}>
-      <h3 className={title}>{titleText}</h3>
+      <h2 className={title}>{titleText}</h2>
       <div className={authors}>
         {authorsArray.map((authorData) => (
           <LazyLoadAuthorCard key={authorData.id} locale={locale} authorData={authorData} />

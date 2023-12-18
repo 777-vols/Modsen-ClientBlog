@@ -1,12 +1,12 @@
 .background {
   background: $color-lavender;
+  padding: $space-large-s $space-zero;
 }
 
 .wrapper {
   @include appearanceAnimation;
   @include container;
 
-  padding: $space-large-s $space-zero;
   display: flex;
   justify-content: space-between;
 }
@@ -27,7 +27,6 @@
   height: 359px;
   width: 100%;
   position: relative;
-  margin-bottom: $space-small-xxl;
 }
 
 .info {

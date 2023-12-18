@@ -24,7 +24,7 @@ const Post = ({ locale, postData }: IProps) => {
         <div className={imageWrapper}>{postImage}</div>
         <div className={content}>
           <h6 className={subtitle}>{category.toUpperCase()}</h6>
-          <h3 className={postTittle}>{postTitleText}</h3>
+          <h2 className={postTittle}>{postTitleText}</h2>
           <p className={description}>{descriptionTitleText}</p>
         </div>
       </div>

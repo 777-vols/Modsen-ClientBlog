@@ -24,7 +24,7 @@ const AllPosts = ({ locale }: ILocaleProps) => {
       <Link href={`/${locale}${blog}`} className={viewAllLink}>
         {viewAllLinkText}
       </Link>
-      <h3 className={title}>{titleText}</h3>
+      <h2 className={title}>{titleText}</h2>
       <div className={postWrapper}>
         {postsArray.map((postData) => (
           <Post key={v4()} locale={locale} postData={postData} />

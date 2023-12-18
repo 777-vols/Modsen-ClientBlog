@@ -3,16 +3,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 import LayoutNavbar from '.';
 
 const meta: Meta<typeof LayoutNavbar> = {
-  title: 'components/Navbar',
+  title: 'components/LayoutNavbar',
   component: LayoutNavbar,
-  tags: ['autodocs'],
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Regular: Story = {
+export const Default: Story = {
+  name: 'LayoutNavbar',
   args: {
-    // title: 'Test',
+    locale: 'en',
   },
 };

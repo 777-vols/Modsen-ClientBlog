@@ -9,6 +9,7 @@ import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
 import { urls } from '@/constants';
 import { activePathHelper, getLinks } from '@/helpers';
 import { useIsMounted } from '@/hooks/useIsMounted';
+import { getDictionary } from '@/lib/getDictionary';
 import { i18n } from '@/lib/i18n.config';
 
 import styles from './styles.module.scss';
@@ -27,7 +28,8 @@ const {
 
 const { home } = urls;
 
-const Navbar: FC<IProps> = ({ navbar, locale, isFooterNav }) => {
+const Navbar: FC<IProps> = ({ locale, isFooterNav }) => {
+  const { navbar } = getDictionary(locale);
   const { title, linksNames, videoButtonName } = navbar;
 
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -15,7 +15,7 @@ const AuthorCard = ({ locale, authorData }: IProps) => {
     <div className={wrapper}>
       <Link href={`/${locale}`}>
         <div className={avatar}>{image}</div>
-        <h5 className={fullName}>{name}</h5>
+        <h3 className={fullName}>{name}</h3>
         <span className={info}>
           {jobTitle} {company}
         </span>

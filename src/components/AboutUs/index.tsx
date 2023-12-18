@@ -34,15 +34,15 @@ const AboutUs = ({ locale }: ILocaleProps) => {
       </div>
       <div className={content}>
         <div className={contentBlock}>
-          <h5 className={subtitle}>{aboutUsSubtitle}</h5>
-          <h3 className={bigTitle}>{aboutUsTitle}</h3>
+          <span className={subtitle}>{aboutUsSubtitle}</span>
+          <h2 className={bigTitle}>{aboutUsTitle}</h2>
           <p className={description}>{aboutUsDescription}</p>
           <Link className={readMoreLink} href={`/${locale}${aboutUs}`}>
             {linkText}
           </Link>
         </div>
         <div className={contentBlock}>
-          <h5 className={subtitle}>{ourMissionSubtitle}</h5>
+          <span className={subtitle}>{ourMissionSubtitle}</span>
           <h3 className={smallTitle}>{ourMissionTitle}</h3>
           <p className={description}>{ourMissionDescription}</p>
         </div>

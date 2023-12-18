@@ -40,10 +40,10 @@ const HomeHero = ({ locale }: ILocaleProps) => {
     <section className={wrapper}>
       <div className={container}>
         <div className={content}>
-          <h5 className={subtitle}>
+          <span className={subtitle}>
             {subtitleText[0]}
             <b>{subtitleText[1]}</b>
-          </h5>
+          </span>
           <h1 className={title}>{titleText}</h1>
           <span className={info}>
             {infoText[0]}

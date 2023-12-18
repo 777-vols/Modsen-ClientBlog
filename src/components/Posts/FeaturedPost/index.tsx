@@ -41,7 +41,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
 
   return (
     <div className={wrapper}>
-      <h3 className={title}>{titleText}</h3>
+      <h2 className={title}>{titleText}</h2>
       <article className={postWrapper}>
         <div className={imageWrapper}>{postImage}</div>
         <span className={info}>
@@ -51,7 +51,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
           </Link>
           {` ${stringDate}`}
         </span>
-        <h5 className={postTittle}>{postTitleText}</h5>
+        <h3 className={postTittle}>{postTitleText}</h3>
         <p className={description}>{descriptionTitleText}</p>
         <Link className={readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
           {readMoreLinkText}

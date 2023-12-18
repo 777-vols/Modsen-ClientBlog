@@ -45,8 +45,8 @@ const Carousel = () => {
         <div className={author}>
           <div className={avatar}>{image}</div>
           <div className={info}>
-            <span className={fullName}>{name}</span>
-            <span className={adress}>{from}</span>
+            <h4 className={fullName}>{name}</h4>
+            <h4 className={adress}>{from}</h4>
           </div>
         </div>
         <div className={controls}>

@@ -17,7 +17,7 @@ const JoinOurTeam = ({ locale }: ILocaleProps) => {
   return (
     <section className={wrapper}>
       <div className={content}>
-        <h3 className={title}>{titleText}</h3>
+        <h2 className={title}>{titleText}</h2>
         <p className={description}>{descriptionText}</p>
         <Link className={joinUsLink} href={`/${locale}${contactUs}`}>
           {buttonText}

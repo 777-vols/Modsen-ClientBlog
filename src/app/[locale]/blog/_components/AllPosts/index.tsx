@@ -54,7 +54,7 @@ const AllPosts: FC<ILocaleProps> = ({ locale }) => {
 
   return (
     <section className={wrapper}>
-      <h2 className={title}>{titleText}</h2>
+      <h1 className={title}>{titleText}</h1>
       <div className={postsBlock}>{postsComponents}</div>
       <div className={controls}>
         <div className={buttonWrapper}>

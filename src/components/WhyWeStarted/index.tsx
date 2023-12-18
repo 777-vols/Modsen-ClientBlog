@@ -20,8 +20,8 @@ const WhyWeStarted = ({ locale }: ILocaleProps) => {
     <section className={wrapper}>
       <div className={bannerWrapper}>{whyWeStartedBanner}</div>
       <div className={content}>
-        <h5 className={subtitle}>{subtitleText}</h5>
-        <h3 className={title}>{titleText}</h3>
+        <span className={subtitle}>{subtitleText}</span>
+        <h1 className={title}>{titleText}</h1>
         <p className={description}>{descriptionText}</p>
         <Link className={ourStoryLink} href={`/${locale}${aboutUs}`}>
           {buttonText}

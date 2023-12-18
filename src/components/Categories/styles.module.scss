@@ -10,7 +10,7 @@
 
 .title {
   @include blockTitle;
-  @include flex-center-horizontally;
 
+  text-align: center;
   margin-bottom: $space-medium-s;
 }

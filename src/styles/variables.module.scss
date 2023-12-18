@@ -205,3 +205,10 @@ $fontWeight-s: 400;
   font-size: $fontSize-small-xl;
   line-height: 28px;
 }
+
+@mixin userAvatar {
+  position: relative;
+  margin-right: $fontSize-medium-s;
+  height: 48px;
+  width: 48px;
+}

@@ -2,12 +2,6 @@
   @include flex-space-between;
 }
 
-.avatar {
-  position: relative;
-  height: 48px;
-  width: 48px;
-}
-
 .message {
   font-size: $space-small-xl;
   line-height: 32px;
@@ -22,7 +16,7 @@
 }
 
 .avatar {
-  margin-right: $fontSize-medium-s;
+  @include userAvatar;
 }
 
 .info {

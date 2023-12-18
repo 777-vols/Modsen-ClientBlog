@@ -28,7 +28,7 @@ const HomeHero = ({ locale }: ILocaleProps) => {
   const {
     id: postId,
     title: titleText,
-    description: descriptionText,
+    preview: previewText,
     createdDate: createdPostDate,
     authorName: authorNameText,
     authorId,
@@ -52,7 +52,7 @@ const HomeHero = ({ locale }: ILocaleProps) => {
             </Link>
             {` | ${stringDate}`}
           </span>
-          <p className={description}>{descriptionText}</p>
+          <p className={description}>{previewText}</p>
           <Link href={`/${locale}${blogPostPageUrl}/${postId}`} className={readMoreLink}>
             {buttonText}
           </Link>

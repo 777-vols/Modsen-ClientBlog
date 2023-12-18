@@ -98,5 +98,17 @@
     "messagePlaceholderText": "Текст сообщения",
     "subscribeButtonText": "Подписаться",
     "sendMessageButtonText": "Отправить сообщение"
+  },
+  "blogPostTitle": "Что почитать еще",
+  "blogPostInfo": "Опубликован: ",
+  "contactBlock": {
+    "subtitleText": "СВЯЗАТЬСЯ С НАМИ",
+    "titleText": "Давайте начнем диалог",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+    "mondayToFridayText": "С Понедельника по Пятницу",
+    "hoursText": "С 9:00 до 20:00",
+    "ourTeamText": "Наша команда поддержки работает 24/7",
+    "contactUsText": "Связаться с нами",
+    "workingHoursText": "Время работы"
   }
 }

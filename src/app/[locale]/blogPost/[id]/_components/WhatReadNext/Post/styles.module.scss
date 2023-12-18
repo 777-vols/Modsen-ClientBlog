@@ -1,0 +1,38 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.postWrapper {
+  max-width: 405px;
+  width: 100%;
+}
+
+.imageWrapper {
+  height: 318px;
+  width: 100%;
+  position: relative;
+  margin-bottom: $space-small-xxl;
+}
+
+.info {
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-m;
+  line-height: 20px;
+  font-family: var(--inter-font);
+}
+
+.postTittle {
+  @include mediumTitle;
+
+  margin-top: $space-zero $space-small-l;
+}
+
+.authorLink {
+  @include purpleLink;
+}
+
+.description {
+  @include descriptionText;
+}

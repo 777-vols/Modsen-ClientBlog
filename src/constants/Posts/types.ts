@@ -1,12 +1,15 @@
 import React from 'react';
 
+import { allCategories } from '../allCategories';
+
 export interface IPost {
   id: string;
   title: string;
-  description: string;
+  preview: string;
+  text?: string;
   createdDate: Date;
-  category: string;
+  category: keyof typeof allCategories;
   authorName: string;
   authorId: string;
-  image?: React.ReactElement;
+  image: React.ReactElement;
 }

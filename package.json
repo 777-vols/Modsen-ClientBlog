@@ -16,6 +16,7 @@
     "@emailjs/browser": "^3.11.0",
     "@formatjs/intl-localematcher": "^0.5.2",
     "@hookform/resolvers": "^3.3.2",
+    "@netlify/plugin-nextjs": "^4.41.3",
     "mapbox-gl": "^3.0.1",
     "negotiator": "^0.6.3",
     "next": "14.0.4",

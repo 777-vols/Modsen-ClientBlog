@@ -1,7 +1,7 @@
+import { getDictionary } from '@/lib/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
-import { getDictionary } from '@/lib/getDictionary';
 
 const {
   wrapper,

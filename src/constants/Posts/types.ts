@@ -8,5 +8,5 @@ export interface IPost {
   category: string;
   authorName: string;
   authorId: string;
-  image?: React.ReactElement;
+  image: React.ReactElement;
 }

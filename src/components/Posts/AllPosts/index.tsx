@@ -13,11 +13,13 @@ const { blog } = urls;
 
 const { wrapper, title, viewAllLink, postWrapper } = styles;
 
+const numberOfPosts = 4;
+
 const AllPosts = ({ locale }: ILocaleProps) => {
   const { postsBlock } = getDictionary(locale);
   const { allPosts: allPostsData } = postsBlock;
   const { titleText, viewAllLinkText } = allPostsData;
-  const postsArray = allPosts.slice(0, 4);
+  const postsArray = allPosts.slice(0, numberOfPosts);
 
   return (
     <div className={wrapper}>

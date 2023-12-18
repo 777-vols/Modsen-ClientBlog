@@ -49,7 +49,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
           <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
             {postAuthor}
           </Link>
-          {` ${stringDate}`}
+          {` | ${stringDate}`}
         </span>
         <h3 className={postTittle}>{postTitleText}</h3>
         <p className={description}>{descriptionTitleText}</p>

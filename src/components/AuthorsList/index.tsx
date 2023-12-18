@@ -9,6 +9,8 @@ import styles from './styles.module.scss';
 
 const { wrapper, title, authors } = styles;
 
+const numberOfPosts = 4;
+
 const LazyLoadAuthorCard = dynamic(() => import('./AuthorCard'), {
   loading: () => <Loading />,
 });
@@ -17,7 +19,7 @@ const AuthorsList = ({ locale }: ILocaleProps) => {
   const { authorsList } = getDictionary(locale);
   const { titleText } = authorsList;
 
-  const authorsArray = allAuthors.slice(0, 4);
+  const authorsArray = allAuthors.slice(0, numberOfPosts);
 
   return (
     <section className={wrapper}>

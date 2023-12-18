@@ -1,6 +1,15 @@
 import Image from 'next/image';
 
 export const postsImages = {
+  homeHeroPostImage: (
+    <Image
+      src="/assets/homeHeroBanner.webp"
+      alt="featuredPost"
+      fill
+      priority
+      sizes="height: 352px, width: 100%"
+    />
+  ),
   featuredHomePostImage: (
     <Image
       src="/assets/posts/featuredHomePost.webp"

@@ -26,7 +26,7 @@ const Post = ({ locale, postData }: IProps) => {
         <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
           {authorName}
         </Link>
-        {` ${stringDate}`}
+        {` | ${stringDate}`}
       </span>
       <h4 className={title}>{postTitle}</h4>
     </div>

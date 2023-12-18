@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 
 const {
   title: postTitleText,
-  description: descriptionTitleText,
+  preview: previewText,
   createdDate: createdPostDate,
   authorName: postAuthor,
   authorId,
@@ -52,7 +52,7 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
           {` | ${stringDate}`}
         </span>
         <h3 className={postTittle}>{postTitleText}</h3>
-        <p className={description}>{descriptionTitleText}</p>
+        <p className={description}>{previewText}</p>
         <Link className={readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
           {readMoreLinkText}
         </Link>

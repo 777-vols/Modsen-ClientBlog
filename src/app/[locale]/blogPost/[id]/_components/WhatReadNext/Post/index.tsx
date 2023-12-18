@@ -3,18 +3,18 @@ import Link from 'next/link';
 import { urls } from '@/constants';
 import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/lib/getDictionary';
+import { ILocaleWithPost } from '@/types';
 
 import styles from './styles.module.scss';
-import { IProps } from './types';
 
 const { wrapper, postWrapper, imageWrapper, info, postTittle, description, authorLink } = styles;
 
 const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 
-const Post = ({ locale, postData }: IProps) => {
+const Post = ({ locale, postData }: ILocaleWithPost) => {
   const {
     title: postTitleText,
-    description: descriptionTitleText,
+    preview: previewText,
     createdDate: createdPostDate,
     authorName: postAuthor,
     authorId,
@@ -41,7 +41,7 @@ const Post = ({ locale, postData }: IProps) => {
           {` | ${stringDate}`}
         </span>
         <h3 className={postTittle}>{postTitleText}</h3>
-        <p className={description}>{descriptionTitleText}</p>
+        <p className={description}>{previewText}</p>
       </article>
     </div>
   );

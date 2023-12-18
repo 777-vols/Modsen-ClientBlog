@@ -75,7 +75,7 @@ const Navbar: FC<IProps> = ({ navbar, locale, isFooterNav }) => {
                   ? `/${i18n.locales[1]}/${restUrl.join('/')}`
                   : `/${i18n.locales[0]}/${restUrl.join('/')}`
               }>
-              {currentLanguage === i18n.locales[0] ? i18n.locales[1] : i18n.locales[0]}
+              en/ru
             </Link>
           </>
         )}

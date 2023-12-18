@@ -3,17 +3,20 @@
 import { useMemo } from 'react';
 
 import { allPosts } from '@/constants/Posts';
+import { getDictionary } from '@/lib/getDictionary';
+import { ILocaleWithPost } from '@/types';
 
 import Post from './Post';
 import styles from './styles.module.scss';
-import { IProps } from './types';
 
 const { wrapper, title, postsWrapper } = styles;
 
 const numberOfPosts = 3;
 
-const WhatReadNext = ({ locale, currentPostData }: IProps) => {
-  const { id: currentPostId, category: currentPostCategory } = currentPostData;
+const WhatReadNext = ({ locale, postData }: ILocaleWithPost) => {
+  const { blogPostTitle } = getDictionary(locale);
+
+  const { id: currentPostId, category: currentPostCategory } = postData;
 
   const recommendedPosts = useMemo(
     () =>
@@ -28,7 +31,7 @@ const WhatReadNext = ({ locale, currentPostData }: IProps) => {
 
   return (
     <section className={wrapper}>
-      <h2 className={title}>What to read next</h2>
+      <h2 className={title}>{blogPostTitle}</h2>
       <div className={postsWrapper}>{recommendedPosts}</div>
     </section>
   );

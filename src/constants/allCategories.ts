@@ -1,7 +1,6 @@
 export const allCategories = {
-  business: 'Business',
-  technology: 'Technology',
-  startup: 'Startup',
-  science: 'Science',
-  traveling: 'Traveling',
+  business: 'business',
+  technology: 'technology',
+  startup: 'startup',
+  economy: 'economy',
 };

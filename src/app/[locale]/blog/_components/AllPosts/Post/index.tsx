@@ -12,7 +12,7 @@ const { blogPost: blogPostPageUrl } = urls;
 const Post = ({ locale, postData }: IProps) => {
   const {
     title: postTitleText,
-    description: descriptionTitleText,
+    preview: previewText,
     category,
     image: postImage,
     id: postId,
@@ -25,7 +25,7 @@ const Post = ({ locale, postData }: IProps) => {
         <div className={content}>
           <h6 className={subtitle}>{category.toUpperCase()}</h6>
           <h2 className={postTittle}>{postTitleText}</h2>
-          <p className={description}>{descriptionTitleText}</p>
+          <p className={description}>{previewText}</p>
         </div>
       </div>
     </Link>

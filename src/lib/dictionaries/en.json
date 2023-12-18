@@ -98,5 +98,17 @@
     "messagePlaceholderText": "Message",
     "subscribeButtonText": "Subscribe",
     "sendMessageButtonText": "Send Message"
+  },
+  "blogPostTitle": "What to read next",
+  "blogPostInfo": "Posted on: ",
+  "contactBlock": {
+    "subtitleText": "CONTACT US",
+    "titleText": "Let’s Start a Conversation",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+    "mondayToFridayText": "Monday To Friday",
+    "hoursText": "9:00 AM to 8:00 PM",
+    "ourTeamText": "Our Support Team is available 24/7",
+    "contactUsText": "Contact Us",
+    "workingHoursText": "Working hours"
   }
 }

@@ -74,6 +74,10 @@
     color: $color-yellow;
   }
 
+  @media (max-width: $breakpoint-laptop) {
+    margin-left: $space-small-l;
+  }
+
   @media (max-width: $breakpoint-tablet) {
     margin-top: $space-small-xl;
     margin-left: $space-zero;

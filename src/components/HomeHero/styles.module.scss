@@ -6,13 +6,26 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: calc(100vh - 70px);
+  }
 }
 
 .container {
   @include container;
+  @include flex-center-vertical;
 
   height: 100%;
   padding: $space-large-xxl $space-large-s;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $space-large-xxl $space-medium-l;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-large-xxl $space-small-xxl;
+  }
 }
 
 .content {
@@ -35,10 +48,24 @@
   letter-spacing: -2px;
   line-height: 64px;
   margin: $space-small-xl $space-zero;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-large-l;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    line-height: 50px;
+    font-size: $fontSize-large-m;
+    margin: $space-small-l $space-zero;
+  }
 }
 
 .info {
   font-size: $fontSize-small-xl;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-small-l;
+  }
 }
 
 .authorNameLink {
@@ -54,6 +81,10 @@
   font-weight: $fontWeight-s;
   line-height: 28px;
   margin: $space-small-l $space-zero;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-small-l;
+  }
 }
 
 .readMoreLink {
@@ -61,4 +92,8 @@
   @include yellowButton;
 
   margin-top: $space-small-xxl;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: $space-small-xl;
+  }
 }

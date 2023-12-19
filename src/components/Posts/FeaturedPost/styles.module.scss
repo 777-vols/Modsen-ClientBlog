@@ -3,6 +3,10 @@
   max-width: 733px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 100%;
+  }
 }
 
 .title {
@@ -15,6 +19,14 @@
   border: 1px solid rgba(244, 244, 244, 1);
   padding: $space-small-xxl;
   flex-grow: 1;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $space-small-xl;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $space-small-m;
+  }
 }
 
 .imageWrapper {
@@ -22,6 +34,14 @@
   width: 100%;
   position: relative;
   margin-bottom: $space-small-xxl;
+
+  @media (max-width: $breakpoint-laptop) {
+    height: 250px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 200px;
+  }
 }
 
 .info {

@@ -3,6 +3,11 @@
 
   max-width: 517px;
   position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: $space-small-m;
+    max-width: 100%;
+  }
 }
 
 .title {
@@ -22,4 +27,8 @@
 .postWrapper {
   max-height: 724px;
   overflow: auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: fit-content;
+  }
 }

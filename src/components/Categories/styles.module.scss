@@ -4,8 +4,9 @@
 }
 
 .categories {
-  display: flex;
-  justify-content: space-between;
+  @include flex-space-between;
+
+  gap: $space-small-m;
 }
 
 .title {

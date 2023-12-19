@@ -17,10 +17,10 @@ $color-home-hero-gradient: radial-gradient(
   rgba(0, 0, 0, 0.6) 100%
 );
 
-$screen-big: 1920px;
-$screen-laptop: 1280px;
-$screen-tablet: 821px;
-$screen-mobile: 480px;
+$breakpoint-big-screen: 1920px;
+$breakpoint-laptop: 1064px;
+$breakpoint-tablet: 821px;
+$breakpoint-mobile: 480px;
 
 $fontSize-large-xl: 56px;
 $fontSize-large-l: 48px;

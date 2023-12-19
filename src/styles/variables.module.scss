@@ -20,6 +20,7 @@ $color-home-hero-gradient: radial-gradient(
 $breakpoint-big-screen: 1920px;
 $breakpoint-laptop: 1064px;
 $breakpoint-tablet: 821px;
+$breakpoint-small-tablet: 600px;
 $breakpoint-mobile: 480px;
 
 $fontSize-large-xl: 56px;
@@ -132,9 +133,20 @@ $fontWeight-s: 400;
   border: none;
   height: 56px;
   width: fit-content;
-  padding: 0 $space-medium-s;
+  padding: $space-zero $space-medium-s;
   font-family: var(--sen-font);
   font-size: $fontSize-medium-s;
+
+  @media (max-width: $breakpoint-laptop) {
+    height: 45px;
+    padding: $space-zero $space-small-l;
+    font-size: $fontSize-small-xl;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 40px;
+    font-size: $fontSize-small-l;
+  }
 }
 
 @mixin whiteButton {
@@ -191,6 +203,17 @@ $fontWeight-s: 400;
   letter-spacing: -2px;
 }
 
+@mixin smallTitle {
+  font-weight: $fontWeight-l;
+  line-height: 32px;
+  font-size: $fontSize-medium-l;
+
+  @media (max-width: $breakpoint-laptop) {
+    line-height: 30px;
+    font-size: $fontSize-medium-m;
+  }
+}
+
 @mixin mediumTitle {
   font-weight: $fontWeight-l;
   line-height: 40px;
@@ -211,4 +234,20 @@ $fontWeight-s: 400;
   margin-right: $fontSize-medium-s;
   height: 48px;
   width: 48px;
+}
+
+@mixin navbarTitle {
+  @include smallTitle;
+
+  cursor: pointer;
+  font-family: var(--inter-font);
+  color: $color-white;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-medium-s;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-small-xl;
+  }
 }

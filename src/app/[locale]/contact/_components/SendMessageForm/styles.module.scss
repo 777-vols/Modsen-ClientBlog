@@ -31,10 +31,10 @@
 
 .formButton {
   @include yellowButtonWithDarkBg;
+  @include smallTitle;
 
   width: 100%;
   height: 64px;
-  font-size: $fontSize-medium-l;
 }
 
 .errorMessage {

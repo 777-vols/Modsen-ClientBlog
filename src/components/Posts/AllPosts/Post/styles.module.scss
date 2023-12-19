@@ -12,8 +12,8 @@
 }
 
 .title {
-  font-size: $fontSize-medium-l;
-  line-height: 32px;
+  @include smallTitle;
+
   margin-top: $space-small-s;
   max-width: 370px;
 }

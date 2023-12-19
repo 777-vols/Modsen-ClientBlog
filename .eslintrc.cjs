@@ -49,6 +49,7 @@ module.exports = {
     'import/no-duplicates': 'error',
     'react/function-component-definition': 0,
     'import/prefer-default-export': 0,
+    'jsx-a11y/control-has-associated-label': 0,
     'react/jsx-props-no-spreading': 0,
     'no-param-reassign': 0,
     '@typescript-eslint/no-misused-promises': [

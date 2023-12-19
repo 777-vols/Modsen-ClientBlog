@@ -43,7 +43,7 @@
 .categoryWrapper {
   @include flex-center-vertical;
 
-  font-size: $space-small-xl;
+  font-size: $fontSize-medium-l;
 }
 
 .content {
@@ -67,10 +67,9 @@
   }
 
   li {
-    font-size: $fontSize-medium-l;
-    line-height: 32px;
-    list-style: inside;
+    @include smallTitle;
 
+    list-style: inside;
     letter-spacing: 1px;
     color: $color-medium-grey;
   }

@@ -2,35 +2,28 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC, useCallback, useMemo, useState } from 'react';
+import { FC, useCallback, useRef, useState } from 'react';
 import { Portal } from 'react-portal';
 
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
 import { urls } from '@/constants';
-import { activePathHelper, getLinks } from '@/helpers';
+import { useOnClickOutside } from '@/hooks';
 import { useIsMounted } from '@/hooks/useIsMounted';
 import { getDictionary } from '@/lib/getDictionary';
 import { i18n } from '@/lib/i18n.config';
+import { ILocaleProps } from '@/types';
 
+import NavMenu from '../NavMenu';
 import styles from './styles.module.scss';
-import { IProps } from './types';
-
-const {
-  wrapper,
-  headerTitle,
-  navWrapper,
-  linksWrapper,
-  itemLink,
-  activeLink,
-  videoButton,
-  language,
-} = styles;
 
 const { home } = urls;
 
-const Navbar: FC<IProps> = ({ locale, isFooterNav }) => {
+const Navbar: FC<ILocaleProps> = ({ locale }) => {
   const { navbar } = getDictionary(locale);
-  const { title, linksNames, videoButtonName } = navbar;
+  const { title, videoButtonName } = navbar;
+
+  const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState<boolean>(false);
+  const menuRef = useRef(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -39,49 +32,54 @@ const Navbar: FC<IProps> = ({ locale, isFooterNav }) => {
   const splittedPathname = pathname.split('/');
   const [, currentLanguage, ...restUrl] = splittedPathname;
 
-  const linksList = useMemo(
-    () =>
-      getLinks(locale, linksNames, isFooterNav).map(({ name, path }) => {
-        return (
-          <li className={activePathHelper(pathname, path) ? activeLink : itemLink} key={path}>
-            <Link href={path}>{name}</Link>
-          </li>
-        );
-      }),
-    [isFooterNav, linksNames, locale, pathname],
-  );
-
   const handleOpenCloseModal = useCallback(() => {
     setIsModalOpen((prevState) => !prevState);
   }, []);
 
-  return (
-    <div className={wrapper}>
-      <Link href={`/${locale}${home}`}>
-        <h4 className={headerTitle}>{title}</h4>
-      </Link>
-      <div className={navWrapper}>
-        <nav>
-          <ul className={linksWrapper}>{linksList}</ul>
-        </nav>
+  const burgerButtonHandler = useCallback(() => {
+    setBurgerMenuIsOpen((prevState) => !prevState);
+  }, []);
 
-        {!isFooterNav && (
-          <>
-            <button className={videoButton} type="button" onClick={handleOpenCloseModal}>
-              {videoButtonName}
-            </button>
-            <Link
-              className={language}
-              href={
-                currentLanguage === i18n.locales[0]
-                  ? `/${i18n.locales[1]}/${restUrl.join('/')}`
-                  : `/${i18n.locales[0]}/${restUrl.join('/')}`
-              }>
-              en/ru
-            </Link>
-          </>
-        )}
+  useOnClickOutside(menuRef, () => {
+    if (burgerMenuIsOpen) {
+      burgerButtonHandler();
+    }
+  });
+
+  return (
+    <div ref={menuRef} className={styles.wrapper}>
+      <button
+        type="button"
+        className={burgerMenuIsOpen ? styles.activeBurgerButton : styles.burgerButton}
+        onClick={burgerButtonHandler}>
+        <span className={styles.styledBar} />
+        <span className={styles.styledBar} />
+        <span className={styles.styledBar} />
+      </button>
+
+      <Link href={`/${locale}${home}`}>
+        <h4 className={styles.headerTitle}>{title}</h4>
+      </Link>
+
+      <div className={burgerMenuIsOpen ? styles.mobileNavWrapper : styles.navWrapper}>
+        <NavMenu locale={locale} isMobileNav={burgerMenuIsOpen} closeMenu={burgerButtonHandler} />
+
+        <div className={styles.controls}>
+          <button className={styles.videoButton} type="button" onClick={handleOpenCloseModal}>
+            {videoButtonName}
+          </button>
+          <Link
+            className={styles.language}
+            href={
+              currentLanguage === i18n.locales[0]
+                ? `/${i18n.locales[1]}/${restUrl.join('/')}`
+                : `/${i18n.locales[0]}/${restUrl.join('/')}`
+            }>
+            en/ru
+          </Link>
+        </div>
       </div>
+
       {mounted && (
         <Portal>{isModalOpen && <AboutUsModal handleCloseModal={handleOpenCloseModal} />}</Portal>
       )}

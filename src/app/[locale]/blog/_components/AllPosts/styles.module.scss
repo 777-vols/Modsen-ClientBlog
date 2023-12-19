@@ -31,9 +31,9 @@
 
 .disabledPrevNextButton {
   @include maxSize;
+  @include smallTitle;
 
   background: none;
-  font-size: $fontSize-medium-l;
   font-weight: $fontWeight-xl;
   border: none;
   color: $color-medium-grey;

@@ -3,7 +3,7 @@
 }
 
 .message {
-  font-size: $space-small-xl;
+  font-size: $fontSize-medium-l;
   line-height: 32px;
   font-weight: $fontWeight-l;
   height: 256px;
@@ -25,8 +25,7 @@
 }
 
 .fullName {
-  font-size: $fontSize-medium-l;
-  line-height: 32px;
+  @include smallTitle;
 }
 
 .adress {

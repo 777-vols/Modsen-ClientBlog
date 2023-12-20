@@ -12,6 +12,10 @@
   position: relative;
   height: 705px;
   max-width: 949px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
 }
 
 .content {
@@ -24,6 +28,19 @@
   background: $color-white;
   max-width: 706px;
   height: fit-content;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $space-medium-s $space-small-xxl;
+    position: static;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $space-medium-s $space-zero;
+  }
 }
 
 .subtitle {
@@ -36,6 +53,11 @@
   letter-spacing: -2px;
   line-height: 64px;
   margin-top: $space-small-xl;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-large-m;
+    line-height: 54px;
+  }
 }
 
 .description {

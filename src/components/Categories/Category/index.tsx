@@ -10,8 +10,6 @@ const { category } = urls;
 
 const { categoryImages } = allImages;
 
-const { wrapper, title, description, imageWrapper } = styles;
-
 const Category = ({ categoryKey, locale }: IProps) => {
   const { category: categoryData } = getDictionary(locale);
   const { categoriesList } = categoryData;
@@ -19,10 +17,12 @@ const Category = ({ categoryKey, locale }: IProps) => {
 
   return (
     <Link href={`/${locale}${category}/${titleText.toLocaleLowerCase()}`}>
-      <div className={wrapper}>
-        <div className={imageWrapper}>{categoryImages[categoryKey]}</div>
-        <h3 className={title}>{titleText}</h3>
-        <p className={description}>{descriptionText}</p>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <div className={styles.imageWrapper}>{categoryImages[categoryKey]}</div>
+          <h3 className={styles.title}>{titleText}</h3>
+        </div>
+        <p className={styles.description}>{descriptionText}</p>
       </div>
     </Link>
   );

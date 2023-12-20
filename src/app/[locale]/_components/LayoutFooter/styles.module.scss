@@ -29,8 +29,7 @@
   gap: 10%;
 
   @media (max-width: $breakpoint-laptop) {
-    margin: $space-zero;
-    margin-bottom: $space-small-m;
+    margin-bottom: $space-small-m $space-zero;
     padding: $space-small-xxl $space-medium-l;
   }
 

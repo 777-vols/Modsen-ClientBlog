@@ -12,6 +12,10 @@
 
   @media (max-width: $breakpoint-tablet) {
     height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
   }
 }
 

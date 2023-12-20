@@ -231,6 +231,10 @@ $fontWeight-s: 400;
   line-height: 40px;
   letter-spacing: -1px;
   font-size: $fontSize-large-s;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-xl;
+  }
 }
 
 @mixin descriptionText {
@@ -257,9 +261,5 @@ $fontWeight-s: 400;
 
   @media (max-width: $breakpoint-laptop) {
     font-size: $fontSize-medium-s;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    font-size: $fontSize-small-xl;
   }
 }

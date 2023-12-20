@@ -6,8 +6,6 @@ import Category from './Category';
 import styles from './styles.module.scss';
 import { IProps, TypeCategoryKey } from './types';
 
-const { wrapper, categories, title } = styles;
-
 const Categories = ({ titleText, locale }: IProps) => {
   const { category } = getDictionary(locale);
   const { categoriesList } = category;
@@ -17,9 +15,9 @@ const Categories = ({ titleText, locale }: IProps) => {
   ));
 
   return (
-    <section className={wrapper}>
-      <h2 className={title}>{titleText}</h2>
-      <div className={categories}>{categoriesComponents}</div>
+    <section className={styles.wrapper}>
+      <h2 className={styles.title}>{titleText}</h2>
+      <div className={styles.categories}>{categoriesComponents}</div>
     </section>
   );
 };

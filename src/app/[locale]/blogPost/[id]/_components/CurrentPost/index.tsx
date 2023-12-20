@@ -13,19 +13,6 @@ import styles from './styles.module.scss';
 
 const { author: authorPageUrl } = urls;
 
-const {
-  wrapper,
-  imageWrapper,
-  blogInnerHeader,
-  content,
-  dateInfo,
-  userAvatar,
-  userBlock,
-  userName,
-  postTitle,
-  categoryWrapper,
-} = styles;
-
 const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
   const {
     title: postTitleText,
@@ -49,25 +36,25 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
   const textDate = getStringDate(createdDate);
 
   return (
-    <section className={wrapper}>
-      <div className={blogInnerHeader}>
-        <div className={userBlock}>
-          <div className={userAvatar}>{authorAvatar}</div>
+    <section className={styles.wrapper}>
+      <div className={styles.blogInnerHeader}>
+        <div className={styles.userBlock}>
+          <div className={styles.userAvatar}>{authorAvatar}</div>
           <div>
             <Link href={`/${locale}${authorPageUrl}/${authorId}`}>
-              <h3 className={userName}>{authorNameText}</h3>
+              <h3 className={styles.userName}>{authorNameText}</h3>
             </Link>
-            <span className={dateInfo}>{`${blogPostInfo}${textDate}`}</span>
+            <span className={styles.dateInfo}>{`${blogPostInfo}${textDate}`}</span>
           </div>
         </div>
-        <h1 className={postTitle}>{postTitleText}</h1>
-        <h4 className={categoryWrapper}>
+        <h1 className={styles.postTitle}>{postTitleText}</h1>
+        <h4 className={styles.categoryWrapper}>
           {categoryImage}
           {categoryName}
         </h4>
       </div>
-      <div className={imageWrapper}>{postImage}</div>
-      <div className={content} dangerouslySetInnerHTML={{ __html: text! }} />
+      <div className={styles.imageWrapper}>{postImage}</div>
+      <div className={styles.content} dangerouslySetInnerHTML={{ __html: text! }} />
     </section>
   );
 };

@@ -18,18 +18,6 @@ const {
   id: postId,
 } = featuredHomePost;
 
-const {
-  wrapper,
-  title,
-  postWrapper,
-  imageWrapper,
-  readMoreLink,
-  info,
-  postTittle,
-  description,
-  authorLink,
-} = styles;
-
 const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 
 const FeaturedPost = ({ locale }: ILocaleProps) => {
@@ -40,20 +28,20 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
   const stringDate = getStringDate(createdPostDate);
 
   return (
-    <div className={wrapper}>
-      <h2 className={title}>{titleText}</h2>
-      <article className={postWrapper}>
-        <div className={imageWrapper}>{postImage}</div>
-        <span className={info}>
+    <div className={styles.wrapper}>
+      <h2 className={styles.title}>{titleText}</h2>
+      <article className={styles.postWrapper}>
+        <div className={styles.imageWrapper}>{postImage}</div>
+        <span className={styles.info}>
           {postInfo}
-          <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+          <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
             {postAuthor}
           </Link>
           {` | ${stringDate}`}
         </span>
-        <h3 className={postTittle}>{postTitleText}</h3>
-        <p className={description}>{previewText}</p>
-        <Link className={readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
+        <h3 className={styles.postTittle}>{postTitleText}</h3>
+        <p className={styles.description}>{previewText}</p>
+        <Link className={styles.readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
           {readMoreLinkText}
         </Link>
       </article>

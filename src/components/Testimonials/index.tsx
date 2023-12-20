@@ -6,8 +6,6 @@ import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
 
-const { wrapper, wrappeInner, content, carousel, subtitle, title, description } = styles;
-
 const LazyLoadAllPosts = dynamic(() => import('./Carousel'), {
   loading: () => <Loading />,
 });
@@ -17,14 +15,14 @@ const Testimonials = ({ locale }: ILocaleProps) => {
   const { titleText, subtitleText, descriptionText } = testimonials;
 
   return (
-    <section className={wrapper}>
-      <div className={wrappeInner}>
-        <div className={content}>
-          <span className={subtitle}>{subtitleText}</span>
-          <h2 className={title}>{titleText}</h2>
-          <p className={description}>{descriptionText}</p>
+    <section className={styles.wrapper}>
+      <div className={styles.wrappeInner}>
+        <div className={styles.content}>
+          <span className={styles.subtitle}>{subtitleText}</span>
+          <h2 className={styles.title}>{titleText}</h2>
+          <p className={styles.description}>{descriptionText}</p>
         </div>
-        <div className={carousel}>
+        <div className={styles.carousel}>
           <LazyLoadAllPosts />
         </div>
       </div>

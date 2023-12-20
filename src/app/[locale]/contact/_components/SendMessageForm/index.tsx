@@ -17,8 +17,6 @@ import { ISendMessageFormData } from './types';
 
 const { emailJSPublicKey, emailJSServiceId, emailJSContactFormTemplate } = envVariables;
 
-const { form, input, textarea, formButton, errorMessage, querySelector } = styles;
-
 const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
   const { forms } = getDictionary(locale);
   const {
@@ -63,34 +61,34 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
   };
 
   return (
-    <form className={form} ref={formRef} onSubmit={handleSubmit(handleSendMessage)}>
-      <span className={errorMessage}>{errors.fullName?.message}</span>
+    <form className={styles.form} ref={formRef} onSubmit={handleSubmit(handleSendMessage)}>
+      <span className={styles.errorMessage}>{errors.fullName?.message}</span>
       <input
-        className={input}
+        className={styles.input}
         type="text"
         placeholder={namePlaceholderText}
         {...register('fullName')}
       />
-      <span className={errorMessage}>{errors.email?.message}</span>
+      <span className={styles.errorMessage}>{errors.email?.message}</span>
       <input
-        className={input}
+        className={styles.input}
         type="email"
         placeholder={emailPlaceholderText}
         {...register('email', {
           required: true,
         })}
       />
-      <span className={errorMessage}>{errors.query?.message}</span>
-      <select className={querySelector} {...register('query')}>
+      <span className={styles.errorMessage}>{errors.query?.message}</span>
+      <select className={styles.querySelector} {...register('query')}>
         {queryOptionsArray}
       </select>
-      <span className={errorMessage}>{errors.message?.message}</span>
+      <span className={styles.errorMessage}>{errors.message?.message}</span>
       <textarea
-        className={textarea}
+        className={styles.textarea}
         placeholder={messagePlaceholderText}
         {...register('message')}
       />
-      <button className={formButton} type="submit">
+      <button className={styles.formButton} type="submit">
         {sendMessageButtonText}
       </button>
 

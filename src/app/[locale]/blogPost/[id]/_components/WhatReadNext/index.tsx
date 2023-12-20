@@ -9,8 +9,6 @@ import { ILocaleWithPost } from '@/types';
 import Post from './Post';
 import styles from './styles.module.scss';
 
-const { wrapper, title, postsWrapper } = styles;
-
 const numberOfPosts = 3;
 
 const WhatReadNext = ({ locale, postData }: ILocaleWithPost) => {
@@ -30,9 +28,9 @@ const WhatReadNext = ({ locale, postData }: ILocaleWithPost) => {
   );
 
   return (
-    <section className={wrapper}>
-      <h2 className={title}>{blogPostTitle}</h2>
-      <div className={postsWrapper}>{recommendedPosts}</div>
+    <section className={styles.wrapper}>
+      <h2 className={styles.title}>{blogPostTitle}</h2>
+      <div className={styles.postsWrapper}>{recommendedPosts}</div>
     </section>
   );
 };

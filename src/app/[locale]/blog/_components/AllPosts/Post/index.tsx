@@ -5,8 +5,6 @@ import { urls } from '@/constants';
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
-const { wrapper, imageWrapper, postTittle, description, subtitle, content } = styles;
-
 const { blogPost: blogPostPageUrl } = urls;
 
 const Post = ({ locale, postData }: IProps) => {
@@ -20,12 +18,12 @@ const Post = ({ locale, postData }: IProps) => {
 
   return (
     <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
-      <div className={wrapper}>
-        <div className={imageWrapper}>{postImage}</div>
-        <div className={content}>
-          <h6 className={subtitle}>{category.toUpperCase()}</h6>
-          <h2 className={postTittle}>{postTitleText}</h2>
-          <p className={description}>{previewText}</p>
+      <div className={styles.wrapper}>
+        <div className={styles.imageWrapper}>{postImage}</div>
+        <div className={styles.content}>
+          <h6 className={styles.subtitle}>{category.toUpperCase()}</h6>
+          <h2 className={styles.postTittle}>{postTitleText}</h2>
+          <p className={styles.description}>{previewText}</p>
         </div>
       </div>
     </Link>

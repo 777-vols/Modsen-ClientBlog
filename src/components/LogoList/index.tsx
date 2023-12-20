@@ -4,13 +4,11 @@ import { logos } from '@/constants';
 
 import styles from './styles.module.scss';
 
-const { wrapper, logoslist, logoWrapper } = styles;
-
 const LogoList = () => (
-  <section className={wrapper}>
-    <div className={logoslist}>
+  <section className={styles.wrapper}>
+    <div className={styles.logoslist}>
       {logos.map(({ icon }) => (
-        <div className={logoWrapper} key={v4()}>
+        <div className={styles.logoWrapper} key={v4()}>
           {icon}
         </div>
       ))}

@@ -10,20 +10,18 @@ const { aboutUs } = urls;
 
 const { whyWeStartedBanner } = allImages;
 
-const { wrapper, bannerWrapper, content, subtitle, title, description, ourStoryLink } = styles;
-
 const WhyWeStarted = ({ locale }: ILocaleProps) => {
   const { whyWeStarted } = getDictionary(locale);
   const { titleText, subtitleText, descriptionText, buttonText } = whyWeStarted;
 
   return (
-    <section className={wrapper}>
-      <div className={bannerWrapper}>{whyWeStartedBanner}</div>
-      <div className={content}>
-        <span className={subtitle}>{subtitleText}</span>
-        <h1 className={title}>{titleText}</h1>
-        <p className={description}>{descriptionText}</p>
-        <Link className={ourStoryLink} href={`/${locale}${aboutUs}`}>
+    <section className={styles.wrapper}>
+      <div className={styles.bannerWrapper}>{whyWeStartedBanner}</div>
+      <div className={styles.content}>
+        <span className={styles.subtitle}>{subtitleText}</span>
+        <h1 className={styles.title}>{titleText}</h1>
+        <p className={styles.description}>{descriptionText}</p>
+        <Link className={styles.ourStoryLink} href={`/${locale}${aboutUs}`}>
           {buttonText}
         </Link>
       </div>

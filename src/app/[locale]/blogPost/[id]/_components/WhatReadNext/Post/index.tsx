@@ -7,8 +7,6 @@ import { ILocaleWithPost } from '@/types';
 
 import styles from './styles.module.scss';
 
-const { wrapper, postWrapper, imageWrapper, info, postTittle, description, authorLink } = styles;
-
 const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 
 const Post = ({ locale, postData }: ILocaleWithPost) => {
@@ -28,20 +26,20 @@ const Post = ({ locale, postData }: ILocaleWithPost) => {
   const stringDate = getStringDate(createdPostDate);
 
   return (
-    <div className={wrapper}>
-      <article className={postWrapper}>
+    <div className={styles.wrapper}>
+      <article className={styles.postWrapper}>
         <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
-          <div className={imageWrapper}>{postImage}</div>
+          <div className={styles.imageWrapper}>{postImage}</div>
         </Link>
-        <span className={info}>
+        <span className={styles.info}>
           {postInfo}
-          <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+          <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
             {postAuthor}
           </Link>
           {` | ${stringDate}`}
         </span>
-        <h3 className={postTittle}>{postTitleText}</h3>
-        <p className={description}>{previewText}</p>
+        <h3 className={styles.postTittle}>{postTitleText}</h3>
+        <p className={styles.description}>{previewText}</p>
       </article>
     </div>
   );

@@ -9,8 +9,6 @@ import { IProps } from './types';
 
 const { author: authorPageUrl } = urls;
 
-const { wrapper, title, info, authorLink } = styles;
-
 const Post = ({ locale, postData }: IProps) => {
   const { title: postTitle, createdDate, authorName, authorId } = postData;
 
@@ -20,15 +18,15 @@ const Post = ({ locale, postData }: IProps) => {
   const stringDate = getStringDate(createdDate);
 
   return (
-    <div className={wrapper}>
-      <span className={info}>
+    <div className={styles.wrapper}>
+      <span className={styles.info}>
         {postInfo}
-        <Link className={authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+        <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
           {authorName}
         </Link>
         {` | ${stringDate}`}
       </span>
-      <h4 className={title}>{postTitle}</h4>
+      <h4 className={styles.title}>{postTitle}</h4>
     </div>
   );
 };

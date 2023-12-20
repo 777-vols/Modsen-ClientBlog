@@ -7,8 +7,6 @@ import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';
 
-const { wrapper, title, authors } = styles;
-
 const numberOfPosts = 4;
 
 const LazyLoadAuthorCard = dynamic(() => import('./AuthorCard'), {
@@ -22,9 +20,9 @@ const AuthorsList = ({ locale }: ILocaleProps) => {
   const authorsArray = allAuthors.slice(0, numberOfPosts);
 
   return (
-    <section className={wrapper}>
-      <h2 className={title}>{titleText}</h2>
-      <div className={authors}>
+    <section className={styles.wrapper}>
+      <h2 className={styles.title}>{titleText}</h2>
+      <div className={styles.authors}>
         {authorsArray.map((authorData) => (
           <LazyLoadAuthorCard key={authorData.id} locale={locale} authorData={authorData} />
         ))}

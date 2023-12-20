@@ -8,19 +8,6 @@ import styles from './styles.module.scss';
 
 const { aboutUs } = urls;
 
-const {
-  wrapper,
-  shape,
-  purpleShape,
-  content,
-  contentBlock,
-  subtitle,
-  smallTitle,
-  bigTitle,
-  description,
-  readMoreLink,
-} = styles;
-
 const AboutUs = ({ locale }: ILocaleProps) => {
   const { aboutUsBlock } = getDictionary(locale);
   const { aboutUs: aboutUsData, ourMission } = aboutUsBlock;
@@ -28,23 +15,23 @@ const AboutUs = ({ locale }: ILocaleProps) => {
   const { ourMissionTitle, ourMissionSubtitle, ourMissionDescription } = ourMission;
 
   return (
-    <section className={wrapper}>
-      <div className={shape}>
-        <div className={purpleShape} />
+    <section className={styles.wrapper}>
+      <div className={styles.shape}>
+        <div className={styles.purpleShape} />
       </div>
-      <div className={content}>
-        <div className={contentBlock}>
-          <span className={subtitle}>{aboutUsSubtitle}</span>
-          <h2 className={bigTitle}>{aboutUsTitle}</h2>
-          <p className={description}>{aboutUsDescription}</p>
-          <Link className={readMoreLink} href={`/${locale}${aboutUs}`}>
+      <div className={styles.content}>
+        <div className={styles.contentBlock}>
+          <span className={styles.subtitle}>{aboutUsSubtitle}</span>
+          <h2 className={styles.bigTitle}>{aboutUsTitle}</h2>
+          <p className={styles.description}>{aboutUsDescription}</p>
+          <Link className={styles.readMoreLink} href={`/${locale}${aboutUs}`}>
             {linkText}
           </Link>
         </div>
-        <div className={contentBlock}>
-          <span className={subtitle}>{ourMissionSubtitle}</span>
-          <h3 className={smallTitle}>{ourMissionTitle}</h3>
-          <p className={description}>{ourMissionDescription}</p>
+        <div className={styles.contentBlock}>
+          <span className={styles.subtitle}>{ourMissionSubtitle}</span>
+          <h3 className={styles.smallTitle}>{ourMissionTitle}</h3>
+          <p className={styles.description}>{ourMissionDescription}</p>
         </div>
       </div>
     </section>

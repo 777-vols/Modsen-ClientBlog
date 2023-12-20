@@ -6,20 +6,6 @@ import { allAuthors } from '@/constants/Authors';
 
 import styles from './styles.module.scss';
 
-const {
-  message,
-  panel,
-  author,
-  info,
-  avatar,
-  fullName,
-  adress,
-  buttonWrapper,
-  controls,
-  disabledPrevNextButton,
-  activePrevNextButton,
-} = styles;
-
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -39,30 +25,32 @@ const Carousel = () => {
 
   return (
     <div>
-      <p className={message}>{review}</p>
-      <div className={panel}>
-        <div className={author}>
-          <div className={avatar}>{image}</div>
-          <div className={info}>
-            <h4 className={fullName}>{name}</h4>
-            <h4 className={adress}>{from}</h4>
+      <p className={styles.message}>{review}</p>
+      <div className={styles.panel}>
+        <div className={styles.author}>
+          <div className={styles.avatar}>{image}</div>
+          <div className={styles.info}>
+            <h4 className={styles.fullName}>{name}</h4>
+            <h4 className={styles.adress}>{from}</h4>
           </div>
         </div>
-        <div className={controls}>
-          <div className={buttonWrapper}>
+        <div className={styles.controls}>
+          <div className={styles.buttonWrapper}>
             <button
-              className={currentSlide !== 0 ? activePrevNextButton : disabledPrevNextButton}
+              className={
+                currentSlide !== 0 ? styles.activePrevNextButton : styles.disabledPrevNextButton
+              }
               type="button"
               onClick={handlePrevious}>
               ←
             </button>
           </div>
-          <div className={buttonWrapper}>
+          <div className={styles.buttonWrapper}>
             <button
               className={
                 currentSlide !== allAuthors.length - 1
-                  ? activePrevNextButton
-                  : disabledPrevNextButton
+                  ? styles.activePrevNextButton
+                  : styles.disabledPrevNextButton
               }
               type="button"
               onClick={handleNext}>

@@ -7,8 +7,6 @@ import { useOnClickOutside } from '@/hooks';
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
-const { background, wrapper, closeModalButton } = styles;
-
 const AboutUsModal: FC<IProps> = ({ handleCloseModal }) => {
   const modalRef = useRef(null);
 
@@ -17,9 +15,9 @@ const AboutUsModal: FC<IProps> = ({ handleCloseModal }) => {
   });
 
   return (
-    <div className={background}>
-      <div className={wrapper} ref={modalRef}>
-        <button className={closeModalButton} type="button" onClick={handleCloseModal}>
+    <div className={styles.background}>
+      <div className={styles.wrapper} ref={modalRef}>
+        <button className={styles.closeModalButton} type="button" onClick={handleCloseModal}>
           X
         </button>
         <iframe

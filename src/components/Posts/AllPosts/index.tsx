@@ -11,8 +11,6 @@ import styles from './styles.module.scss';
 
 const { blog } = urls;
 
-const { wrapper, title, viewAllLink, postWrapper } = styles;
-
 const numberOfPosts = 4;
 
 const AllPosts = ({ locale }: ILocaleProps) => {
@@ -22,12 +20,12 @@ const AllPosts = ({ locale }: ILocaleProps) => {
   const postsArray = allPosts.slice(0, numberOfPosts);
 
   return (
-    <div className={wrapper}>
-      <Link href={`/${locale}${blog}`} className={viewAllLink}>
+    <div className={styles.wrapper}>
+      <Link href={`/${locale}${blog}`} className={styles.viewAllLink}>
         {viewAllLinkText}
       </Link>
-      <h2 className={title}>{titleText}</h2>
-      <div className={postWrapper}>
+      <h2 className={styles.title}>{titleText}</h2>
+      <div className={styles.postWrapper}>
         {postsArray.map((postData) => (
           <Post key={v4()} locale={locale} postData={postData} />
         ))}

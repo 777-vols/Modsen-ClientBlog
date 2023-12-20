@@ -6,15 +6,13 @@ import { ILocaleProps } from '@/types';
 import FeaturedPost from './FeaturedPost';
 import styles from './styles.module.scss';
 
-const { wrapper } = styles;
-
 const LazyLoadAllPosts = dynamic(() => import('./AllPosts'), {
   loading: () => <Loading />,
 });
 
 const Posts = ({ locale }: ILocaleProps) => {
   return (
-    <section className={wrapper}>
+    <section className={styles.wrapper}>
       <FeaturedPost locale={locale} />
       <LazyLoadAllPosts locale={locale} />
     </section>

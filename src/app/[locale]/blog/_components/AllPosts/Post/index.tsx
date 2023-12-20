@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
@@ -19,7 +20,9 @@ const Post = ({ locale, postData }: IProps) => {
   return (
     <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
       <div className={styles.wrapper}>
-        <div className={styles.imageWrapper}>{postImage}</div>
+        <div className={styles.imageWrapper}>
+          <Image src={postImage} alt="post picture" fill priority />
+        </div>
         <div className={styles.content}>
           <h6 className={styles.subtitle}>{category.toUpperCase()}</h6>
           <h2 className={styles.postTittle}>{postTitleText}</h2>

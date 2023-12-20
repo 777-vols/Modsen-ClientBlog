@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { allImages, urls } from '@/constants';
@@ -16,7 +17,9 @@ const WhyWeStarted = ({ locale }: ILocaleProps) => {
 
   return (
     <section className={styles.wrapper}>
-      <div className={styles.bannerWrapper}>{whyWeStartedBanner}</div>
+      <div className={styles.bannerWrapper}>
+        <Image src={whyWeStartedBanner} alt="banner" fill priority />
+      </div>
       <div className={styles.content}>
         <span className={styles.subtitle}>{subtitleText}</span>
         <h1 className={styles.title}>{titleText}</h1>

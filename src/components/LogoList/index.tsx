@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { logos } from '@/constants';
 
 import styles from './styles.module.scss';
@@ -7,7 +9,7 @@ const LogoList = () => (
     <div className={styles.logoslist}>
       {logos.map(({ id, icon }) => (
         <div className={styles.logoWrapper} key={id}>
-          {icon}
+          <Image src={icon} alt="logo-icon" fill />
         </div>
       ))}
     </div>

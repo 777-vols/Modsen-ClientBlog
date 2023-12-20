@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
@@ -29,7 +30,9 @@ const Post = ({ locale, postData }: ILocaleWithPost) => {
     <div className={styles.wrapper}>
       <article className={styles.postWrapper}>
         <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
-          <div className={styles.imageWrapper}>{postImage}</div>
+          <div className={styles.imageWrapper}>
+            <Image src={postImage} alt="post picture" fill priority />
+          </div>
         </Link>
         <span className={styles.info}>
           {postInfo}

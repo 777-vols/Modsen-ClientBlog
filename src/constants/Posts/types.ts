@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { allCategories } from '@/constants/allCategories';
 
 export interface IPost {
@@ -11,5 +9,5 @@ export interface IPost {
   category: keyof typeof allCategories;
   authorName: string;
   authorId: string;
-  image: React.ReactElement;
+  image: string;
 }

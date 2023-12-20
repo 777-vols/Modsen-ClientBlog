@@ -17,4 +17,8 @@
 
 .logoWrapper {
   @include flex-center-vertical;
+
+  height: 30px;
+  width: 140px;
+  position: relative;
 }

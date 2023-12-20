@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import NavMenu from '@/components/NavMenu';
@@ -7,6 +8,8 @@ import { ILocaleProps } from '@/types';
 
 import SendMessageForm from './SendMessageForm';
 import styles from './styles.module.scss';
+
+const socialIconSize = 16;
 
 const LayoutFooter = ({ locale }: ILocaleProps) => {
   const { footer, navbar } = getDictionary(locale);
@@ -33,7 +36,12 @@ const LayoutFooter = ({ locale }: ILocaleProps) => {
           <div className={styles.socialsWrapper}>
             {socials.map(({ id, icon, href }) => (
               <Link className={styles.socialLink} key={id} href={href} target="_blank">
-                {icon}
+                <Image
+                  src={icon}
+                  alt="social-icon"
+                  width={socialIconSize}
+                  height={socialIconSize}
+                />
               </Link>
             ))}
           </div>

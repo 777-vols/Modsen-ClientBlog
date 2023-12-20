@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 import { allAuthors } from '@/constants/Authors';
@@ -28,7 +29,9 @@ const Carousel = () => {
       <p className={styles.message}>{review}</p>
       <div className={styles.panel}>
         <div className={styles.author}>
-          <div className={styles.avatar}>{image}</div>
+          <div className={styles.avatar}>
+            <Image src={image} alt="avatar" fill priority />
+          </div>
           <div className={styles.info}>
             <h4 className={styles.fullName}>{name}</h4>
             <h4 className={styles.adress}>{from}</h4>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
@@ -31,7 +32,9 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
     <div className={styles.wrapper}>
       <h2 className={styles.title}>{titleText}</h2>
       <article className={styles.postWrapper}>
-        <div className={styles.imageWrapper}>{postImage}</div>
+        <div className={styles.imageWrapper}>
+          <Image src={postImage} alt="banner" fill priority />
+        </div>
         <span className={styles.info}>
           {postInfo}
           <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>

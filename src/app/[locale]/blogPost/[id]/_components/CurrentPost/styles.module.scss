@@ -1,3 +1,5 @@
+$content-max-width: 843px;
+
 .wrapper {
   @include container;
 
@@ -12,12 +14,9 @@
 
 .imageWrapper {
   position: relative;
-  height: 582px;
-  margin: $space-medium-xl $space-zero;
-
-  @media (max-width: $breakpoint-laptop) {
-    height: 450px;
-  }
+  height: 400px;
+  max-width: $content-max-width;
+  margin: $space-medium-xl auto;
 
   @media (max-width: $breakpoint-tablet) {
     height: 350px;
@@ -67,7 +66,7 @@
 
 .content {
   margin: $space-zero auto;
-  max-width: 843px;
+  max-width: $content-max-width;
   width: 100%;
 
   h2 {

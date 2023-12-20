@@ -1,7 +1,7 @@
 .wrapper {
   @include container;
 
-  padding-top: $space-large-xxl;
+  margin-top: $space-large-xxl;
 }
 
 .blogInnerHeader {
@@ -14,6 +14,24 @@
   position: relative;
   height: 582px;
   margin: $space-medium-xl $space-zero;
+
+  @media (max-width: $breakpoint-laptop) {
+    height: 450px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 350px;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 300px;
+    margin: $space-medium-s $space-zero;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 230px;
+    margin: $space-small-xxl $space-zero;
+  }
 }
 
 .userBlock {
@@ -29,7 +47,8 @@
 }
 
 .userName {
-  font-size: $fontSize-large-s;
+  @include mediumTitle;
+
   color: $color-purple;
 }
 

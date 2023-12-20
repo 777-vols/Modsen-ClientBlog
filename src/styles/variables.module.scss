@@ -58,6 +58,10 @@ $fontWeight-l: 700;
 $fontWeight-m: 600;
 $fontWeight-s: 400;
 
+@media (max-width: $breakpoint-small-tablet) {
+  $space-large-xxl: 80px;
+}
+
 @mixin appearanceAnimation {
   @keyframes show {
     from {

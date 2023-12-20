@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, useCallback, useRef, useState } from 'react';
-import { Portal } from 'react-portal';
+import { createPortal } from 'react-dom';
 
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
 import NavMenu from '@/components/NavMenu';
@@ -59,11 +59,9 @@ const Navbar: FC<ILocaleProps> = ({ locale }) => {
         <span className={styles.styledBar} />
         <span className={styles.styledBar} />
       </button>
-
       <Link href={`/${locale}${home}`}>
         <h4 className={styles.headerTitle}>{title}</h4>
       </Link>
-
       <div className={burgerMenuIsOpen ? styles.mobileNavWrapper : styles.navWrapper}>
         <NavMenu locale={locale} isMobileNav={burgerMenuIsOpen} closeMenu={burgerButtonHandler} />
 
@@ -83,9 +81,9 @@ const Navbar: FC<ILocaleProps> = ({ locale }) => {
         </div>
       </div>
 
-      {mounted && (
-        <Portal>{isModalOpen && <AboutUsModal handleCloseModal={handleOpenCloseModal} />}</Portal>
-      )}
+      {mounted &&
+        isModalOpen &&
+        createPortal(<AboutUsModal handleCloseModal={handleOpenCloseModal} />, document.body)}
     </div>
   );
 };

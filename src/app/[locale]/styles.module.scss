@@ -1,0 +1,42 @@
+$sizeS: 300px;
+$sizeM: 450px;
+$sizeL: 600px;
+$sizeXL: 700px;
+
+.wrapper {
+  @include flex-center-horizontally;
+
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $color-red;
+  align-items: center;
+}
+
+.errorBanner {
+  @include flex-center-horizontally;
+
+  min-height: $sizeS;
+  min-width: $sizeS;
+  width: $sizeXL;
+  height: $sizeXL;
+  background: url('/assets/errorBanner.svg');
+
+  @media (max-width: $breakpoint-laptop) {
+    width: $sizeL;
+    height: $sizeL;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    width: $sizeM;
+    height: $sizeM;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    width: $sizeS;
+    height: $sizeS;
+  }
+}

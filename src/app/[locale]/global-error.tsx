@@ -1,19 +1,14 @@
 'use client';
 
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
+import styles from './styles.module.scss';
+
+export default function GlobalError() {
   return (
     <html lang="en">
       <body>
-        <h2>Something went wrong!</h2>
-        <button type="button" onClick={() => reset()}>
-          Try again
-        </button>
+        <div className={styles.wrapper}>
+          <div className={styles.errorBanner} />
+        </div>
       </body>
     </html>
   );

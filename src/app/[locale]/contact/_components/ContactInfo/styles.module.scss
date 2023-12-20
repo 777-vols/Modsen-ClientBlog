@@ -8,6 +8,14 @@
 
   flex-direction: column;
   margin-bottom: $space-medium-xl;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: $space-small-xl;
+  }
 }
 
 .subtitle {
@@ -23,6 +31,11 @@
   letter-spacing: -2px;
   text-align: center;
   margin-bottom: $space-small-s;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-large-m;
+    margin-bottom: $space-zero;
+  }
 }
 
 .description {
@@ -37,14 +50,24 @@
   display: flex;
   gap: 42px;
   color: $color-white;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    padding: $space-small-xxl;
+    gap: 30px;
+  }
 }
 
 .schedule {
-  flex: 5 2 200px;
+  flex: 5 2;
 }
 
 .contactUs {
-  flex: 5 2 200px;
+  flex: 5 2;
 }
 
 .contentInnerBlock {
@@ -64,4 +87,9 @@
 .smallHeading {
   font-size: $fontSize-medium-s;
   line-height: 36px;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    font-size: $fontSize-small-xl;
+    line-height: 28px;
+  }
 }

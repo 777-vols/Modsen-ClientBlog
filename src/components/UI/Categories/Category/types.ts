@@ -1,4 +1,4 @@
-import { TypeCategoryKey } from '@/components/Categories/types';
+import { TypeCategoryKey } from '@/components/UI/Categories/types';
 import { Locale } from '@/i18n/i18n.config';
 
 export interface IProps {

@@ -5,6 +5,18 @@
   height: 80px;
   padding-left: $space-medium-l;
   padding-right: $space-small-xxl;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding: $space-zero;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 }
 
 .container {

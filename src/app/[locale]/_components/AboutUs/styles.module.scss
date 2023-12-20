@@ -1,0 +1,88 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+
+  margin-bottom: $space-large-xxl;
+}
+
+.shape {
+  display: flex;
+  justify-content: flex-end;
+
+  height: 23px;
+  margin-left: 18%;
+  background: $color-yellow;
+}
+
+.purpleShape {
+  height: 100%;
+  width: 28%;
+  background: $color-purple;
+}
+
+.content {
+  @include flex-space-between;
+
+  gap: 61px;
+  padding: $space-large-m $space-large-s;
+  padding-right: $space-large-l;
+  background: $color-lavender;
+
+  @media (max-width: $breakpoint-laptop) {
+    @include flex-direction-column;
+
+    gap: 50px;
+    padding: $space-medium-l $space-medium-m;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-medium-l $space-small-xl;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $space-medium-m $space-small-l;
+  }
+}
+
+.contentBlock {
+  flex: 5 2;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.smallTitle {
+  @include mediumTitle;
+
+  margin-top: $space-small-xl;
+  margin-bottom: $space-small-l;
+}
+
+.bigTitle {
+  @include blockTitle;
+
+  margin-top: $space-small-xl;
+  margin-bottom: $space-small-l;
+  letter-spacing: -1px;
+
+  @media (max-width: $breakpoint-mobile) {
+    line-height: 40px;
+  }
+}
+
+.description {
+  @include descriptionText;
+}
+
+.readMoreLink {
+  display: inline-block;
+  margin-top: $space-small-l;
+  color: $color-purple;
+  font-size: $fontSize-medium-s;
+  font-weight: $fontWeight-l;
+
+  &:hover {
+    color: $color-red;
+  }
+}

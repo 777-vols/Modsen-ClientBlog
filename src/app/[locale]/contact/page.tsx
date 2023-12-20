@@ -7,14 +7,12 @@ import MapGl from './_components/MapGl';
 import SendMessageForm from './_components/SendMessageForm';
 import styles from './styles.module.scss';
 
-const { contentWrapper, content } = styles;
-
 const Contact = ({ params: { locale } }: ILocaleParams) => {
   return (
     <Suspense fallback={<Loading />}>
       <main>
-        <section className={contentWrapper}>
-          <div className={content}>
+        <section className={styles.contentWrapper}>
+          <div className={styles.content}>
             <ContactInfo locale={locale} />
             <SendMessageForm locale={locale} />
           </div>

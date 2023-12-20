@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { allCategories } from '../allCategories';
+import { allCategories } from '@/constants/allCategories';
 
 export interface IPost {
   id: string;
@@ -11,5 +9,5 @@ export interface IPost {
   category: keyof typeof allCategories;
   authorName: string;
   authorId: string;
-  image: React.ReactElement;
+  image: string;
 }

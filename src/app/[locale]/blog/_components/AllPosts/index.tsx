@@ -1,24 +1,13 @@
 'use client';
 
 import { FC, useMemo, useState } from 'react';
-import { v4 } from 'uuid';
 
 import { allPosts } from '@/constants/Posts';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import Post from './Post';
 import styles from './styles.module.scss';
-
-const {
-  wrapper,
-  title,
-  postsBlock,
-  controls,
-  buttonWrapper,
-  activePrevNextButton,
-  disabledPrevNextButton,
-} = styles;
 
 const numberOfPosts = 5;
 
@@ -47,28 +36,32 @@ const AllPosts: FC<ILocaleProps> = ({ locale }) => {
     const lastPost = currentPage * numberOfPosts;
     if (currentPage <= numberOfPages) {
       const postsArray = allPosts.slice(lastPost - numberOfPosts, lastPost);
-      return postsArray.map((post) => <Post key={v4()} locale={locale} postData={post} />);
+      return postsArray.map((post) => <Post key={post.id} locale={locale} postData={post} />);
     }
     return [];
   }, [currentPage, locale, numberOfPages]);
 
   return (
-    <section className={wrapper}>
-      <h1 className={title}>{titleText}</h1>
-      <div className={postsBlock}>{postsComponents}</div>
-      <div className={controls}>
-        <div className={buttonWrapper}>
+    <section className={styles.wrapper}>
+      <h1 className={styles.title}>{titleText}</h1>
+      <div className={styles.postsBlock}>{postsComponents}</div>
+      <div className={styles.controls}>
+        <div className={styles.buttonWrapper}>
           <button
-            className={currentPage !== 1 ? activePrevNextButton : disabledPrevNextButton}
+            className={
+              currentPage !== 1 ? styles.activePrevNextButton : styles.disabledPrevNextButton
+            }
             type="button"
             onClick={handlePrevious}>
             {prevButtonText}
           </button>
         </div>
-        <div className={buttonWrapper}>
+        <div className={styles.buttonWrapper}>
           <button
             className={
-              currentPage !== numberOfPages ? activePrevNextButton : disabledPrevNextButton
+              currentPage !== numberOfPages
+                ? styles.activePrevNextButton
+                : styles.disabledPrevNextButton
             }
             type="button"
             onClick={handleNext}>

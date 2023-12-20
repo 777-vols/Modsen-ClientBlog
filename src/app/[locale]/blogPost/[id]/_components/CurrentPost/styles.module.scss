@@ -1,7 +1,9 @@
+$content-max-width: 843px;
+
 .wrapper {
   @include container;
 
-  padding-top: $space-large-xxl;
+  margin-top: $space-large-xxl;
 }
 
 .blogInnerHeader {
@@ -12,8 +14,23 @@
 
 .imageWrapper {
   position: relative;
-  height: 582px;
-  margin: $space-medium-xl $space-zero;
+  height: 400px;
+  max-width: $content-max-width;
+  margin: $space-medium-xl auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 350px;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 300px;
+    margin: $space-medium-s $space-zero;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 230px;
+    margin: $space-small-xxl $space-zero;
+  }
 }
 
 .userBlock {
@@ -29,13 +46,14 @@
 }
 
 .userName {
-  font-size: $fontSize-large-s;
+  @include mediumTitle;
+
   color: $color-purple;
 }
 
 .postTitle {
-  font-size: $fontSize-large-l;
-  letter-spacing: -2px;
+  @include bigTitle;
+
   margin-top: $space-small-xl;
   margin-bottom: $space-small-xxl;
 }
@@ -43,12 +61,12 @@
 .categoryWrapper {
   @include flex-center-vertical;
 
-  font-size: $space-small-xl;
+  font-size: $fontSize-medium-l;
 }
 
 .content {
   margin: $space-zero auto;
-  max-width: 843px;
+  max-width: $content-max-width;
   width: 100%;
 
   h2 {
@@ -67,10 +85,9 @@
   }
 
   li {
-    font-size: $fontSize-medium-l;
-    line-height: 32px;
-    list-style: inside;
+    @include smallTitle;
 
+    list-style: inside;
     letter-spacing: 1px;
     color: $color-medium-grey;
   }

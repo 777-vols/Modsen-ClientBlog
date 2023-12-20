@@ -17,10 +17,11 @@ $color-home-hero-gradient: radial-gradient(
   rgba(0, 0, 0, 0.6) 100%
 );
 
-$screen-big: 1920px;
-$screen-laptop: 1280px;
-$screen-tablet: 821px;
-$screen-mobile: 480px;
+$breakpoint-big-screen: 1920px;
+$breakpoint-laptop: 1064px;
+$breakpoint-tablet: 821px;
+$breakpoint-small-tablet: 600px;
+$breakpoint-mobile: 480px;
 
 $fontSize-large-xl: 56px;
 $fontSize-large-l: 48px;
@@ -56,6 +57,10 @@ $fontWeight-xl: 900;
 $fontWeight-l: 700;
 $fontWeight-m: 600;
 $fontWeight-s: 400;
+
+@media (max-width: $breakpoint-small-tablet) {
+  $space-large-xxl: 80px;
+}
 
 @mixin appearanceAnimation {
   @keyframes show {
@@ -114,6 +119,10 @@ $fontWeight-s: 400;
   margin: $space-zero auto;
   width: 100%;
   max-height: 100%;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-zero $space-small-l;
+  }
 }
 
 @mixin modalBackground {
@@ -132,9 +141,20 @@ $fontWeight-s: 400;
   border: none;
   height: 56px;
   width: fit-content;
-  padding: 0 $space-medium-s;
+  padding: $space-zero $space-medium-s;
   font-family: var(--sen-font);
   font-size: $fontSize-medium-s;
+
+  @media (max-width: $breakpoint-laptop) {
+    height: 45px;
+    padding: $space-zero $space-small-l;
+    font-size: $fontSize-small-xl;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 40px;
+    font-size: $fontSize-small-l;
+  }
 }
 
 @mixin whiteButton {
@@ -181,21 +201,62 @@ $fontWeight-s: 400;
   letter-spacing: 3px;
   font-size: $fontSize-small-xl;
   font-weight: $fontWeight-m;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-small-l;
+  }
 }
 
 @mixin blockTitle {
   font-family: var(--sen-font);
   font-size: $fontSize-large-m;
   font-weight: $fontWeight-l;
-  line-height: 48px;
   letter-spacing: -2px;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-large-s;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-xl;
+  }
+}
+
+@mixin smallTitle {
+  font-weight: $fontWeight-l;
+  font-size: $fontSize-medium-l;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-medium-m;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-s;
+  }
 }
 
 @mixin mediumTitle {
   font-weight: $fontWeight-l;
-  line-height: 40px;
   letter-spacing: -1px;
   font-size: $fontSize-large-s;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-medium-l;
+  }
+}
+
+@mixin bigTitle {
+  font-weight: $fontWeight-l;
+  letter-spacing: -2px;
+  font-size: $fontSize-large-l;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-large-m;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    font-size: $fontSize-large-s;
+  }
 }
 
 @mixin descriptionText {
@@ -211,4 +272,16 @@ $fontWeight-s: 400;
   margin-right: $fontSize-medium-s;
   height: 48px;
   width: 48px;
+}
+
+@mixin navbarTitle {
+  @include smallTitle;
+
+  cursor: pointer;
+  font-family: var(--inter-font);
+  color: $color-white;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-medium-s;
+  }
 }

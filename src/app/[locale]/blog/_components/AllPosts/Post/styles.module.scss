@@ -4,6 +4,11 @@
 
   padding: $space-small-xxl $space-zero;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 
 .content {
@@ -12,6 +17,10 @@
   align-items: center;
   max-width: 624px;
   margin-left: $space-small-xxl;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: $space-zero;
+  }
 }
 
 .subtitle {
@@ -27,6 +36,11 @@
   width: 100%;
   position: relative;
   margin-bottom: $space-small-xxl;
+
+  @media (max-width: $breakpoint-laptop) {
+    max-width: 320px;
+    height: 220px;
+  }
 }
 
 .postTittle {
@@ -34,6 +48,10 @@
 
   width: 100%;
   margin-top: $space-small-xl;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: $space-small-m;
+  }
 }
 
 .description {
@@ -41,4 +59,10 @@
 
   margin-top: $space-small-l;
   margin-bottom: $space-small-xxl;
+
+  @media (max-width: $breakpoint-mobile) {
+    line-height: 24px;
+    margin-top: $space-small-m;
+    margin-bottom: $space-small-l;
+  }
 }

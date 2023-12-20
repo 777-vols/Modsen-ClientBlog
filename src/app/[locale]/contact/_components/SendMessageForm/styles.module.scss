@@ -15,6 +15,10 @@
   font-size: $fontSize-small-xl;
   font-family: var(--inter-font);
   margin-bottom: $space-small-l;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 60px;
+  }
 }
 
 .textarea {
@@ -27,14 +31,18 @@
   font-size: $fontSize-small-l;
   font-family: var(--inter-font);
   height: 144px;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 110px;
+  }
 }
 
 .formButton {
   @include yellowButtonWithDarkBg;
+  @include smallTitle;
 
   width: 100%;
   height: 64px;
-  font-size: $fontSize-medium-l;
 }
 
 .errorMessage {
@@ -52,4 +60,8 @@
   font-size: $fontSize-small-xl;
   font-family: var(--inter-font);
   margin-bottom: $space-small-l;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 60px;
+  }
 }

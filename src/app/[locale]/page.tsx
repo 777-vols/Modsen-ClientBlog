@@ -2,20 +2,18 @@
 
 import { FC, Suspense } from 'react';
 
+import { Categories, InfinityScroll, JoinOurTeam } from '@/components';
+import { getDictionary } from '@/i18n/getDictionary';
+
 import {
   AboutUs,
   AuthorsList,
-  Categories,
   HomeHero,
-  JoinOurTeam,
   LogoList,
   Posts,
   Testimonials,
   WhyWeStarted,
-} from '@/components';
-import InfinityScroll from '@/components/InfinityScroll';
-import { getDictionary } from '@/lib/getDictionary';
-
+} from './_components';
 import Loading from './loading';
 
 const Home: FC<ILocaleParams> = ({ params: { locale } }) => {

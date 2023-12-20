@@ -7,6 +7,16 @@
 
   padding-top: $space-medium-l;
   padding-bottom: $space-medium-l;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding-top: $space-medium-s;
+    padding-bottom: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding-top: $space-small-l;
+    padding-bottom: $space-small-l;
+  }
 }
 
 .content {
@@ -17,6 +27,19 @@
   margin: $space-medium-m $space-zero;
   padding: $space-large-s $space-medium-xl;
   gap: 10%;
+
+  @media (max-width: $breakpoint-laptop) {
+    margin-bottom: $space-small-m $space-zero;
+    padding: $space-small-xxl $space-medium-l;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    @include flex-direction-column;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $space-small-l $space-small-l;
+  }
 }
 
 .subscribeText {
@@ -26,10 +49,30 @@
   font-size: $fontSize-large-m;
   font-weight: 700;
   max-width: 50%;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-large-s;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    letter-spacing: 0.5px;
+    font-size: $fontSize-medium-l;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    text-align: center;
+    margin-bottom: $space-small-xl;
+    max-width: 100%;
+    font-size: $fontSize-medium-s;
+  }
 }
 
 .info {
   @include flex-space-between;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    @include flex-direction-column;
+  }
 }
 
 .contacts {
@@ -42,10 +85,23 @@
   font-family: var(--inter-font);
   font-size: $fontSize-small-xl;
   line-height: 28px;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-small-l;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    @include flex-center-horizontally;
+  }
 }
 
 .socialsWrapper {
   @include flex-center-vertical;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    @include flex-center-horizontally;
+    margin: $space-small-m auto;
+  }
 }
 
 .socialLink {
@@ -54,5 +110,21 @@
 
   &:hover {
     transform: scale(1.3);
+  }
+}
+
+.navbarWrapper {
+  @include flex-space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.headerTitle {
+  @include navbarTitle;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
   }
 }

@@ -1,4 +1,5 @@
 export * from './allImages';
+export * from './allMonthsNames';
 export * from './envVariables';
 export * from './formValidators';
 export * from './imageArrays';

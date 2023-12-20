@@ -1,11 +1,11 @@
 import styles from './styles.module.scss';
 
-const { wrapper, spinner } = styles;
-
-export const Loader = () => {
+const Loader = () => {
   return (
-    <div className={wrapper}>
-      <span className={spinner} />
+    <div className={styles.wrapper}>
+      <span className={styles.spinner} />
     </div>
   );
 };
+
+export default Loader;

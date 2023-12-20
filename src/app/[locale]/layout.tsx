@@ -9,7 +9,7 @@ import { LayoutFooter, LayoutNavbar } from './_components';
 export const metadata: Metadata = {
   title: 'Client Blog',
   description: 'Client Blog application',
-  icons: [{ rel: 'icon', url: '/img/favicon.ico' }],
+  icons: [{ rel: 'icon', url: '/img/favicon.png' }],
 };
 
 export function generateStaticParams() {

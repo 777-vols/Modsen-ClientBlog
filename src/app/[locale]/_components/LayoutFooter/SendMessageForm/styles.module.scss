@@ -2,14 +2,24 @@
   @include flex-center-horizontally;
 
   flex: 10 2 50%;
-  min-width: 450px;
   width: 100%;
+
+  @media (max-width: $breakpoint-laptop) {
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .inputsWrapper {
   width: fit-content;
   max-width: 323px;
   margin-right: $space-small-xl;
+
+  @media (max-width: $breakpoint-laptop) {
+    max-width: 100%;
+    margin-right: $space-zero;
+  }
 }
 
 .input {
@@ -22,6 +32,11 @@
   font-size: $fontSize-small-xl;
   font-family: var(--inter-font);
   margin-bottom: $space-small-s;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 40px;
+    font-size: $fontSize-small-l;
+  }
 }
 
 .textarea {
@@ -36,6 +51,10 @@
 
 .formButton {
   @include yellowButton;
+
+  @media (max-width: $breakpoint-laptop) {
+    margin-top: $space-small-s;
+  }
 }
 
 .errorMessage {

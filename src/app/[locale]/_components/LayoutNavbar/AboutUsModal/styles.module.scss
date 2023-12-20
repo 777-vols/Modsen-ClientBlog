@@ -11,6 +11,21 @@
   max-height: 550px;
   max-width: 900px;
   position: relative;
+  margin: 0 $space-small-l;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: 450px;
+    padding: $space-small-l;
+    padding-top: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    max-height: 350px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-height: 300px;
+  }
 }
 
 .closeModalButton {

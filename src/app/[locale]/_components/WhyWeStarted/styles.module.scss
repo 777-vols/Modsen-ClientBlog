@@ -1,0 +1,66 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+
+  position: relative;
+  margin-top: $space-large-xxl;
+}
+
+.bannerWrapper {
+  @include maxSize;
+
+  position: relative;
+  height: 705px;
+  max-width: 949px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.content {
+  @include maxSize;
+
+  padding: $space-large-s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: $color-white;
+  max-width: 706px;
+  height: fit-content;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $space-medium-s $space-small-xxl;
+    position: static;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $space-medium-s $space-zero;
+  }
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.title {
+  @include bigTitle;
+
+  margin-top: $space-small-xl;
+}
+
+.description {
+  @include descriptionText;
+
+  margin-top: $space-small-l;
+  margin-bottom: $space-small-xxl;
+}
+
+.ourStoryLink {
+  @include yellowButtonWithDarkBg;
+  @include flex-center;
+}

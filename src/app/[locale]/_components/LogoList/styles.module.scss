@@ -1,0 +1,24 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+}
+
+.logoslist {
+  @include flex-space-between;
+
+  flex-wrap: wrap;
+  padding: $space-large-m $space-zero;
+  gap: 20px;
+
+  @media (max-width: $breakpoint-laptop) {
+    justify-content: center;
+  }
+}
+
+.logoWrapper {
+  @include flex-center-vertical;
+
+  height: 30px;
+  width: 140px;
+  position: relative;
+}

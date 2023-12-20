@@ -1,0 +1,34 @@
+.wrapper {
+  @include maxSize;
+
+  max-width: 517px;
+  position: relative;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: $space-small-m;
+    max-width: 100%;
+  }
+}
+
+.title {
+  @include blockTitle;
+
+  margin-bottom: $space-small-xxl;
+}
+
+.viewAllLink {
+  @include purpleLink;
+
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.postWrapper {
+  max-height: 724px;
+  overflow: auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: fit-content;
+  }
+}

@@ -1,4 +1,14 @@
-import React, { Children, cloneElement, useCallback, useEffect, useRef, useState } from 'react';
+'use client';
+
+import React, {
+  Children,
+  cloneElement,
+  memo,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import { useObserve } from '@/hooks';
 
@@ -46,4 +56,4 @@ const InfinityScroll = ({ wrapper, children }: IProps) => {
   );
 };
 
-export default InfinityScroll;
+export default memo(InfinityScroll);

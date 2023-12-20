@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { v4 } from 'uuid';
 
 import NavMenu from '@/components/NavMenu';
 import { socials } from '@/constants';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import SendMessageForm from './SendMessageForm';
@@ -32,8 +31,8 @@ const LayoutFooter = ({ locale }: ILocaleProps) => {
             <span className={styles.contactItem}>{emailText}</span>
           </div>
           <div className={styles.socialsWrapper}>
-            {socials.map(({ icon, href }) => (
-              <Link className={styles.socialLink} key={v4()} href={href}>
+            {socials.map(({ id, icon, href }) => (
+              <Link className={styles.socialLink} key={id} href={href} target="_blank">
                 {icon}
               </Link>
             ))}

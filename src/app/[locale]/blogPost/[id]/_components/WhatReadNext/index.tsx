@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 
 import { allPosts } from '@/constants/Posts';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleWithPost } from '@/types';
 
 import Post from './Post';

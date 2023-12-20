@@ -9,7 +9,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 
 import { envVariables, footerFormValidator } from '@/constants';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { v4 } from 'uuid';
 
 import { socials } from '@/constants';
 
@@ -20,7 +19,7 @@ const AuthorCard = ({ locale, authorData }: IProps) => {
       </Link>
       <div className={styles.socialsWrapper}>
         {socials.map(({ icon, href }) => (
-          <Link className={styles.socialLink} key={v4()} href={href}>
+          <Link className={styles.socialLink} key={href} href={href}>
             {icon}
           </Link>
         ))}

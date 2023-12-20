@@ -2,15 +2,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { memo, useCallback, useMemo } from 'react';
+import { FC, memo, useCallback, useMemo } from 'react';
 
 import { IProps } from '@/components/NavMenu/types';
 import { activePathHelper, getLinks } from '@/helpers';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 
 import styles from './styles.module.scss';
 
-const NavMenu = ({ locale, isFooterNav, isMobileNav, closeMenu }: IProps) => {
+const NavMenu: FC<IProps> = (props) => {
+  const { locale, isFooterNav, isMobileNav, closeMenu } = props;
+
   const { navbar } = getDictionary(locale);
   const { linksNames } = navbar;
 

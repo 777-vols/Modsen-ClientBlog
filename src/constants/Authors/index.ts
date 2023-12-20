@@ -47,7 +47,7 @@ export const allAuthors: IAuthor[] = [
   },
   {
     id: '4',
-    image: author3,
+    image: author0,
     name: 'James West',
     jobTitle: 'Developer',
     company: '@Company',

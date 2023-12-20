@@ -1,6 +1,6 @@
 import { urls } from '@/constants';
-import { DictionaryType } from '@/lib/getDictionary';
-import { Locale } from '@/lib/i18n.config';
+import { DictionaryType } from '@/i18n/getDictionary';
+import { Locale } from '@/i18n/i18n.config';
 
 export const getLinks = (
   locale: Locale,

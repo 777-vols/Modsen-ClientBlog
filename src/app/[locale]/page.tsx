@@ -14,7 +14,7 @@ import {
   WhyWeStarted,
 } from '@/components';
 import InfinityScroll from '@/components/InfinityScroll';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 
 import Loading from './loading';
 

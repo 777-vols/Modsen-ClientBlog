@@ -1,17 +1,4 @@
-const allMonthsNames: string[] = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+import { allMonthsNames } from '@/constants';
 
 export const getStringDate = (createdDate: Date) => {
   return `${String(allMonthsNames[createdDate.getMonth()]).padStart(2, '0')} ${String(

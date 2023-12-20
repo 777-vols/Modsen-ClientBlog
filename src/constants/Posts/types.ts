@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { allCategories } from '../allCategories';
+import { allCategories } from '@/constants/allCategories';
 
 export interface IPost {
   id: string;

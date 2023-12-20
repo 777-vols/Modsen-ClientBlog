@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { urls } from '@/constants';
 import { getStringDate } from '@/helpers';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';

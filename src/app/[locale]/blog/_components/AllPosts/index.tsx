@@ -1,10 +1,9 @@
 'use client';
 
 import { FC, useMemo, useState } from 'react';
-import { v4 } from 'uuid';
 
 import { allPosts } from '@/constants/Posts';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import Post from './Post';
@@ -37,7 +36,7 @@ const AllPosts: FC<ILocaleProps> = ({ locale }) => {
     const lastPost = currentPage * numberOfPosts;
     if (currentPage <= numberOfPages) {
       const postsArray = allPosts.slice(lastPost - numberOfPosts, lastPost);
-      return postsArray.map((post) => <Post key={v4()} locale={locale} postData={post} />);
+      return postsArray.map((post) => <Post key={post.id} locale={locale} postData={post} />);
     }
     return [];
   }, [currentPage, locale, numberOfPages]);

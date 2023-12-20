@@ -6,14 +6,14 @@ import { FC, useCallback, useRef, useState } from 'react';
 import { Portal } from 'react-portal';
 
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
+import NavMenu from '@/components/NavMenu';
 import { urls } from '@/constants';
 import { useOnClickOutside } from '@/hooks';
 import { useIsMounted } from '@/hooks/useIsMounted';
-import { getDictionary } from '@/lib/getDictionary';
-import { i18n } from '@/lib/i18n.config';
+import { getDictionary } from '@/i18n/getDictionary';
+import { i18n } from '@/i18n/i18n.config';
 import { ILocaleProps } from '@/types';
 
-import NavMenu from '../NavMenu';
 import styles from './styles.module.scss';
 
 const { home } = urls;
@@ -32,13 +32,16 @@ const Navbar: FC<ILocaleProps> = ({ locale }) => {
   const splittedPathname = pathname.split('/');
   const [, currentLanguage, ...restUrl] = splittedPathname;
 
-  const handleOpenCloseModal = useCallback(() => {
-    setIsModalOpen((prevState) => !prevState);
-  }, []);
-
   const burgerButtonHandler = useCallback(() => {
     setBurgerMenuIsOpen((prevState) => !prevState);
   }, []);
+
+  const handleOpenCloseModal = useCallback(() => {
+    if (burgerMenuIsOpen) {
+      burgerButtonHandler();
+    }
+    setIsModalOpen((prevState) => !prevState);
+  }, [burgerButtonHandler, burgerMenuIsOpen]);
 
   useOnClickOutside(menuRef, () => {
     if (burgerMenuIsOpen) {

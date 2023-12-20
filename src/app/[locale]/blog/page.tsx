@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 
 import Loading from '@/app/[locale]/loading';
 import { Categories, JoinOurTeam } from '@/components';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 
 import { AllPosts, FeaturedPost } from './_components';
 

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 import Loading from '@/app/[locale]/loading';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';

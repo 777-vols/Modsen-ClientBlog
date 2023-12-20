@@ -6,7 +6,7 @@ import { useMemo } from 'react';
 import { allImages, urls } from '@/constants';
 import { allAuthors } from '@/constants/Authors';
 import { getStringDate } from '@/helpers';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleWithPost } from '@/types';
 
 import styles from './styles.module.scss';

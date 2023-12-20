@@ -1,5 +1,5 @@
-import en from '@/lib/dictionaries/en.json';
-import ru from '@/lib/dictionaries/ru.json';
+import en from '@/i18n/dictionaries/en.json';
+import ru from '@/i18n/dictionaries/ru.json';
 
 import { Locale } from './i18n.config';
 

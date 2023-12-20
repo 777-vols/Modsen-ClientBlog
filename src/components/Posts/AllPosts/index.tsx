@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { v4 } from 'uuid';
 
 import { urls } from '@/constants';
 import { allPosts } from '@/constants/Posts';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import Post from './Post';
@@ -27,7 +26,7 @@ const AllPosts = ({ locale }: ILocaleProps) => {
       <h2 className={styles.title}>{titleText}</h2>
       <div className={styles.postWrapper}>
         {postsArray.map((postData) => (
-          <Post key={v4()} locale={locale} postData={postData} />
+          <Post key={postData.id} locale={locale} postData={postData} />
         ))}
       </div>
     </div>

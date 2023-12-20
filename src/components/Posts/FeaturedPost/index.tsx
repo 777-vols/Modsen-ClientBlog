@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { urls } from '@/constants';
 import { featuredHomePost } from '@/constants/Posts';
 import { getStringDate } from '@/helpers';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';

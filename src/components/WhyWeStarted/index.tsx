@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { allImages, urls } from '@/constants';
-import { getDictionary } from '@/lib/getDictionary';
+import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
 import styles from './styles.module.scss';

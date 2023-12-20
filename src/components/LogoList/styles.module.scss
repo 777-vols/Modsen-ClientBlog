@@ -8,6 +8,11 @@
 
   flex-wrap: wrap;
   padding: $space-large-m $space-zero;
+  gap: 20px;
+
+  @media (max-width: $breakpoint-mobile) {
+    justify-content: center;
+  }
 }
 
 .logoWrapper {

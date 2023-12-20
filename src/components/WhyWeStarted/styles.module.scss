@@ -58,6 +58,11 @@
     font-size: $fontSize-large-m;
     line-height: 54px;
   }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    font-size: $fontSize-large-s;
+    line-height: 44px;
+  }
 }
 
 .description {

@@ -11,6 +11,10 @@
   &:hover {
     background: $color-light-yellow;
   }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-small-l;
+  }
 }
 
 .avatar {
@@ -19,6 +23,16 @@
   width: 128px;
   margin: $space-zero auto;
   margin-bottom: $space-small-l;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 90px;
+    width: 90px;
+  }
 }
 
 .fullName {

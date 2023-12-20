@@ -19,6 +19,10 @@
   font-weight: $fontWeight-l;
   line-height: 40px;
   letter-spacing: -1px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-xl;
+  }
 }
 
 .description {

@@ -1,14 +1,33 @@
 .panel {
   @include flex-space-between;
+
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .message {
   font-size: $fontSize-medium-l;
-  line-height: 32px;
+  font-size: $fontSize-medium-m;
   font-weight: $fontWeight-l;
   height: 256px;
-  padding-bottom: $space-small-s;
+  margin-bottom: $space-small-s;
   transition: transform 0.5s ease-in-out;
+
+  @media (max-width: $breakpoint-laptop) {
+    text-align: center;
+    height: 180px;
+    margin-bottom: $space-small-xxl;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    font-size: $fontSize-medium-m;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-s;
+    line-height: 25px;
+  }
 }
 
 .author {
@@ -26,6 +45,11 @@
 
 .fullName {
   @include smallTitle;
+
+  @media (max-width: $breakpoint-mobile) {
+    line-height: 25px;
+    font-size: $fontSize-medium-s;
+  }
 }
 
 .adress {

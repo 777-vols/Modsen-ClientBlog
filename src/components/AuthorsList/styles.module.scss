@@ -16,4 +16,9 @@
   @include flex-space-between;
 
   gap: $space-small-m;
+
+  @media (max-width: $breakpoint-laptop) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

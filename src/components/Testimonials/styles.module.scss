@@ -7,18 +7,38 @@
   background-color: $color-light-yellow;
   padding: $space-medium-xxl $space-large-l;
   display: flex;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding: $space-medium-xl $space-large-m;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-medium-l $space-medium-m;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    padding: $space-small-xl;
+  }
 }
 
 .content {
-  flex: 4 1 300px;
+  flex: 4 1;
   border-right: 1px solid $color-medium-grey;
   padding-right: $space-large-s;
+
+  @media (max-width: $breakpoint-laptop) {
+    border-bottom: 1px solid $color-medium-grey;
+    border-right: $space-zero;
+    padding-right: $space-zero;
+    padding-bottom: $space-small-xxl;
+  }
 }
 
 .subtitle {
-  font-family: var(--inter-font);
-  font-size: $fontSize-small-xl;
-  font-weight: $fontWeight-m;
+  @include subtitle;
+
   margin-bottom: $space-small-m;
 }
 
@@ -35,6 +55,11 @@
 }
 
 .carousel {
-  flex: 6 2 400px;
+  flex: 6 2;
   padding-left: $space-large-m;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding-left: $space-zero;
+    padding-top: $space-small-xxl;
+  }
 }

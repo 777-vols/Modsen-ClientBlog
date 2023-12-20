@@ -117,7 +117,7 @@ $fontWeight-s: 400;
   max-height: 100%;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: $space-zero $space-small-xl;
+    padding: $space-zero $space-small-l;
   }
 }
 
@@ -211,7 +211,8 @@ $fontWeight-s: 400;
   letter-spacing: -2px;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $fontSize-large-s;
+    font-size: $fontSize-medium-xl;
+    line-height: 35px;
   }
 }
 
@@ -233,7 +234,8 @@ $fontWeight-s: 400;
   font-size: $fontSize-large-s;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $fontSize-medium-xl;
+    font-size: $fontSize-medium-l;
+    line-height: 35px;
   }
 }
 

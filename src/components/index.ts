@@ -1,10 +1,3 @@
-export { default as AboutUs } from './AboutUs';
-export { default as AuthorsList } from './AuthorsList';
-export { default as Categories } from './Categories';
-export { default as HomeHero } from './HomeHero';
-export { default as JoinOurTeam } from './JoinOurTeam';
-export { default as LogoList } from './LogoList';
-export { default as Navbar } from './Navbar';
-export { default as Posts } from './Posts';
-export { default as Testimonials } from './Testimonials';
-export { default as WhyWeStarted } from './WhyWeStarted';
+export { default as InfinityScroll } from './InfinityScroll';
+export { default as Loader } from './Loader';
+export * from './UI';

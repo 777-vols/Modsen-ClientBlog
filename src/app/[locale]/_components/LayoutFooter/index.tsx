@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import NavMenu from '@/components/NavMenu';
+import NavMenu from '@/components/UI/NavMenu';
 import { socials } from '@/constants';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';

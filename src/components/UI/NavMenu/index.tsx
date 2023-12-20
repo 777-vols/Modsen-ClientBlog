@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, memo, useCallback, useMemo } from 'react';
 
-import { IProps } from '@/components/NavMenu/types';
+import { IProps } from '@/components/UI/NavMenu/types';
 import { activePathHelper, getLinks } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 

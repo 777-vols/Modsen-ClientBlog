@@ -6,7 +6,7 @@ import { FC, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import AboutUsModal from '@/app/[locale]/_components/LayoutNavbar/AboutUsModal';
-import NavMenu from '@/components/NavMenu';
+import NavMenu from '@/components/UI/NavMenu';
 import { urls } from '@/constants';
 import { useOnClickOutside } from '@/hooks';
 import { useIsMounted } from '@/hooks/useIsMounted';

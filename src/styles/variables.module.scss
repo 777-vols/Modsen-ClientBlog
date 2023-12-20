@@ -207,35 +207,51 @@ $fontWeight-s: 400;
   font-family: var(--sen-font);
   font-size: $fontSize-large-m;
   font-weight: $fontWeight-l;
-  line-height: 48px;
   letter-spacing: -2px;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-large-s;
+  }
 
   @media (max-width: $breakpoint-mobile) {
     font-size: $fontSize-medium-xl;
-    line-height: 35px;
   }
 }
 
 @mixin smallTitle {
   font-weight: $fontWeight-l;
-  line-height: 32px;
   font-size: $fontSize-medium-l;
 
   @media (max-width: $breakpoint-laptop) {
-    line-height: 30px;
     font-size: $fontSize-medium-m;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-s;
   }
 }
 
 @mixin mediumTitle {
   font-weight: $fontWeight-l;
-  line-height: 40px;
   letter-spacing: -1px;
   font-size: $fontSize-large-s;
 
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: $breakpoint-tablet) {
     font-size: $fontSize-medium-l;
-    line-height: 35px;
+  }
+}
+
+@mixin bigTitle {
+  font-weight: $fontWeight-l;
+  letter-spacing: -2px;
+  font-size: $fontSize-large-l;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $fontSize-large-m;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    font-size: $fontSize-large-s;
   }
 }
 

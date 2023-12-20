@@ -34,8 +34,8 @@
 }
 
 .postTitle {
-  font-size: $fontSize-large-l;
-  letter-spacing: -2px;
+  @include bigTitle;
+
   margin-top: $space-small-xl;
   margin-bottom: $space-small-xxl;
 }

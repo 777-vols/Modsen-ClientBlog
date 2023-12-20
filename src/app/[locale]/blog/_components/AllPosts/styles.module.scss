@@ -6,7 +6,8 @@
 }
 
 .title {
-  font-size: $fontSize-large-l;
+  @include bigTitle;
+
   padding-bottom: $space-small-xxl;
   border-bottom: 1px solid $color-medium-grey;
 }
@@ -45,13 +46,12 @@
 
 .activePrevNextButton {
   @include maxSize;
+  @include mediumTitle;
 
   cursor: pointer;
   background: none;
   border: none;
   color: $color-dark-blue;
-  font-weight: $fontWeight-xl;
-  font-size: $fontSize-large-s;
   transition: all 0.2s ease-in-out;
 
   &:hover {

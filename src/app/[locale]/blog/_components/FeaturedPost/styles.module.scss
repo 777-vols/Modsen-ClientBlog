@@ -1,6 +1,12 @@
 .background {
   background: $color-lavender;
   padding: $space-large-s $space-zero;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    @include flex-center;
+
+    height: 100vh;
+  }
 }
 
 .wrapper {
@@ -9,6 +15,11 @@
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 
 .content {
@@ -16,6 +27,11 @@
 
   max-width: 624px;
   margin-right: $space-small-xxl;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 100%;
+    margin-right: $space-zero;
+  }
 }
 
 .subtitle {
@@ -27,6 +43,22 @@
   height: 359px;
   width: 100%;
   position: relative;
+
+  @media (max-width: $breakpoint-laptop) {
+    max-width: 450px;
+    height: 250px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: $space-zero auto;
+    margin-bottom: $space-medium-m;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 200px;
+    max-width: 320px;
+    margin-bottom: $space-small-l;
+  }
 }
 
 .info {
@@ -40,6 +72,10 @@
   @include blockTitle;
 
   margin-top: $space-small-xl;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: $space-small-m $space-zero;
+  }
 }
 
 .authorLink {
@@ -56,4 +92,8 @@
 .readMoreLink {
   @include yellowButtonWithDarkBg;
   @include flex-center;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: $space-zero auto;
+  }
 }

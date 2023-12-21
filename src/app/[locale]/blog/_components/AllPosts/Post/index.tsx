@@ -25,7 +25,7 @@ const Post = ({ locale, postData }: IProps) => {
       <div className={styles.imageWrapper}>
         <Image src={postImage} alt="post picture" fill priority />
       </div>
-      <div className={styles.content}>
+      <div data-cy={`postItem${postId}`} className={styles.content}>
         <h6 className={styles.subtitle}>{category.toUpperCase()}</h6>
         <h2 className={styles.postTittle}>{postTitleText}</h2>
         <p className={styles.description}>{previewText}</p>

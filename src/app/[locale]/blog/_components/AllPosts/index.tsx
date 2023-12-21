@@ -48,6 +48,7 @@ const AllPosts: FC<ILocaleProps> = ({ locale }) => {
       <div className={styles.controls}>
         <div className={styles.buttonWrapper}>
           <button
+            data-cy="prevPageButton"
             className={
               currentPage !== 1 ? styles.activePrevNextButton : styles.disabledPrevNextButton
             }
@@ -58,6 +59,7 @@ const AllPosts: FC<ILocaleProps> = ({ locale }) => {
         </div>
         <div className={styles.buttonWrapper}>
           <button
+            data-cy="nextPageButton"
             className={
               currentPage !== numberOfPages
                 ? styles.activePrevNextButton

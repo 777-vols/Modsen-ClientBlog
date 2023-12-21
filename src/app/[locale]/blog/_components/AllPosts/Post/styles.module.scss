@@ -75,7 +75,6 @@
   @include descriptionText;
 
   margin-top: $space-small-l;
-  // margin-bottom: $space-small-xxl;
 
   @media (max-width: $breakpoint-laptop) {
     line-height: 25px;

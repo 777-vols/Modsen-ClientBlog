@@ -22,7 +22,9 @@ const Category = ({ categoryKey, locale }: IProps) => {
   const { titleText, descriptionText } = categoriesList[categoryKey];
 
   return (
-    <Link href={`/${locale}${category}/${titleText.toLocaleLowerCase()}`}>
+    <Link
+      data-cy={`category${titleText}`}
+      href={`/${locale}${category}/${titleText.toLocaleLowerCase()}`}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <div className={styles.imageWrapper}>

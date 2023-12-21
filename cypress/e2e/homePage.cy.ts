@@ -53,8 +53,11 @@ describe('Renders Home page', () => {
     cy.visit(`${baseUrl}/en`);
     cy.scrollTo(0, 1500, { duration: 1000 });
     cy.scrollTo(0, 3000, { duration: 1000 });
-    cy.get('h3').contains('Technology').click();
-    cy.url().should('eq', `${baseUrl}/en/category/technology`);
+    cy.get('[data-cy="categoryTechnology"]').contains('Technology');
+    cy.get('[data-cy="categoryEconomy"]').contains('Economy');
+    cy.get('[data-cy="categoryStartup"]').contains('Startup');
+    cy.get('[data-cy="categoryBusiness"]').contains('Business').click();
+    cy.url().should('eq', `${baseUrl}/en/category/business`);
   });
 
   it('Should test navigation to AboutUs page from WhyWeStarted block', () => {
@@ -66,7 +69,7 @@ describe('Renders Home page', () => {
     cy.url().should('eq', `${baseUrl}/en/about`);
   });
 
-  it('Should test navigation to AboutUs page from WhyWeStarted block', () => {
+  it('Should test navigation to AboutUs page from Authors block', () => {
     cy.visit(`${baseUrl}/en`);
     cy.scrollTo(0, 1500, { duration: 1000 });
     cy.scrollTo(0, 3000, { duration: 1000 });
@@ -76,7 +79,7 @@ describe('Renders Home page', () => {
     cy.url().should('eq', `${baseUrl}/en/author/0`);
   });
 
-  it('Should test navigation to AboutUs page from WhyWeStarted block', () => {
+  it('Should test navigation to AboutUs page from JoinOurTeam block', () => {
     cy.visit(`${baseUrl}/en`);
     cy.scrollTo(0, 1500, { duration: 1000 });
     cy.scrollTo(0, 3000, { duration: 1000 });

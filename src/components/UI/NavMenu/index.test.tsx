@@ -10,7 +10,7 @@ jest.mock('next/navigation');
 describe('Renders NavMenu', () => {
   (usePathname as jest.Mock).mockImplementation(() => 'en');
 
-  it('Renders NavMenu in English', () => {
+  it('Should renders NavMenu in English', () => {
     render(<NavMenu locale="en" />);
 
     expect(screen.getByText('Home')).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe('Renders NavMenu', () => {
     expect(screen.getByText('Contact Us')).toBeInTheDocument();
   });
 
-  it('Renders NavMenu in Russian', () => {
+  it('Should renders NavMenu in Russian', () => {
     render(<NavMenu locale="ru" />);
 
     expect(screen.getByText('Главная')).toBeInTheDocument();
@@ -28,7 +28,7 @@ describe('Renders NavMenu', () => {
     expect(screen.getByText('Контакты')).toBeInTheDocument();
   });
 
-  it('Renders NavMenu for footer in English', () => {
+  it('Should renders NavMenu for footer in English', () => {
     render(<NavMenu locale="en" isFooterNav />);
 
     expect(screen.getByText('Home')).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe('Renders NavMenu', () => {
     expect(screen.getByText('Privacy Policy')).toBeInTheDocument();
   });
 
-  it('Renders NavMenu for footer in Russian', () => {
+  it('Should renders NavMenu for footer in Russian', () => {
     render(<NavMenu locale="ru" isFooterNav />);
 
     expect(screen.getByText('Главная')).toBeInTheDocument();

@@ -37,14 +37,20 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
         </div>
         <span className={styles.info}>
           {postInfo}
-          <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+          <Link
+            data-cy="authorLinkFeaturedPost"
+            className={styles.authorLink}
+            href={`/${locale}${authorPageUrl}/${authorId}`}>
             {postAuthor}
           </Link>
           {` | ${stringDate}`}
         </span>
         <h3 className={styles.postTittle}>{postTitleText}</h3>
         <p className={styles.description}>{previewText}</p>
-        <Link className={styles.readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
+        <Link
+          data-cy="readLinkFeaturedPost"
+          className={styles.readMoreLink}
+          href={`/${locale}${blogPostPageUrl}/${postId}`}>
           {readMoreLinkText}
         </Link>
       </article>

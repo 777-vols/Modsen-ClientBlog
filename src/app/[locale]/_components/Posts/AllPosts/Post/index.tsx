@@ -7,10 +7,10 @@ import { getDictionary } from '@/i18n/getDictionary';
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
-const { author: authorPageUrl } = urls;
+const { author: authorPageUrl, blogPost: blogPostPageUrl } = urls;
 
 const Post = ({ locale, postData }: IProps) => {
-  const { title: postTitle, createdDate, authorName, authorId } = postData;
+  const { id: postId, title: postTitle, createdDate, authorName, authorId } = postData;
 
   const { postsBlock } = getDictionary(locale);
   const { postInfo } = postsBlock;
@@ -26,7 +26,9 @@ const Post = ({ locale, postData }: IProps) => {
         </Link>
         {` | ${stringDate}`}
       </span>
-      <h4 className={styles.title}>{postTitle}</h4>
+      <Link className={styles.readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
+        <h4 className={styles.title}>{postTitle}</h4>
+      </Link>
     </div>
   );
 };

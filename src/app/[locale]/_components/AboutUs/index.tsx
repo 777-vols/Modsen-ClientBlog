@@ -24,7 +24,7 @@ const AboutUs = ({ locale }: ILocaleProps) => {
           <span className={styles.subtitle}>{aboutUsSubtitle}</span>
           <h2 className={styles.bigTitle}>{aboutUsTitle}</h2>
           <p className={styles.description}>{aboutUsDescription}</p>
-          <Link className={styles.readMoreLink} href={`/${locale}${aboutUs}`}>
+          <Link data-cy="aboutUsLink" className={styles.readMoreLink} href={`/${locale}${aboutUs}`}>
             {linkText}
           </Link>
         </div>

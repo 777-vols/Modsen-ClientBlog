@@ -14,6 +14,9 @@ import styles from './styles.module.scss';
 
 const { author: authorPageUrl } = urls;
 
+const defaultImageSize = 48;
+const startupImageSize = 23;
+
 const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
   const {
     title: postTitleText,
@@ -24,6 +27,8 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
     authorId,
     image: postImage,
   } = postData;
+
+  const imageSize = category === 'startup' ? startupImageSize : defaultImageSize;
 
   const { category: categoryData, blogPostInfo } = getDictionary(locale);
   const { categoriesList } = categoryData;
@@ -41,7 +46,7 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
       <div className={styles.blogInnerHeader}>
         <div className={styles.userBlock}>
           <div className={styles.userAvatar}>
-            <Image src={authorAvatar} alt="post picture" fill priority />
+            <Image src={authorAvatar} alt="avatar" fill priority />
           </div>
           <div>
             <Link href={`/${locale}${authorPageUrl}/${authorId}`}>
@@ -51,10 +56,10 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
           </div>
         </div>
         <h1 className={styles.postTitle}>{postTitleText}</h1>
-        <h4 className={styles.categoryWrapper}>
-          {categoryImage}
-          {categoryName}
-        </h4>
+        <div className={styles.categoryWrapper}>
+          <Image src={categoryImage} alt="category" height={imageSize} width={imageSize} />
+          <h4 className={styles.categoryName}>{categoryName}</h4>
+        </div>
       </div>
       <div className={styles.imageWrapper}>
         <Image src={postImage} alt="post picture" fill priority />

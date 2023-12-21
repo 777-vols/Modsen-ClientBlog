@@ -24,7 +24,10 @@ const WhyWeStarted = ({ locale }: ILocaleProps) => {
         <span className={styles.subtitle}>{subtitleText}</span>
         <h1 className={styles.title}>{titleText}</h1>
         <p className={styles.description}>{descriptionText}</p>
-        <Link className={styles.ourStoryLink} href={`/${locale}${aboutUs}`}>
+        <Link
+          data-cy="whyWeStartedLink"
+          className={styles.ourStoryLink}
+          href={`/${locale}${aboutUs}`}>
           {buttonText}
         </Link>
       </div>

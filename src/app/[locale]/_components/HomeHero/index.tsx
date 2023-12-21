@@ -35,13 +35,19 @@ const HomeHero = ({ locale }: ILocaleProps) => {
           <h1 className={styles.title}>{titleText}</h1>
           <span className={styles.info}>
             {infoText[0]}
-            <Link href={`/${locale}${authorPageUrl}/${authorId}`} className={styles.authorNameLink}>
+            <Link
+              data-cy="authorLinkHomeHero"
+              href={`/${locale}${authorPageUrl}/${authorId}`}
+              className={styles.authorNameLink}>
               {authorNameText}
             </Link>
             {` | ${stringDate}`}
           </span>
           <p className={styles.description}>{previewText}</p>
-          <Link href={`/${locale}${blogPostPageUrl}/${postId}`} className={styles.readMoreLink}>
+          <Link
+            data-cy="readLinkHomeHero"
+            href={`/${locale}${blogPostPageUrl}/${postId}`}
+            className={styles.readMoreLink}>
             {buttonText}
           </Link>
         </div>

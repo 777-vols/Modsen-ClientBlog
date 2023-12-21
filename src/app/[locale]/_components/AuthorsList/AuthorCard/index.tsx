@@ -1,19 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { socials } from '@/constants';
+import { socials, urls } from '@/constants';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';
 
 const socialIconSize = 16;
 
+const { author: authorPageUrl } = urls;
+
 const AuthorCard = ({ locale, authorData }: IProps) => {
-  const { image, name, jobTitle, company } = authorData;
+  const { image, name, jobTitle, company, id } = authorData;
 
   return (
     <div className={styles.wrapper}>
-      <Link href={`/${locale}`}>
+      <Link data-cy="authorLink" href={`/${locale}${authorPageUrl}/${id}`}>
         <div className={styles.avatar}>
           <Image src={image} alt="avatar" fill priority />
         </div>

@@ -32,6 +32,9 @@
 
 .author {
   display: flex;
+  justify-content: center;
+  max-width: 256px;
+  width: 100%;
 }
 
 .avatar {
@@ -45,6 +48,7 @@
 
 .fullName {
   @include smallTitle;
+  @include textElipsis;
 
   @media (max-width: $breakpoint-mobile) {
     line-height: 25px;

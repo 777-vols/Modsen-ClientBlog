@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const { from, image, name, review } = allAuthors[currentSlide];
+  const { from, image, name, review, id: slideId } = allAuthors[currentSlide];
 
   const handlePrevious = () => {
     if (currentSlide !== 0) {
@@ -26,20 +26,25 @@ const Carousel = () => {
 
   return (
     <div>
-      <p className={styles.message}>{review}</p>
+      <p data-cy={`slideText${slideId}`} className={styles.message}>
+        {review}
+      </p>
       <div className={styles.panel}>
         <div className={styles.author}>
           <div className={styles.avatar}>
             <Image src={image} alt="avatar" fill priority />
           </div>
           <div className={styles.info}>
-            <h4 className={styles.fullName}>{name}</h4>
+            <h4 data-cy="slideAuthorFullName" className={styles.fullName}>
+              {name}
+            </h4>
             <h4 className={styles.adress}>{from}</h4>
           </div>
         </div>
         <div className={styles.controls}>
           <div className={styles.buttonWrapper}>
             <button
+              data-cy="prevSlideButton"
               className={
                 currentSlide !== 0 ? styles.activePrevNextButton : styles.disabledPrevNextButton
               }
@@ -50,6 +55,7 @@ const Carousel = () => {
           </div>
           <div className={styles.buttonWrapper}>
             <button
+              data-cy="nextSlideButton"
               className={
                 currentSlide !== allAuthors.length - 1
                   ? styles.activePrevNextButton

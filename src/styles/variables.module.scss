@@ -285,3 +285,10 @@ $fontWeight-s: 400;
     font-size: $fontSize-medium-s;
   }
 }
+
+@mixin textElipsis {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

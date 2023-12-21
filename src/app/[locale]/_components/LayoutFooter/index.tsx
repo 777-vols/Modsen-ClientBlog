@@ -35,7 +35,12 @@ const LayoutFooter = ({ locale }: ILocaleProps) => {
           </div>
           <div className={styles.socialsWrapper}>
             {socials.map(({ id, icon, href }) => (
-              <Link className={styles.socialLink} key={id} href={href} target="_blank">
+              <Link
+                data-cy="social"
+                className={styles.socialLink}
+                key={id}
+                href={href}
+                target="_blank">
                 <Image
                   src={icon}
                   alt="social-icon"

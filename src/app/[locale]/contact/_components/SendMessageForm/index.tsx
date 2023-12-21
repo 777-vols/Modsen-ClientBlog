@@ -64,6 +64,7 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
     <form className={styles.form} ref={formRef} onSubmit={handleSubmit(handleSendMessage)}>
       <span className={styles.errorMessage}>{errors.fullName?.message}</span>
       <input
+        data-cy="contactFormFullName"
         className={styles.input}
         type="text"
         placeholder={namePlaceholderText}
@@ -71,6 +72,7 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
       />
       <span className={styles.errorMessage}>{errors.email?.message}</span>
       <input
+        data-cy="contactFormEmail"
         className={styles.input}
         type="email"
         placeholder={emailPlaceholderText}
@@ -79,11 +81,12 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
         })}
       />
       <span className={styles.errorMessage}>{errors.query?.message}</span>
-      <select className={styles.querySelector} {...register('query')}>
+      <select data-cy="contactFormSelect" className={styles.querySelector} {...register('query')}>
         {queryOptionsArray}
       </select>
       <span className={styles.errorMessage}>{errors.message?.message}</span>
       <textarea
+        data-cy="contactFormTextarea"
         className={styles.textarea}
         placeholder={messagePlaceholderText}
         {...register('message')}

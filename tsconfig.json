@@ -8,7 +8,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -22,7 +22,7 @@
       "public/*": ["./public/*"],
       "@/*": ["./src/*"]
     },
-    "types": ["jest", "@types/testing-library__jest-dom"]
+    "types": ["jest"]
   },
   "include": [
     "jest",
@@ -36,5 +36,5 @@
     "next.config.mjs",
     "jest.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["cypress.config.ts", "cypress", "node_modules"]
 }

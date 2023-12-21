@@ -60,6 +60,7 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
       <div className={styles.inputsWrapper}>
         <span className={styles.errorMessage}>{errors.fullName?.message}</span>
         <input
+          data-cy="footerFormFullName"
           className={styles.input}
           type="text"
           placeholder={namePlaceholderText}
@@ -67,6 +68,7 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
         />
         <span className={styles.errorMessage}>{errors.email?.message}</span>
         <input
+          data-cy="footerFormEmail"
           className={styles.input}
           type="email"
           placeholder={emailPlaceholderText}
@@ -76,6 +78,7 @@ const SendMessageForm: FC<ILocaleProps> = ({ locale }) => {
         />
         <span className={styles.errorMessage}>{errors.message?.message}</span>
         <textarea
+          data-cy="footerFormTextarea"
           className={styles.textarea}
           placeholder={messagePlaceholderText}
           {...register('message')}

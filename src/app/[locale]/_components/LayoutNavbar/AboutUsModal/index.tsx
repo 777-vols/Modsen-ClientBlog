@@ -16,8 +16,12 @@ const AboutUsModal: FC<IProps> = ({ handleCloseModal }) => {
 
   return (
     <div className={styles.background}>
-      <div className={styles.wrapper} ref={modalRef}>
-        <button className={styles.closeModalButton} type="button" onClick={handleCloseModal}>
+      <div data-cy="modalVideo" className={styles.wrapper} ref={modalRef}>
+        <button
+          data-cy="closeModalVideo"
+          className={styles.closeModalButton}
+          type="button"
+          onClick={handleCloseModal}>
           X
         </button>
         <iframe

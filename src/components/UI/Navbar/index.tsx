@@ -60,16 +60,23 @@ const Navbar: FC<ILocaleProps> = ({ locale }) => {
         <span className={styles.styledBar} />
       </button>
       <Link href={`/${locale}${home}`}>
-        <h4 className={styles.headerTitle}>{title}</h4>
+        <h4 data-cy="navbarTitle" className={styles.headerTitle}>
+          {title}
+        </h4>
       </Link>
       <div className={burgerMenuIsOpen ? styles.mobileNavWrapper : styles.navWrapper}>
         <NavMenu locale={locale} isMobileNav={burgerMenuIsOpen} closeMenu={burgerButtonHandler} />
 
         <div className={styles.controls}>
-          <button className={styles.videoButton} type="button" onClick={handleOpenCloseModal}>
+          <button
+            data-cy="modalVideoButton"
+            className={styles.videoButton}
+            type="button"
+            onClick={handleOpenCloseModal}>
             {videoButtonName}
           </button>
           <Link
+            data-cy="languageSwitcher"
             className={styles.language}
             href={
               currentLanguage === i18n.locales[0]

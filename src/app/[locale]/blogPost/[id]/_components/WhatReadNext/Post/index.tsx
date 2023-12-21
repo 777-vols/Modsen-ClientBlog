@@ -27,23 +27,24 @@ const Post = ({ locale, postData }: ILocaleWithPost) => {
   const stringDate = getStringDate(createdPostDate);
 
   return (
-    <div className={styles.wrapper}>
-      <article className={styles.postWrapper}>
-        <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
-          <div className={styles.imageWrapper}>
-            <Image src={postImage} alt="post picture" fill priority />
-          </div>
+    <div data-cy="recommendedPost" className={styles.wrapper}>
+      <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
+        <div className={styles.imageWrapper}>
+          <Image src={postImage} alt="post picture" fill priority />
+        </div>
+      </Link>
+      <span className={styles.info}>
+        {postInfo}
+        <Link
+          data-cy="recommendedPostAuthorLink"
+          className={styles.authorLink}
+          href={`/${locale}${authorPageUrl}/${authorId}`}>
+          {postAuthor}
         </Link>
-        <span className={styles.info}>
-          {postInfo}
-          <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
-            {postAuthor}
-          </Link>
-          {` | ${stringDate}`}
-        </span>
-        <h3 className={styles.postTittle}>{postTitleText}</h3>
-        <p className={styles.description}>{previewText}</p>
-      </article>
+        {` | ${stringDate}`}
+      </span>
+      <h3 className={styles.postTittle}>{postTitleText}</h3>
+      <p className={styles.description}>{previewText}</p>
     </div>
   );
 };

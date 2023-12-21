@@ -49,7 +49,7 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
             <Image src={authorAvatar} alt="avatar" fill priority />
           </div>
           <div>
-            <Link href={`/${locale}${authorPageUrl}/${authorId}`}>
+            <Link data-cy="authorPageLink" href={`/${locale}${authorPageUrl}/${authorId}`}>
               <h3 className={styles.userName}>{authorNameText}</h3>
             </Link>
             <span className={styles.dateInfo}>{`${blogPostInfo}${textDate}`}</span>

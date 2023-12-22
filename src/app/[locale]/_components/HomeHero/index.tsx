@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { urls } from '@/constants';
-import { homeHeroPost } from '@/constants/Posts';
+import { homeHeroPost } from '@/constants/posts';
 import { getStringDate } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';

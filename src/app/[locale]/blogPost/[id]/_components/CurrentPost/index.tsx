@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { memo, useMemo } from 'react';
 
 import { allImages, urls } from '@/constants';
-import { allAuthors } from '@/constants/Authors';
+import { allAuthors } from '@/constants/authors';
 import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleWithPost } from '@/types';

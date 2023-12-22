@@ -1,9 +1,11 @@
+const postsPath = '/assets/posts/';
+
 export const postsImages = {
   homeHeroPostImage: '/assets/homeHeroBanner.webp',
-  featuredHomePostImage: '/assets/posts/featuredHomePost.webp',
-  featuredBlogPostImage: '/assets/posts/featuredBlogPost.webp',
-  twoWomen: '/assets/posts/twoWomen.png',
-  peopleDoingHandshakes: '/assets/posts/peopleDoingHandshakes.png',
-  womanLookingAtMan: '/assets/posts/womanLookingAtMan.png',
-  peopleWalkingOnHallway: '/assets/posts/peopleWalkingOnHallway.png',
+  featuredHomePostImage: `${postsPath}featuredHomePost.webp`,
+  featuredBlogPostImage: `${postsPath}featuredBlogPost.webp`,
+  twoWomen: `${postsPath}twoWomen.png`,
+  peopleDoingHandshakes: `${postsPath}peopleDoingHandshakes.png`,
+  womanLookingAtMan: `${postsPath}womanLookingAtMan.png`,
+  peopleWalkingOnHallway: `${postsPath}peopleWalkingOnHallway.png`,
 };

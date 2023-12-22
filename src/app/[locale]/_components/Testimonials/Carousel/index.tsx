@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import { allAuthors } from '@/constants/Authors';
+import { allAuthors } from '@/constants/authors';
 import { rgbDataURL } from '@/helpers';
 
 import styles from './styles.module.scss';

@@ -2,7 +2,7 @@
 
 import { FC, useMemo, useState } from 'react';
 
-import { allPosts } from '@/constants/Posts';
+import { allPosts } from '@/constants/posts';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 

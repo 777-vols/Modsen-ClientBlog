@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
-import { featuredHomePost } from '@/constants/Posts';
+import { featuredHomePost } from '@/constants/posts';
 import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';

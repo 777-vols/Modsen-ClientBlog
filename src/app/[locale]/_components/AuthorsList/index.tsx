@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 import Loading from '@/app/[locale]/loading';
-import { allAuthors } from '@/constants/Authors';
+import { allAuthors } from '@/constants/authors';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 

@@ -4,7 +4,7 @@ import { FC, Suspense, useMemo } from 'react';
 
 import Loading from '@/app/[locale]/loading';
 import { JoinOurTeam } from '@/components';
-import { allPosts } from '@/constants/Posts';
+import { allPosts } from '@/constants/posts';
 
 import CurrentPost from './_components/CurrentPost';
 import WhatReadNext from './_components/WhatReadNext';

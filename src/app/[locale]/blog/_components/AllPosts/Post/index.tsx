@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
+import { rgbDataURL } from '@/helpers';
 
 import styles from './styles.module.scss';
 import { IProps } from './types';
@@ -23,7 +24,14 @@ const Post = ({ locale, postData }: IProps) => {
       className={styles.wrapper}
       href={`/${locale}${blogPostPageUrl}/${postId}`}>
       <div className={styles.imageWrapper}>
-        <Image src={postImage} alt="post picture" fill priority />
+        <Image
+          src={postImage}
+          alt="post picture"
+          placeholder="blur"
+          blurDataURL={rgbDataURL()}
+          fill
+          priority
+        />
       </div>
       <div data-cy={`postItem${postId}`} className={styles.content}>
         <h6 className={styles.subtitle}>{category.toUpperCase()}</h6>

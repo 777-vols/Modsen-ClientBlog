@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import NavMenu from '@/components/UI/NavMenu';
 import { socials } from '@/constants';
+import { rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -46,6 +47,8 @@ const LayoutFooter = ({ locale }: ILocaleProps) => {
                   alt="social-icon"
                   width={socialIconSize}
                   height={socialIconSize}
+                  placeholder="blur"
+                  blurDataURL={rgbDataURL()}
                 />
               </Link>
             ))}

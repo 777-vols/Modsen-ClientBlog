@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { urls } from '@/constants';
 import { featuredBlogPost } from '@/constants/Posts';
-import { getStringDate } from '@/helpers';
+import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -50,7 +50,14 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
           </Link>
         </div>
         <div className={styles.imageWrapper}>
-          <Image src={postImage} alt="feature post picture" fill priority />
+          <Image
+            src={postImage}
+            alt="feature post picture"
+            placeholder="blur"
+            blurDataURL={rgbDataURL()}
+            fill
+            priority
+          />
         </div>
       </div>
     </section>

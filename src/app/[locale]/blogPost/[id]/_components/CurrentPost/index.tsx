@@ -6,7 +6,7 @@ import { memo, useMemo } from 'react';
 
 import { allImages, urls } from '@/constants';
 import { allAuthors } from '@/constants/Authors';
-import { getStringDate } from '@/helpers';
+import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleWithPost } from '@/types';
 
@@ -46,7 +46,14 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
       <div className={styles.blogInnerHeader}>
         <div className={styles.userBlock}>
           <div className={styles.userAvatar}>
-            <Image src={authorAvatar} alt="avatar" fill priority />
+            <Image
+              src={authorAvatar}
+              alt="avatar"
+              placeholder="blur"
+              blurDataURL={rgbDataURL()}
+              fill
+              priority
+            />
           </div>
           <div>
             <Link data-cy="authorPageLink" href={`/${locale}${authorPageUrl}/${authorId}`}>
@@ -62,7 +69,14 @@ const CurrentPost = ({ locale, postData }: ILocaleWithPost) => {
         </div>
       </div>
       <div className={styles.imageWrapper}>
-        <Image src={postImage} alt="post picture" fill priority />
+        <Image
+          src={postImage}
+          alt="post picture"
+          placeholder="blur"
+          blurDataURL={rgbDataURL()}
+          fill
+          priority
+        />
       </div>
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: text! }} />
     </section>

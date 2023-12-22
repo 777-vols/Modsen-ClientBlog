@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import { allAuthors } from '@/constants/Authors';
+import { rgbDataURL } from '@/helpers';
 
 import styles from './styles.module.scss';
 
@@ -32,7 +33,14 @@ const Carousel = () => {
       <div className={styles.panel}>
         <div className={styles.author}>
           <div className={styles.avatar}>
-            <Image src={image} alt="avatar" fill priority />
+            <Image
+              src={image}
+              alt="avatar"
+              placeholder="blur"
+              blurDataURL={rgbDataURL()}
+              fill
+              priority
+            />
           </div>
           <div className={styles.info}>
             <h4 data-cy="slideAuthorFullName" className={styles.fullName}>

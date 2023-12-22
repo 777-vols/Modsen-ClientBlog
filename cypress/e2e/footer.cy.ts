@@ -28,6 +28,8 @@ describe('Renders Footer', () => {
     cy.visit(`${baseUrl}/en/contact`);
 
     cy.get('a').contains('Privacy Policy').click();
+
+    cy.wait(3000);
     cy.url().should('eq', `${baseUrl}/en/privacyPolicy`);
   });
 

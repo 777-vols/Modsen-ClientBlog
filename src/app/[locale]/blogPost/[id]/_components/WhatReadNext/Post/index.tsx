@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
-import { getStringDate } from '@/helpers';
+import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleWithPost } from '@/types';
 
@@ -30,7 +30,14 @@ const Post = ({ locale, postData }: ILocaleWithPost) => {
     <div data-cy="recommendedPost" className={styles.wrapper}>
       <Link href={`/${locale}${blogPostPageUrl}/${postId}`}>
         <div className={styles.imageWrapper}>
-          <Image src={postImage} alt="post picture" fill priority />
+          <Image
+            src={postImage}
+            alt="post picture"
+            placeholder="blur"
+            blurDataURL={rgbDataURL()}
+            fill
+            priority
+          />
         </div>
       </Link>
       <span className={styles.info}>

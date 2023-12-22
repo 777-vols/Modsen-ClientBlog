@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { allImages, urls } from '@/constants';
+import { rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 
 import styles from './styles.module.scss';
@@ -31,6 +32,8 @@ const Category = ({ categoryKey, locale }: IProps) => {
             <Image
               src={categoryImages[categoryKey]}
               alt="category"
+              placeholder="blur"
+              blurDataURL={rgbDataURL()}
               height={imageSize}
               width={imageSize}
             />

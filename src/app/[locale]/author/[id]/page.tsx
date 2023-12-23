@@ -1,9 +1,7 @@
+import EmptyPage from '@/app/[locale]/_components/EmptyPage';
+
 const Author = () => {
-  return (
-    <main>
-      <h1>Author</h1>
-    </main>
-  );
+  return <EmptyPage pageName="Author page" />;
 };
 
 export default Author;

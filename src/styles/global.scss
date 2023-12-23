@@ -7,6 +7,10 @@ body {
   font-family: var(--sen-font);
 }
 
+body {
+  margin-top: $space-medium-xxl;
+}
+
 *,
 *::after,
 *::before {

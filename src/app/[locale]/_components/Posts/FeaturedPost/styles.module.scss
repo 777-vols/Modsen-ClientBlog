@@ -30,7 +30,7 @@
 }
 
 .imageWrapper {
-  height: 352px;
+  height: 340px;
   width: 100%;
   position: relative;
   margin-bottom: $space-small-xxl;
@@ -41,6 +41,10 @@
 
   @media (max-width: $breakpoint-tablet) {
     height: 200px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 180px;
   }
 }
 

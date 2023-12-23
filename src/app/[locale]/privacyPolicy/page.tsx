@@ -1,9 +1,7 @@
+import EmptyPage from '@/app/[locale]/_components/EmptyPage';
+
 const PrivacyPolicy = () => {
-  return (
-    <main>
-      <h1>PrivacyPolicy</h1>
-    </main>
-  );
+  return <EmptyPage pageName="Privacy policy page" />;
 };
 
 export default PrivacyPolicy;

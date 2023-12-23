@@ -1,10 +1,12 @@
 import '@/styles/global.scss';
 
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 
 import { inter, sen } from '@/styles/fonts';
 
 import { LayoutFooter, LayoutNavbar } from './_components';
+import Loading from './loading';
 
 export const metadata: Metadata = {
   title: 'Client Blog',
@@ -26,7 +28,7 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={`${inter.variable} ${sen.variable}`}>
         <LayoutNavbar locale={locale} />
-        {children}
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <LayoutFooter locale={locale} />
       </body>
     </html>

@@ -1,8 +1,7 @@
 'use client';
 
-import { FC, Suspense, useMemo } from 'react';
+import { FC, useMemo } from 'react';
 
-import Loading from '@/app/[locale]/loading';
 import { JoinOurTeam } from '@/components';
 import { allPosts } from '@/constants/posts';
 
@@ -17,13 +16,11 @@ const BlogPost: FC<TypeProps> = ({ params: { locale, id } }) => {
   );
 
   return (
-    <Suspense fallback={<Loading />}>
-      <main>
-        <CurrentPost locale={locale} postData={currentPostData} />
-        <WhatReadNext locale={locale} postData={currentPostData} />
-        <JoinOurTeam locale={locale} />
-      </main>
-    </Suspense>
+    <main>
+      <CurrentPost locale={locale} postData={currentPostData} />
+      <WhatReadNext locale={locale} postData={currentPostData} />
+      <JoinOurTeam locale={locale} />
+    </main>
   );
 };
 

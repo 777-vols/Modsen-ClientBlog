@@ -1,0 +1,21 @@
+.wrapper {
+  @include container;
+
+  margin-top: $space-large-l;
+  border-bottom: 1px solid $color-input-border;
+}
+
+.title {
+  @include blockTitle;
+}
+
+.postsWrapper {
+  @include flex-space-between;
+
+  padding: $space-medium-xl $space-zero;
+  gap: 15px;
+
+  @media (max-width: $breakpoint-laptop) {
+    flex-direction: column;
+  }
+}

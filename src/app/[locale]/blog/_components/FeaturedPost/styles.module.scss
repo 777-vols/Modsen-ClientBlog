@@ -1,0 +1,99 @@
+.background {
+  background: $color-lavender;
+  padding: $space-large-s $space-zero;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    @include flex-center;
+
+    height: 100vh;
+  }
+}
+
+.wrapper {
+  @include appearanceAnimation;
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.content {
+  @include flex-direction-column;
+
+  max-width: 624px;
+  margin-right: $space-small-xxl;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 100%;
+    margin-right: $space-zero;
+  }
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.imageWrapper {
+  max-width: 515px;
+  height: 359px;
+  width: 100%;
+  position: relative;
+
+  @media (max-width: $breakpoint-laptop) {
+    max-width: 450px;
+    height: 250px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: $space-zero auto;
+    margin-bottom: $space-medium-m;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 200px;
+    max-width: 320px;
+    margin-bottom: $space-small-l;
+  }
+}
+
+.info {
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-m;
+  line-height: 20px;
+  font-family: var(--inter-font);
+}
+
+.postTittle {
+  @include blockTitle;
+
+  margin-top: $space-small-xl;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: $space-small-m $space-zero;
+  }
+}
+
+.authorLink {
+  @include purpleLink;
+}
+
+.description {
+  @include descriptionText;
+
+  margin-top: $space-small-l;
+  margin-bottom: $space-small-xxl;
+}
+
+.readMoreLink {
+  @include yellowButtonWithDarkBg;
+  @include flex-center;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: $space-zero auto;
+  }
+}

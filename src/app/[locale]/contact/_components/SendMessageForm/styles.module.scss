@@ -1,0 +1,67 @@
+.form {
+  @include flex-direction-column;
+
+  justify-content: center;
+  width: 100%;
+  margin-bottom: $space-medium-xxl;
+}
+
+.input {
+  color: $color-dark-blue;
+  border: 1px solid $color-input-border;
+  padding: $space-zero $space-small-xl;
+  height: 76px;
+  width: 100%;
+  font-size: $fontSize-small-xl;
+  font-family: var(--inter-font);
+  margin-bottom: $space-small-l;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 60px;
+  }
+}
+
+.textarea {
+  margin-bottom: $space-small-l;
+  background: transparent;
+  color: $color-dark-blue;
+  border: 1px solid $color-input-border;
+  padding: $space-small-s $space-small-xl;
+  width: 100%;
+  font-size: $fontSize-small-l;
+  font-family: var(--inter-font);
+  height: 144px;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 110px;
+  }
+}
+
+.formButton {
+  @include yellowButtonWithDarkBg;
+  @include smallTitle;
+
+  width: 100%;
+  height: 64px;
+}
+
+.errorMessage {
+  color: $color-red;
+  font-size: $fontSize-small-xl;
+  font-weight: $fontWeight-s;
+}
+
+.querySelector {
+  color: $color-dark-blue;
+  border: 1px solid $color-input-border;
+  padding: $space-zero $space-small-xl;
+  height: 76px;
+  width: 100%;
+  font-size: $fontSize-small-xl;
+  font-family: var(--inter-font);
+  margin-bottom: $space-small-l;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 60px;
+  }
+}

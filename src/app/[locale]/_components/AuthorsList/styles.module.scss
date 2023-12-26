@@ -1,0 +1,24 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+
+  margin-top: $space-large-xxl;
+}
+
+.title {
+  @include blockTitle;
+  @include flex-center-horizontally;
+
+  margin-bottom: $space-medium-s;
+}
+
+.authors {
+  @include flex-space-between;
+
+  gap: $space-small-m;
+
+  @media (max-width: $breakpoint-laptop) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

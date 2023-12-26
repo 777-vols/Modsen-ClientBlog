@@ -5,7 +5,18 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb', 'airbnb-typescript', 'plugin:@typescript-eslint/recommended', 'eslint:recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended', 'next/core-web-vitals', 'plugin:@typescript-eslint/recommended-type-checked', 'plugin:@typescript-eslint/stylistic-type-checked', 'plugin:storybook/recommended'],
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'eslint:recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:storybook/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -38,7 +49,10 @@ module.exports = {
     'import/no-duplicates': 'error',
     'react/function-component-definition': 0,
     'import/prefer-default-export': 0,
+    'jsx-a11y/control-has-associated-label': 0,
+    'react/jsx-props-no-spreading': 0,
     'no-param-reassign': 0,
+    'no-bitwise': 0,
     '@typescript-eslint/no-misused-promises': [
       'error',
       {

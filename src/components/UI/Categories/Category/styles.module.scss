@@ -1,0 +1,50 @@
+.wrapper {
+  max-width: 296px;
+  border: 1px solid $color-medium-grey;
+  flex: 5 2 200px;
+  padding: $space-small-xxl;
+  transition: 0.3s;
+
+  &:hover {
+    background: $color-yellow;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $space-small-l;
+  }
+}
+
+.title {
+  font-size: $fontSize-large-s;
+  font-weight: $fontWeight-l;
+  line-height: 40px;
+  letter-spacing: -1px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-xl;
+  }
+}
+
+.description {
+  @include descriptionText;
+}
+
+.imageWrapper {
+  @include flex-center;
+
+  background: $color-light-yellow;
+  border-radius: 5px;
+  flex-direction: column;
+  height: 48px;
+  width: 48px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-right: $space-small-m;
+  }
+}
+
+.content {
+  @media (max-width: $breakpoint-tablet) {
+    @include flex-center;
+  }
+}

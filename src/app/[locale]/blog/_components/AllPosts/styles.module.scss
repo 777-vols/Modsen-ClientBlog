@@ -1,0 +1,76 @@
+.wrapper {
+  @include appearanceAnimation;
+  @include container;
+
+  margin: $space-medium-xl auto;
+}
+
+.title {
+  @include bigTitle;
+
+  padding-bottom: $space-small-xxl;
+  border-bottom: 1px solid $color-medium-grey;
+}
+
+.postsBlock {
+  margin: $space-small-xxl $space-zero;
+  max-width: 1147px;
+  width: 100%;
+  min-height: 1720px;
+
+  @media (max-width: $breakpoint-laptop) {
+    min-height: 1370px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 2650px;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    min-height: 2400px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 2625px;
+  }
+}
+
+.controls {
+  @include flex-center;
+}
+
+.buttonWrapper {
+  @include flex-center;
+
+  width: fit-content;
+  padding: $space-zero $space-small-s;
+}
+
+.disabledPrevNextButton {
+  @include maxSize;
+  @include smallTitle;
+
+  background: none;
+  font-weight: $fontWeight-xl;
+  border: none;
+  color: $color-medium-grey;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.activePrevNextButton {
+  @include maxSize;
+  @include mediumTitle;
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: $color-dark-blue;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

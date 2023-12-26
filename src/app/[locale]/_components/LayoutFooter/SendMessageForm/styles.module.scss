@@ -1,0 +1,64 @@
+.form {
+  @include flex-center-horizontally;
+
+  flex: 10 2 50%;
+  width: 100%;
+
+  @media (max-width: $breakpoint-laptop) {
+    min-width: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.inputsWrapper {
+  width: fit-content;
+  max-width: 323px;
+  margin-right: $space-small-xl;
+
+  @media (max-width: $breakpoint-laptop) {
+    max-width: 100%;
+    margin-right: $space-zero;
+  }
+}
+
+.input {
+  background: transparent;
+  color: $color-white;
+  border: 1px solid $color-dark-grey;
+  padding: $space-zero $space-small-xl;
+  height: 45px;
+  width: 100%;
+  font-size: $fontSize-small-xl;
+  font-family: var(--inter-font);
+  margin-bottom: $space-small-s;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 40px;
+    font-size: $fontSize-small-l;
+  }
+}
+
+.textarea {
+  background: transparent;
+  color: $color-white;
+  border: 1px solid $color-dark-grey;
+  padding: $space-small-s $space-small-xl;
+  width: 100%;
+  font-size: $fontSize-small-l;
+  font-family: var(--inter-font);
+}
+
+.formButton {
+  @include yellowButton;
+
+  @media (max-width: $breakpoint-laptop) {
+    margin-top: $space-small-s;
+  }
+}
+
+.errorMessage {
+  color: $color-red;
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-s;
+}

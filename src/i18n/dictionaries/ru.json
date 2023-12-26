@@ -1,0 +1,114 @@
+{
+  "navbar": {
+    "title": "Блог Клиента Модсен",
+    "videoButtonName": "Видео о нас",
+    "linksNames": {
+      "home": "Главная",
+      "blog": "Блог",
+      "aboutUs": "О нас",
+      "contactUs": "Контакты",
+      "privacyPolicy": "Политика безопасности"
+    }
+  },
+  "homeHero": {
+    "titleText": "Пошаговое руководство по выбору отличных пар шрифтов",
+    "subtitleText": ["РАЗМЕЩЕНО ПРИ ", "ЗАПУСКЕ"],
+    "infoText": ["Автор: ", "Джеймс Уэст", " | Май 23, 2022"],
+    "descriptionText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Читать далее >"
+  },
+  "joinOurTeam": {
+    "titleText": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Присоедениться сейчас"
+  },
+  "aboutUsBlock": {
+    "aboutUs": {
+      "aboutUsTitle": "Мы — сообщество авторов контента, которые делятся своими знаниями.",
+      "aboutUsSubtitle": "О НАС",
+      "aboutUsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "linkText": "Читать далее >"
+    },
+    "ourMission": {
+      "ourMissionTitle": "Создание ценного контента для креативщиков по всему миру",
+      "ourMissionSubtitle": "Наша миссия",
+      "ourMissionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  "postsBlock": {
+    "allPosts": {
+      "titleText": "Все посты",
+      "viewAllLinkText": "Смореть все",
+      "prevButtonText": "< Назад",
+      "nextButtonText": "Вперед >"
+    },
+    "postInfo": "Автор: ",
+    "featuredPost": {
+      "titleText": "Лучший пост",
+      "subtitleText": "ЛУЧШИЙ ПОСТ",
+      "readMoreLinkText": "Читать далее >"
+    }
+  },
+  "category": {
+    "homeTitleText": "Выберите категорию",
+    "blogTitleText": "Все категории",
+    "categoriesList": {
+      "business": {
+        "titleText": "Бизнес",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "startup": {
+        "titleText": "Стартап",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "economy": {
+        "titleText": "Экономика",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      },
+      "technology": {
+        "titleText": "Технологии",
+        "descriptionText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      }
+    }
+  },
+  "whyWeStarted": {
+    "titleText": "Все началось с простой идеи и превратилось в нашу страсть.",
+    "subtitleText": "ПОЧЕМУ МЫ НАЧАЛИ",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    "buttonText": "Наша история >"
+  },
+  "authorsList": {
+    "titleText": "Список Авторов"
+  },
+  "testimonials": {
+    "titleText": "Что люди говорят о нашем блоге",
+    "subtitleText": "ОТЗЫВЫ",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
+  "footer": {
+    "titleText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+    "adressText": "Финстрит 118 2561 Финтаун",
+    "emailText": "Hello@finsweet.com 020 7993 2905"
+  },
+  "forms": {
+    "successMessageText": "Готово: ",
+    "errorMessageText": "Ошибка отправки сообщения(",
+    "emailPlaceholderText": "Ваш email",
+    "namePlaceholderText": "Ваше имя",
+    "messagePlaceholderText": "Текст сообщения",
+    "subscribeButtonText": "Подписаться",
+    "sendMessageButtonText": "Отправить сообщение"
+  },
+  "blogPostTitle": "Что почитать еще",
+  "blogPostInfo": "Опубликован: ",
+  "contactBlock": {
+    "subtitleText": "СВЯЗАТЬСЯ С НАМИ",
+    "titleText": "Давайте начнем диалог",
+    "descriptionText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+    "mondayToFridayText": "С Понедельника по Пятницу",
+    "hoursText": "С 9:00 до 20:00",
+    "ourTeamText": "Наша команда поддержки работает 24/7",
+    "contactUsText": "Связаться с нами",
+    "workingHoursText": "Время работы"
+  }
+}

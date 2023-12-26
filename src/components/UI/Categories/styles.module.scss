@@ -1,0 +1,26 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+}
+
+.categories {
+  @include flex-space-between;
+
+  gap: $space-small-m;
+
+  @media (max-width: $breakpoint-laptop) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.title {
+  @include blockTitle;
+
+  text-align: center;
+  margin-bottom: $space-medium-s;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: $space-small-xl;
+  }
+}

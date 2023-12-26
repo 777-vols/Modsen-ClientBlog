@@ -1,0 +1,108 @@
+.panel {
+  @include flex-space-between;
+
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.message {
+  font-size: $fontSize-medium-l;
+  font-size: $fontSize-medium-m;
+  font-weight: $fontWeight-l;
+  height: 256px;
+  margin-bottom: $space-small-s;
+  transition: transform 0.5s ease-in-out;
+
+  @media (max-width: $breakpoint-laptop) {
+    text-align: center;
+    height: 180px;
+    margin-bottom: $space-small-xxl;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    font-size: $fontSize-medium-m;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $fontSize-medium-s;
+    line-height: 25px;
+  }
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  max-width: 256px;
+  width: 100%;
+}
+
+.avatar {
+  @include userAvatar;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullName {
+  @include smallTitle;
+  @include textElipsis;
+
+  @media (max-width: $breakpoint-mobile) {
+    line-height: 25px;
+    font-size: $fontSize-medium-s;
+  }
+}
+
+.adress {
+  font-family: var(--inter-font);
+  color: $color-medium-grey;
+}
+
+.controls {
+  display: flex;
+}
+
+.buttonWrapper {
+  @include flex-center;
+
+  height: 62px;
+  width: 82px;
+}
+
+.disabledPrevNextButton {
+  @include maxSize;
+
+  font-size: $fontSize-large-s;
+  font-weight: $fontWeight-xl;
+  height: 48px;
+  width: 48px;
+  border: none;
+  background: $color-white;
+  border-radius: 50px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.activePrevNextButton {
+  @include maxSize;
+
+  cursor: pointer;
+  height: 62px;
+  width: 62px;
+  border: none;
+  color: $color-white;
+  font-weight: $fontWeight-xl;
+  font-size: $fontSize-large-m;
+  background: $color-dark-blue;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

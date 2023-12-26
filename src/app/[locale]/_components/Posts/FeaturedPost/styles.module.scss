@@ -1,0 +1,78 @@
+.wrapper {
+  width: 100%;
+  max-width: 733px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 100%;
+  }
+}
+
+.title {
+  @include blockTitle;
+
+  margin-bottom: $space-small-xxl;
+}
+
+.postWrapper {
+  border: 1px solid rgba(244, 244, 244, 1);
+  padding: $space-small-xxl;
+  flex-grow: 1;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $space-small-xl;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $space-small-m;
+  }
+}
+
+.imageWrapper {
+  height: 340px;
+  width: 100%;
+  position: relative;
+  margin-bottom: $space-small-xxl;
+
+  @media (max-width: $breakpoint-laptop) {
+    height: 250px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: 200px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 180px;
+  }
+}
+
+.info {
+  font-size: $fontSize-small-l;
+  font-weight: $fontWeight-m;
+  line-height: 20px;
+  font-family: var(--inter-font);
+}
+
+.postTittle {
+  @include mediumTitle;
+
+  margin-top: $space-small-l;
+}
+
+.authorLink {
+  @include purpleLink;
+}
+
+.description {
+  @include descriptionText;
+
+  margin-top: $space-small-l;
+  margin-bottom: $space-small-xxl;
+}
+
+.readMoreLink {
+  @include yellowButtonWithDarkBg;
+  @include flex-center;
+}

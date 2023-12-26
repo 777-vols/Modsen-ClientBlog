@@ -1,0 +1,10 @@
+.contentWrapper {
+  @include container;
+
+  width: 100%;
+}
+
+.content {
+  max-width: 768px;
+  margin: $space-zero auto;
+}

@@ -1,0 +1,87 @@
+.wrapper {
+  @include flex-center-vertical;
+
+  padding: $space-small-xxl $space-zero;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: 530px;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    height: 480px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 525px;
+  }
+}
+
+.content {
+  @include flex-direction-column;
+
+  align-items: center;
+  width: 100%;
+  margin-left: $space-small-xxl;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: $space-zero;
+  }
+}
+
+.subtitle {
+  @include subtitle;
+
+  color: $color-purple;
+  width: 100%;
+}
+
+.imageWrapper {
+  min-width: 450px;
+  height: 280px;
+  position: relative;
+
+  @media (max-width: $breakpoint-laptop) {
+    min-width: 310px;
+    height: 210px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    min-width: 450px;
+    height: 280px;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    min-width: 310px;
+    height: 210px;
+  }
+}
+
+.postTittle {
+  @include mediumTitle;
+
+  width: 100%;
+  margin-top: $space-small-xl;
+
+  @media (max-width: $breakpoint-laptop) {
+    font-size: $fontSize-medium-l;
+    margin-top: $space-small-m;
+  }
+}
+
+.description {
+  @include descriptionText;
+
+  margin-top: $space-small-l;
+
+  @media (max-width: $breakpoint-laptop) {
+    line-height: 25px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: $space-small-m;
+    margin-bottom: $space-small-l;
+  }
+}

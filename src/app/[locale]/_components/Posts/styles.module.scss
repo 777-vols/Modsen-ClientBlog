@@ -1,0 +1,14 @@
+.wrapper {
+  @include container;
+  @include appearanceAnimation;
+
+  margin: $space-large-xxl auto;
+  display: flex;
+  gap: 32px;
+  max-height: 804px;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    max-height: fit-content;
+  }
+}

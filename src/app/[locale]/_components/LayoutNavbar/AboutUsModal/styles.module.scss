@@ -1,0 +1,49 @@
+.background {
+  @include modalBackground;
+}
+
+.wrapper {
+  @include maxSize;
+
+  padding: $space-medium-s;
+  background: $color-dark-blue;
+  border-radius: 10px;
+  max-height: 550px;
+  max-width: 900px;
+  position: relative;
+  margin: 0 $space-small-l;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: 450px;
+    padding: $space-small-l;
+    padding-top: $space-medium-s;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    max-height: 350px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-height: 300px;
+  }
+}
+
+.closeModalButton {
+  position: absolute;
+  cursor: pointer;
+  font-size: $fontSize-small-xl;
+  color: $color-red;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  top: 10px;
+  right: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-red;
+    background-color: $color-white;
+  }
+}

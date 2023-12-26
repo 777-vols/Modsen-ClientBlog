@@ -16,7 +16,23 @@
   margin: $space-small-xxl $space-zero;
   max-width: 1147px;
   width: 100%;
-  min-height: 2070px;
+  min-height: 1720px;
+
+  @media (max-width: $breakpoint-laptop) {
+    min-height: 1370px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 2650px;
+  }
+
+  @media (max-width: $breakpoint-small-tablet) {
+    min-height: 2400px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 2625px;
+  }
 }
 
 .controls {

@@ -1,9 +1,7 @@
+import EmptyPage from '@/app/[locale]/_components/EmptyPage';
+
 const About = () => {
-  return (
-    <main>
-      <h1>About</h1>
-    </main>
-  );
+  return <EmptyPage pageName="About page" />;
 };
 
 export default About;

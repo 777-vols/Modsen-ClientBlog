@@ -1,4 +1,4 @@
-import { IPost } from '@/constants/Posts/types';
+import { IPost } from '@/constants/posts/types';
 import { Locale } from '@/i18n/i18n.config';
 
 export interface ILocaleProps {

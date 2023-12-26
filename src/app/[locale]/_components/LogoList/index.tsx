@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { logos } from '@/constants';
+import { rgbDataURL } from '@/helpers';
 
 import styles from './styles.module.scss';
 
@@ -9,7 +10,7 @@ const LogoList = () => (
     <div className={styles.logoslist}>
       {logos.map(({ id, icon }) => (
         <div className={styles.logoWrapper} key={id}>
-          <Image src={icon} alt="logo-icon" fill />
+          <Image placeholder="blur" blurDataURL={rgbDataURL()} src={icon} alt="logo-icon" fill />
         </div>
       ))}
     </div>

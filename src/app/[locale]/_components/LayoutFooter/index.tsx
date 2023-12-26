@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import NavMenu from '@/components/UI/NavMenu';
 import { socials } from '@/constants';
+import { rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -35,12 +36,19 @@ const LayoutFooter = ({ locale }: ILocaleProps) => {
           </div>
           <div className={styles.socialsWrapper}>
             {socials.map(({ id, icon, href }) => (
-              <Link className={styles.socialLink} key={id} href={href} target="_blank">
+              <Link
+                data-cy="social"
+                className={styles.socialLink}
+                key={id}
+                href={href}
+                target="_blank">
                 <Image
                   src={icon}
                   alt="social-icon"
                   width={socialIconSize}
                   height={socialIconSize}
+                  placeholder="blur"
+                  blurDataURL={rgbDataURL()}
                 />
               </Link>
             ))}

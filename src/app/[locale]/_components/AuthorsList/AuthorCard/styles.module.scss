@@ -36,8 +36,14 @@
 }
 
 .fullName {
-  @include flex-center-horizontally;
-  @include mediumTitle;
+  @include smallTitle;
+
+  margin-bottom: $space-small-s;
+  text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include mediumTitle;
+  }
 }
 
 .info {
@@ -47,6 +53,7 @@
   line-height: 20px;
   font-family: var(--inter-font);
   color: $color-medium-grey;
+  text-align: center;
 }
 
 .socialsWrapper {

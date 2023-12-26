@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { allImages, urls } from '@/constants';
+import { rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 
 import styles from './styles.module.scss';
@@ -22,13 +23,17 @@ const Category = ({ categoryKey, locale }: IProps) => {
   const { titleText, descriptionText } = categoriesList[categoryKey];
 
   return (
-    <Link href={`/${locale}${category}/${titleText.toLocaleLowerCase()}`}>
+    <Link
+      data-cy={`category${titleText}`}
+      href={`/${locale}${category}/${titleText.toLocaleLowerCase()}`}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <div className={styles.imageWrapper}>
             <Image
               src={categoryImages[categoryKey]}
               alt="category"
+              placeholder="blur"
+              blurDataURL={rgbDataURL()}
               height={imageSize}
               width={imageSize}
             />

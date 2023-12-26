@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react';
 
-import { allPosts } from '@/constants/Posts';
+import { allPosts } from '@/constants/posts';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleWithPost } from '@/types';
 

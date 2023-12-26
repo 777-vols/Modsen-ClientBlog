@@ -60,8 +60,13 @@ $content-max-width: 843px;
 
 .categoryWrapper {
   @include flex-center-vertical;
+}
+
+.categoryName {
+  @include flex-center-vertical;
 
   font-size: $fontSize-medium-l;
+  margin-left: $space-small-l;
 }
 
 .content {

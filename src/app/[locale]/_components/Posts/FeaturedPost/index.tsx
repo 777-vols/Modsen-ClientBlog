@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
-import { featuredHomePost } from '@/constants/Posts';
-import { getStringDate } from '@/helpers';
+import { featuredHomePost } from '@/constants/posts';
+import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -33,18 +33,31 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
       <h2 className={styles.title}>{titleText}</h2>
       <article className={styles.postWrapper}>
         <div className={styles.imageWrapper}>
-          <Image src={postImage} alt="banner" fill priority />
+          <Image
+            src={postImage}
+            alt="banner"
+            placeholder="blur"
+            blurDataURL={rgbDataURL()}
+            fill
+            priority
+          />
         </div>
         <span className={styles.info}>
           {postInfo}
-          <Link className={styles.authorLink} href={`/${locale}${authorPageUrl}/${authorId}`}>
+          <Link
+            data-cy="authorLinkFeaturedPost"
+            className={styles.authorLink}
+            href={`/${locale}${authorPageUrl}/${authorId}`}>
             {postAuthor}
           </Link>
           {` | ${stringDate}`}
         </span>
         <h3 className={styles.postTittle}>{postTitleText}</h3>
         <p className={styles.description}>{previewText}</p>
-        <Link className={styles.readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
+        <Link
+          data-cy="readLinkFeaturedPost"
+          className={styles.readMoreLink}
+          href={`/${locale}${blogPostPageUrl}/${postId}`}>
           {readMoreLinkText}
         </Link>
       </article>

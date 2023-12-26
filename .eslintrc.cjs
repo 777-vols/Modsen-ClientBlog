@@ -52,6 +52,7 @@ module.exports = {
     'jsx-a11y/control-has-associated-label': 0,
     'react/jsx-props-no-spreading': 0,
     'no-param-reassign': 0,
+    'no-bitwise': 0,
     '@typescript-eslint/no-misused-promises': [
       'error',
       {

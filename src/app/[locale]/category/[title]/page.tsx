@@ -1,9 +1,7 @@
+import EmptyPage from '@/app/[locale]/_components/EmptyPage';
+
 const Category = () => {
-  return (
-    <main>
-      <h1>Category</h1>
-    </main>
-  );
+  return <EmptyPage pageName="Category page" />;
 };
 
 export default Category;

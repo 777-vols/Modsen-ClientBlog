@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { urls } from '@/constants';
-import { featuredBlogPost } from '@/constants/Posts';
-import { getStringDate } from '@/helpers';
+import { featuredBlogPost } from '@/constants/posts';
+import { getStringDate, rgbDataURL } from '@/helpers';
 import { getDictionary } from '@/i18n/getDictionary';
 import { ILocaleProps } from '@/types';
 
@@ -42,12 +42,22 @@ const FeaturedPost = ({ locale }: ILocaleProps) => {
             {` | ${stringDate}`}
           </span>
           <p className={styles.description}>{previewText}</p>
-          <Link className={styles.readMoreLink} href={`/${locale}${blogPostPageUrl}/${postId}`}>
+          <Link
+            data-cy="readMoreLink"
+            className={styles.readMoreLink}
+            href={`/${locale}${blogPostPageUrl}/${postId}`}>
             {readMoreLinkText}
           </Link>
         </div>
         <div className={styles.imageWrapper}>
-          <Image src={postImage} alt="feature post picture" fill priority />
+          <Image
+            src={postImage}
+            alt="feature post picture"
+            placeholder="blur"
+            blurDataURL={rgbDataURL()}
+            fill
+            priority
+          />
         </div>
       </div>
     </section>

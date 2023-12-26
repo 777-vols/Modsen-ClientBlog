@@ -1,6 +1,3 @@
-import { Suspense } from 'react';
-
-import Loading from '@/app/[locale]/loading';
 import { Categories, JoinOurTeam } from '@/components';
 import { getDictionary } from '@/i18n/getDictionary';
 
@@ -11,14 +8,12 @@ const Blog = ({ params: { locale } }: ILocaleParams) => {
   const { blogTitleText } = category;
 
   return (
-    <Suspense fallback={<Loading />}>
-      <main>
-        <FeaturedPost locale={locale} />
-        <AllPosts locale={locale} />
-        <Categories locale={locale} titleText={blogTitleText} />
-        <JoinOurTeam locale={locale} />
-      </main>
-    </Suspense>
+    <main>
+      <FeaturedPost locale={locale} />
+      <AllPosts locale={locale} />
+      <Categories locale={locale} titleText={blogTitleText} />
+      <JoinOurTeam locale={locale} />
+    </main>
   );
 };
 
